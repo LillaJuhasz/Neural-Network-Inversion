@@ -95,18 +95,21 @@ y = ds_copy.get(key='shares').values
 X = ds_copy.drop(columns='shares').values
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.5, random_state=0)
+    X, y, test_size=0.3, random_state=0)
 
 
 
 ########################## TRAINING ###############################
 
 
-mlp = MLPRegressor(verbose=True)
+mlp = MLPRegressor()
 param_grid = {
-    'hidden_layer_sizes': [(10, 20, 40, 20, 10), (30, 90, 180, 90, 30), (100, 400, 100), (1000,2000)],
+    'hidden_layer_sizes': [(30, 90, 180, 90, 30)],
     'activation': ['logistic', 'tanh', 'relu'],
     'solver': ['lbfgs','sgd', 'adam'],
+    'alpha': [0.03, 0.01, 0.003, 0.001, 0.0003, 0.0001],
+    'learning_rate_init': [0.03, 0.01, 0.003, 0.001, 0.0003, 0.0001],
+    'learning_rate': ['adaptive'],
 }
 gs = GridSearchCV(mlp, param_grid, cv=2)
 gs.fit(X_train, y_train)
