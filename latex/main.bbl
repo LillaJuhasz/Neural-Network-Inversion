@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{article}
+Craig A.~Jensen, Russell D.~Reed, Robert J~Marks, Mohamed El-Sharkawi,
+  Jae-byung Jung, Robert T.~Miyamoto, Gregory M.~Anderson, and J~Eggen.
+\newblock Inversion of feedforward neural networks: Algorithms and
+  applications.
+\newblock 02 2001.
+
+\bibitem{Bottou2012}
+L{\'e}on Bottou.
+\newblock {\em Stochastic Gradient Descent Tricks}, pages 421--436.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2012.
+
+\bibitem{Fernandes2015API}
+Kelwin Fernandes, Pedro Vinagre, and Paulo Cortez.
+\newblock A proactive intelligent decision support system for predicting the
+  popularity of online news.
+\newblock In {\em EPIA}, 2015.
+
+\bibitem{fine2006feedforward}
+T.L. Fine.
+\newblock {\em Feedforward Neural Network Methodology}.
+\newblock Information Science and Statistics. Springer New York, 2006.
+
+\bibitem{KINDERMANN1990277}
+J~Kindermann and A~Linden.
+\newblock Inversion of neural networks by gradient descent.
+\newblock {\em Parallel Computing}, 14(3):277 -- 286, 1990.
+
+\bibitem{tho2010perceptron}
+D.X. Tho.
+\newblock {\em Perceptron Problem in Neural Network}.
+\newblock GRIN Verlag, 2010.
+
+\bibitem{inproceedings}
+Md~Taufeeq Uddin, Muhammed Patwary, Tanveer Ahsan, and Mohammed~Shamsul Alam.
+\newblock Predicting the popularity of online news from content metadata.
+\newblock pages 1--5, 10 2016.
+
+\end{thebibliography}

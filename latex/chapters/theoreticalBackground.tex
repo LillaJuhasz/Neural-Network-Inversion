@@ -1,0 +1,276 @@
+\chapter{Theoretical Background}
+
+\section{Data Mining}
+
+Data mining's applying techniques come from a wider field called \textbf{data analytics}. In a simple explanation data analytics is the process of examining data sets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analysis on existing data sets. A widely used data analytics technique is machine learning, because it can process data sets more quickly than it can be done via conventional analytical modeling. Machine learning automates model building, due to it relies on patterns and inferences, instead of explicit instructions.
+
+\todo{mathematical background, tools......}
+\todo{data mining techniques, crucial concepts of data mining}
+\todo{data cleaning (?)}
+
+
+
+\section{Feedforward Neural Networks}
+
+There are many different types of neural networks, one of them is the feedforward neural network \cite{fine2006feedforward}. It aims on to create a mapping from a properly trained input dataset to an estimated output and it is able to model complex non-linear functions. \medskip
+
+A feedforward neural networks units are the artificial neurons, that are conventionally called \textbf{nodes}. To determine the value of a node, all the inputs would be multiplied one by one with their weights, and then adding their sums. This type of neural network is called feedforward due to there are no feedback connections in which outputs of the model are fed back into itself. \medskip
+
+A typical feedforward neural network consists of inputs, weights and an output. The \textbf{input layer} is a set of input neurons, where each neuron represents a feature in our data set. The \textbf{output} of any feedforward network is the sum of the inputs multiplied by the weights. There is an intermediate part between inputs and outputs, called hidden layers. The \textbf{hidden layer} contains those type of units which can transform the inputs into a mapping which the output layer can use. The relationship between the input and hidden layer is determined by the weights of the network. \medskip
+
+\noindent The output of a trained feedforward neural network can be characterized by
+$$ o_k = f_k(i,w) $$
+where $o_k$ is the $k$th neural network output, $(i,w)$ is a vector of the weights and $f_k(\cdot)$ describes the mapping from the input to the $k$th output, where $f_k(\cdot)$ also contains the structure of the feedforward perceptron. The neural network can be trained if the input and the output are fixed and the weights are set to get the expected results. When a single scalar output can be found, $o_k$ can be replaced by $o$ and $f_k(\cdot)$ by $f(\cdot)$.
+
+
+
+\subsection{Single-Layer Perceptron}
+
+The perceptron is a single layer feedforward neural network \cite{tho2010perceptron}. A single-layer perceptron has only one input and output layer and no hidden layers. The input values are presented to the perceptron, and if the predicted output is the same as the desired output, then the performance is considered satisfactory and no changes to the weights are made. However, if the output does not match the desired output and then the weights need to be changed to reduce the error. \smallskip
+
+In order to avoid unnecessary iterations, it is important to adjust the weights properly.
+$$ \Delta w = \eta * d * x $$
+where $\Delta w$ stands for the current weight, $\eta \leq 1$ is the learning rate which is the size of the required steps, $d$ represents the desired output and $x$ is the input data. \medskip
+
+The sum of the inputs multiplied by the appropriate weights are led directly to the output layer. This weighted sum stands for \textbf{dot product} in this context: $ z = w_1 x_1 + w_2 x_2 + \dots + w_m x_m = \sum_{j=1}^m w_j x_j $
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.28\linewidth]{./figures/perceptron}
+	\caption{The appropriate weights are applied to the inputs and the resulting weighted sum passed to an activation function that produces the output.}
+	\label{fig:perceptron}
+\end{figure}
+
+The output $o$ is determined by whether the weighted sum $\sum_j(w_j x_j)$ is less than or greater than some threshold value $\theta$, which is the parameter of the neuron. If that value is above a given threshold, it "fires", which means that the neuron gets an activated value. 
+$$ o = \begin{cases} 0, & \hbox{for}~ \sum_j(w_j x_j) < \theta \\ 1, & \hbox{for}~ \sum_j(w_j x_j) \geq \theta \end{cases} $$
+
+
+
+\subsection{Multi-Layer Perceptron}
+
+The multi-layer perceptron is a supervised learning algorithm that learns a function $f(\cdot) : \mathbb{R}^m \mapsto \mathbb{R}^o$ by training on a dataset, where $m$ is the number of dimensions for input and $o$ is the number of dimensions for output. Given a set of features $X = x_1, x_2, \dots, x_m$ and a target $y$, it can learn a non-linear function approximator for either classification or regression. \medskip
+
+The difference between single- and multi-layered neural networks that the multi-layered one has one or more hidden layers besides the input and output layer. Except for the input nodes, each node is a neuron that uses a non-linear activation function. \medskip
+
+In a multi-layer perceptron, each neuron in one layer is connected with a weight to another neuron in the next layer. Each of these neurons stores an amount, which is in general a sum of the weighted neurons come from previous layers. There is a special unit, called \textbf{bias} units, that are not influenced by any values in the previous layer, so they do not have any incoming connections. However they have outgoing connections and they can contribute to the output of the artificial neural network. Now the definition of dot product expands like this:
+$$ z = \sum_{j=1}^m w_j x_j + bias $$
+
+A neural network was made to learn from changing the connected weights after every piece of data is processed, compared to the expected result, based on the amount of error. A multi-layer perceptron utilizes a supervised learning technique called \textbf{backpropagation} for training.
+
+
+\subsubsection{Backpropagation}
+
+The main goal of backpropagation is to update all of the weights in the neural network, so they cause the predicted output to be closer to the target output with minimizing the error of each output neuron and also the network. \medskip
+
+The algorithm consists of two phases: the forward phase where the activations are propagated from the input to the output layer, and the backward phase, where the error between the actual and the desired nominal value in the output layer is propagated backwards in order to modify the weights values. \medskip
+
+The function that is used to compute this error is known as \textbf{loss function}. The loss function is a function that maps values of one or more variables onto a real number intuitively representing some "cost" associated with those values. For backpropagation, the loss function calculates the difference between the network output and its expected output, after a training example has propagated through the network. \smallskip
+
+Different loss functions will give different errors for the same prediction, and thus have a considerable effect on the performance of the model. In the training of multi-layer perceptrons, L2 loss function $L$ has been used, which is the square of the L2 norm of the difference between actual value $y$ and predicted value $\hat{y}$.
+$$ L = \sum^n_{i=1}(y - \hat{y})^2 $$
+
+
+
+\subsubsection{Gradient descent}
+
+Backpropagation uses gradient descent in the calculation of the weights used in the neural network. It is an optimization method, which aims on to minimize a given function to its local minimum by iteratively updating the weights of the model. The input is defined with an initial value and the algorithm calculates the gradient i.e. the partial derivative of the loss curve at this starting point. \smallskip
+
+\noindent The components of gradient descent are the following:
+\begin{verse}
+	$\bullet$ Learning rate: size of steps took in any direction\\
+	$\bullet$ Gradients: the direction of the steps, i.e. the slope\\
+	$\bullet$ Cost function: tells the current height, which is the sum of squared errors
+\end{verse}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.35\linewidth]{./figures/gradient}
+	\caption{The gradient descent is an optimization method used by backpropagation}
+	\label{fig:gradient}
+\end{figure}
+
+In backpropagation, the calculation of the gradient proceeds backwards through the network, so the partial computations of the gradient from one layer are reused in the computation of the gradient for the previous layer. This backward phase is a more efficient way of computing the gradient at each layer, instead of calculating the gradient of each layer separately.
+
+
+
+\section{Training a MLP Model}
+
+The task that is being tackled in this paper is to make the inversion of a single-element feedforward neural network. To result this successfully, the appropriate dataset is given and already preprocessed. Hence the main task is now to train a neural network to predict new outputs for the testing set and minimize the loss between the given and the desired outputs from the training set. \medskip
+
+The components of a neural network model i.e the activation function, optimization algorithm and the size of the layers play a very important role in effectively training a model and produce accurate results. Different tasks require a different set of functions to give the most optimum results. The used methods and functions are described in the following.
+
+
+\subsection{Regression}
+
+Regression is a supervised learning task of machine learning that is used to predict values of a desired target variable. It is a statistical technique which requires a data set with the desired output that is consists of one or more continuous variables and real numbers.\smallskip
+
+Using regression the input vector is mapped onto a given set of values by the network. The network regresses the independent variables, provided by the inputs, onto the dependent variable. The multi-layer perceptron uses non-linear regression.  \medskip
+
+In a linear regression task there is one independent variable $x$, to explain or predict the outcome of the dependent variable $y$.
+$$ y = \beta_0 + \beta_1x + \epsilon $$
+where $\beta_0$ stands for the intercept, $\beta_1$ is the steep of the independent variable and $\epsilon$ represents the error value that is the residual of the regression. \medskip
+
+In non-linear regression, a statistical model of the form is
+$$ y \approx f(X,\beta) $$
+that relates a vector of independent variables $X$, and its associated observed dependent variables $y$. The function $f$ is non-linear in the components of the vector of parameters $\beta$, but otherwise arbitrary. 
+
+
+
+\subsection{Activation Functions}
+
+In artificial neural networks, the activation function is a transitional state of the neurons between other layers. It is a mapping of the previous layers and it maps the resulting value into the desired range, which is usually between -1 and 1. The output of the activation function is then used as input for the next layer, until a desired solution is found. There are several activation functions, and each of them utilizes different algorithms for mapping. \smallskip
+
+As the multi-layer perceptron applies non-linear approximator functions, it will be the most accurate by using non-linear activation functions as well. They are known about having more than one degrees and they have a curve in their graph. Due to non-linear functions can generate non-linear mappings from inputs to outputs, they can be applied in complex data sets. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.35\linewidth]{./figures/functions}
+	\caption{The graphs of the most popular non-linear activation functions}
+	\label{fig:functions}
+\end{figure}
+
+The two common activation functions are both sigmoids, and are described by
+$$ f(x)=tanh(x) ~~~ \hbox{and} ~~~ f(x)=\sigma (x)=\frac{1}{1+e^{-x}} $$
+The first is a \textbf{hyperbolic tangent} that ranges from -1 to 1, while the other is the \textbf{logistic} function, which is similar in shape but ranges from 0 to 1. \smallskip
+
+The \textbf{ReLU} function is another type of non-linear functions, which stands for rectified linear unit. Its is called half-rectified, due to if the data set consists any negative values, that will turn into 0 immediately. This operation affects the resulting graph (\autoref{fig:functions}), due to the appropriate values will not be mapped.
+$$ f(x) = \begin{cases} 0, & \hbox{for}~ x < 0 \\ x, & \hbox{for}~ x \geq 0 \end{cases} $$
+
+
+
+\subsection{Optimization Methods}
+
+Artificial neural networks have different phases in the process of their operation. The procedure of the learning process in a neural network can apply different training methods with different characteristics and performance. These training methods use optimization algorithms to update weights and biases i.e. the internal parameters of a model to reduce the error. \cite{veerarajan2007numerical}\cite{pillo2013nonlinear}
+
+
+
+\subsubsection{Stochastic Gradient Descent}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.3\linewidth]{./figures/stochastic}
+	\caption{The difference between the process of the gradient descent and the stochastic gradient descent methods}
+	\label{fig:stochastic}
+\end{figure}
+Stochastic gradient descent \cite{Bottou2012} is a stochastic approximation of gradient descent optimization, used effectively in large-scaled data sets. It can also work in a system of linear and non-linear equations and can effectively solve unconstrained optimization problems. In constrant to gradient descent, the stochastic method can approximate the true gradient of the cost function because it updates the parameters for each training example, one by one. To demonstrate assume that $\eta$ is the learning rate, $L$ stands for the loss function and $\nabla_w L = \frac{\partial L}{\partial w}$ is the gradient. Now the update equation of the weights $w$ in each iteration is:
+\begin{equation} w_{t+1} = w_t - \eta \nabla_w L \label{eq:sgd} \end{equation} 
+
+\noindent The process of the stochastic gradient descent algorithm is the following:\\
+1. Choose one sample from the dataset (this is what makes it stochastic gradient descent).\\
+2. Calculate all the partial derivatives of loss with respect to weights or biases. \\
+3. Use the update equation \eqref{eq:sgd} to update each weight and bias.\\
+4. Go back to step 1.
+
+
+\subsubsection{Adam}
+
+Another method is Adam, whose name is derived from adaptive moment estimation. It is a transition between adaptive methods and momentum-based methods. In the algorithm, running averages of both the gradients and the second moments of the gradients are used, which means Adam not just stores the exponentially decaying average of past squared gradients $v_t$, it also keeps the decaying average of past gradients $m_t$, similarly to momentum-based methods. The algorithm computes the decaying averages of past $m_t$ and past squared $v_t$ gradients respectively as follows:
+$$ m_t = \beta_1 m_{t-1} + (1-\beta_1)L_t ~~~~\hbox{and}~~~\ v_t = \beta_2 v_{t-1} + (1-\beta_2)L^2_t $$
+where $m_t$ and $v_t$ are the estimates of the first and second moments, $\beta_1$ and $\beta_2$ are the decay for gradients and second moments of gradients, and $L_t$ is the loss function.\\
+The first and second moment estimates are:
+$$ \hat{m_t} = \frac{m_t}{a-\beta^t_1} ~~~~\hbox{and}~~~ \hat{v_t} = \frac{v_t}{a-\beta^t_2} $$
+Then these estimates are used to update the parameters $w$ with a simple scalar $\epsilon$ to prevent division by 0
+$$ w_{t+1} = w_t - \frac{\mu}{\sqrt{\hat{v_t}}+\epsilon}\hat{m_t} $$
+
+
+\subsubsection{Limited-memory BFGS}
+
+Limited-memory BFGS is an approximation of Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm, which is an iterative method for solving unconstrained non-linear optimization problems. The difference between them, that L-BFGS uses a limited amount of computer memory. It aims on parameter estimation, and the target problem is to minimize $f(x)$ over unconstrained values of the real-vector $x$ where $f$ is a differentiable scalar function. In this method, the Hessian matrix of second derivatives is not computed, but it is approximated by using gradient evaluation updates. \medskip
+
+\noindent From an initial guess $x_0$ and an approximate Hessian matrix $B_0$, the following steps are repeated as $x_k$ converges to the solution:\\
+1. Obtain a direction $p_k$ by solving $B_k p_k = - \nabla f(x_k). $ \\
+2. Perform a one-dimensional optimization to find an acceptable stepsize $\alpha_k$ in $p_k$. \\
+3. Set $s_k = \alpha_k p_k$ and update $x_{k+1} = x_k + s_k.$ \\
+4. Set $y_k = \nabla f(x_{k+1}) - \nabla f(x_k).$ \\ 
+5. The solution is $B_{k+1} = B_k + \frac{y_k y^T_k}{y^T_k s_k} - \frac{B_k s_k s^T_k B_k}{s^T_k B_k s_k}.$
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.34\linewidth]{./figures/optimization}
+	\caption{The optimization of SGD, Adam and L-BFGS with respect of cost and iteration}
+	\label{fig:optimization}
+\end{figure}
+
+
+
+
+
+\section{Inversion}
+
+As mentioned in \autoref{para:inversion}, a properly trained neural network can model the process that is generating the training data and the inverse process too. Inversion of a neural network consists of clamping the weights and the neural network output while adjusting the input in the neural network until an equality or a best possible fit occurs for one or more values of the input. \medskip
+
+Feedforward neural networks aim on to capture system mapping from training data. The goal is to find the input values that will result the desired output for the given synaptic weights. Generally it can be determined that a single input can generate numerous outputs. \smallskip
+
+\noindent The process is the following:\\
+1. Fix the weights and the outputs.\\
+2. Find such an input that concurs or mostly fits the supposed input. \medskip
+
+\noindent To achieve the goal, it is necessary to:\\
+1. find every point that can fit the input\\
+2. define the external points as thresholds\\
+3. the evenly distributed points can be located in the solution set.
+
+
+
+\subsection{Single-Element Inversion}
+
+In the task of single-element inversion only one point is found by the algorithm depending on the initialization. This means it will result a nearer outcome in further processes. Hence it is very important to find a properly training algorithm, because it notes the previously founded points and reuse them. This process is very time consuming. As the quantity of parameter combinations increases during the training phase, so does the time that the training takes. However, the number of parameter combinations also potenionally increases the inversion accuracy.
+
+
+
+\subsection{Inversion Methods}
+
+To solve the inversion of an unconstrained optimization problem, the inversion method needs to solve the optimization itself in its training phase. After the dataset is properly trained, the inversion problem is the following:
+
+Given some network function $f : X \mapsto Y$, for some $y \in Y$, the appropriate $x \in X$ needs to be found, such that $f(x) = y$. Or more generally, if $L : Y \mapsto \mathbb{R}$ is the loss function defined over the network output, an input $x$ have to be found that minimizes $L(f(x))$. \smallskip
+
+Some applications have been proposed that rely on single-element inversion methods.
+
+
+\subsubsection{WLK Inversion}
+
+The WLK inversion was named after R. L. Williams, A. Linder and J.
+Kindermann, who firstly introduced the single-element search method for inversion of real valued neural network. In this algorithm, the inversion problem is set up as an unconstrained optimization problem and solved by gradient descent, similarly to backpropagation. \medskip
+
+\noindent The method of WLK inversion involves two main steps: \\
+1. \textbf{training} the network \\
+2. \textbf{inversion}\medskip
+
+During the training, the neural network is trained to learn a mapping from input to output. The proper set can be find by minimizing the loss. Thus the neural network learns a functional relationship between the inputs and the outputs. Now all the weights are fixed. After the training, the network is initialized with a random input vector. Output is calculated and compared with the given output. Now the error can be calculated and backpropagated to minimize the loss function and the input vector is updated. This iterative process continues until the error is less than the minimum set value.\medskip
+
+Assume that the initial input vector $i_0$ is given. Now the recursive equation of the training phase is the following: 
+\begin{equation} i_k^{t+1} = i_k+t - \eta \frac{\partial E}{\partial i_k^t} \label{eq:wlk} \end{equation} 
+$t$ - the index of the iteration \\
+$i_k^t$ - the $k$th component of the $i^t$ vector \\
+$\eta$ - the learning rate \medskip
+
+Due to the general feedforward topology, the iteration for inversion in \eqref{eq:wlk} can be solved by the dervative of 
+$$ \frac{\partial E}{\partial i_k} = \delta k ~~~~ k \in I$$
+for every $\delta k$:
+$$ \delta j = \begin{cases} \varphi'_j(o_j)(o_j-t_j):, & ~ j \in O \\ 
+\varphi'_j(o_j)\sum_{m\in H,O}\delta_j w_{jm}:, & j \in I, H \end{cases} $$
+
+\noindent $I$ - the set of input neurons\\
+$O$ - the set of output neurons\\
+$H$ - the set of hidden neurons\\
+$w_{jm}$ - the weight value from neuron $j$ to neuron $m$\\
+$\varphi'_j$ - the derivative of the $j$th neuron squashing function\\
+$o_j$ - the activation of the $j$th neuron\\
+$t_j$ - the desired output of the $j$th neuron \medskip
+
+The derivatives of the neurons need to be solved by backward order from the output to the input. Thus everything is given in the equation, but the absence of feedback, so the relationship of the neurons is only an assumption.
+
+
+
+\subsubsection{Nearest Inversion}
+
+Nearest inversion method is another single-element inversion method that can solve constrained optimization problems. The goal is to find that inverse solution that is lying nearest to a specified point. 
+Assume that $f(i)$ is a given function, $c$ is the level of the desired output and $i_0$ is the initialized point. The method is searching for that $i^*$, which satisfies $f(i^*) = c$ and be the closest to $i_0$. For describing the distance, Euclidean distance is used.
+
+\todo{constrained optimization problem (????)}
+
+
+
+\section{Problem Statement}
+
+\todo{describing the problem -> inversion!!}

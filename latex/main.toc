@@ -1,0 +1,41 @@
+\babel@toc {english}{}
+\contentsline {chapter}{Szerz\IeC {\H o}i Nyilatkozat}{1}{section*.1}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.3}
+\contentsline {chapter}{\numberline {2}Related Works}{4}{chapter.4}
+\contentsline {section}{\numberline {2.1}Data Mining}{4}{section.5}
+\contentsline {subsection}{\numberline {2.1.1}The Dataset (?)}{4}{subsection.6}
+\contentsline {section}{\numberline {2.2}Machine Learning}{5}{section.7}
+\contentsline {subsection}{\numberline {2.2.1}Artificial Neural Networks}{5}{subsection.8}
+\contentsline {subsection}{\numberline {2.2.2}Inversion}{6}{subsection.10}
+\contentsline {section}{\numberline {2.3}Python}{7}{section.11}
+\contentsline {chapter}{\numberline {3}Theoretical Background}{8}{chapter.12}
+\contentsline {section}{\numberline {3.1}Data Mining}{8}{section.13}
+\contentsline {section}{\numberline {3.2}Feedforward Neural Networks}{8}{section.17}
+\contentsline {subsection}{\numberline {3.2.1}Single-Layer Perceptron}{9}{subsection.18}
+\contentsline {subsection}{\numberline {3.2.2}Multi-Layer Perceptron}{9}{subsection.20}
+\contentsline {subsubsection}{Backpropagation}{10}{section*.21}
+\contentsline {subsubsection}{Gradient descent}{10}{section*.22}
+\contentsline {section}{\numberline {3.3}Training a MLP Model}{11}{section.24}
+\contentsline {subsection}{\numberline {3.3.1}Regression}{11}{subsection.25}
+\contentsline {subsection}{\numberline {3.3.2}Activation Functions}{12}{subsection.26}
+\contentsline {subsection}{\numberline {3.3.3}Optimization Methods}{13}{subsection.28}
+\contentsline {subsubsection}{Stochastic Gradient Descent}{13}{section*.29}
+\contentsline {subsubsection}{Adam}{13}{section*.32}
+\contentsline {subsubsection}{Limited-memory BFGS}{14}{section*.33}
+\contentsline {section}{\numberline {3.4}Inversion}{14}{section.35}
+\contentsline {subsection}{\numberline {3.4.1}Single-Element Inversion}{15}{subsection.36}
+\contentsline {subsection}{\numberline {3.4.2}Inversion Methods}{15}{subsection.37}
+\contentsline {subsubsection}{WLK Inversion}{15}{section*.38}
+\contentsline {subsubsection}{Nearest Inversion}{16}{section*.40}
+\contentsline {section}{\numberline {3.5}Problem Statement}{16}{section.42}
+\contentsline {chapter}{\numberline {4}Implementation}{17}{chapter.44}
+\contentsline {section}{\numberline {4.1}Python}{17}{section.45}
+\contentsline {subsection}{\numberline {4.1.1}Scikit-Learn}{17}{subsection.46}
+\contentsline {subsection}{\numberline {4.1.2}Training Libraries}{17}{subsection.47}
+\contentsline {subsection}{\numberline {4.1.3}Inversion Libraries}{17}{subsection.48}
+\contentsline {section}{\numberline {4.2}The Implementation (?)}{17}{section.49}
+\contentsline {subsection}{\numberline {4.2.1}Optimising/Analysing the Dataset (?)}{17}{subsection.51}
+\contentsline {subsection}{\numberline {4.2.2}Training the Neural Network}{17}{subsection.52}
+\contentsline {subsection}{\numberline {4.2.3}Inverting the MLP}{17}{subsection.53}
+\contentsline {section}{\numberline {4.3}Results}{17}{section.54}
+\contentsline {chapter}{\numberline {5}Summary}{18}{chapter.55}

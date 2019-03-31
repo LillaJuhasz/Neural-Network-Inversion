@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis 
+% LaTeX Template
+% Version 1.3 (21/12/12)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper, oneside]{Thesis} % Paper size, default font size and one-sided paper
+
+%\graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
+
+
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{flushleft}
+\Large{
+\univname\\
+\instname\\
+\deptname
+}
+\end{flushleft}
+\begin{center}
+
+
+\vspace{1cm}
+
+\includegraphics[width=0.4\linewidth]{./figures/miskolc_logo}
+
+\vspace{1cm}
+
+{\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
+
+\textsc{\Large \degreename}\\[0.5cm] % Thesis type
+ 
+ \vspace{4.6cm}
+
+\textit{Készítette:}\\
+\authornames\\
+\textsc{\authorId}
+ 
+\vspace{2cm}
+
+\textit{Témavezető:}\\
+\supname
+
+\vspace{2cm}
+
+\textbf{\the\year.}
+%\includegraphics{Logo} % University/department logo - uncomment to place it
+ 
+\vfill
+\end{center}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty}
+\phantomsection
+\addcontentsline{toc}{chapter}{Szerzői Nyilatkozat}
+%\null
+%\vfil
+%\vskip 60\p@
+\begin{center}{\huge\bf Szerző Nyilatkozat\par}\end{center}
+
+
+Alulírott Juhász Lilla, a Miskolci Egyetem Gépészmérnöki- és Informatikai Karának hallgatója büntetőjogi és fegyelmi felelősségem tudatában kijelentem és aláírásommal igazolom, hogy ezt a dolgozatot saját magam készítettem, a benne leírt vizsgálatokat – ha ezt külön nem jelzem – magam végeztem el, és az ismertetett eredményeket magam értem el. Adatokat, információkat csak az irodalomjegyzékben felsorolt forrásokból használtam fel. Minden olyan részt, melyet szó szerint, vagy azonos értelemben, de átfogalmazva más forrásból átvettem, egyértelműen, a forrás megadásával megjelöltem.\bigskip
+
+Miskolc, \today \\
+
+\vspace{2cm}
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\rule{5cm}{0.5mm} \\
+\authornames
+\end{center}
+\end{minipage}
+
+\clearpage % Start a new pag
+
+\tableofcontents
+\newpage
+
+\input{chapters/introduction}
+\input{chapters/relatedWorks}
+\input{chapters/theoreticalBackground}
+\input{chapters/implementation}
+\input{chapters/summary}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+
+\input{appendices/cd}
+
+\end{document}
