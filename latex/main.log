@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.12)  31 MAR 2019 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.12)  31 MAR 2019 21:48
 entering extended mode
 **./main.tex
 (main.tex
@@ -859,7 +859,7 @@ LaTeX Info: Redefining \nameref on input line 34.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<./figures/miskolc_logo.png, id=141, 72.27pt x 65.043pt>
+<./figures/miskolc_logo.png, id=145, 72.27pt x 65.043pt>
 File: ./figures/miskolc_logo.png Graphic file (type png)
 <use ./figures/miskolc_logo.png>
 Package pdftex.def Info: ./figures/miskolc_logo.png  used on input line 53.
@@ -898,7 +898,7 @@ Chapter 2.
 [4
 
 ] [5]
-<./figures/feedforward.png, id=222, 564.1075pt x 355.3275pt>
+<./figures/feedforward.png, id=227, 564.1075pt x 355.3275pt>
 File: ./figures/feedforward.png Graphic file (type png)
 <use ./figures/feedforward.png>
 Package pdftex.def Info: ./figures/feedforward.png  used on input line 60.
@@ -906,111 +906,99 @@ Package pdftex.def Info: ./figures/feedforward.png  used on input line 60.
  [6 <./figures/feedforward.png>]) (chapters/theoreticalBackground.tex
 [7]
 Chapter 3.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 7.
-
-Overfull \hbox (20.26427pt too wide) in paragraph at lines 7--7
-[][][][]\T1/cmr/m/n/10.95 mathematical 
- []
-
-
-Overfull \hbox (20.26427pt too wide) in paragraph at lines 7--7
-[][][][]\T1/cmr/m/n/10.95 mathematical 
- []
-
-
-LaTeX Warning: Marginpar on page 8 moved.
-
-
-LaTeX Warning: Marginpar on page 8 moved.
-
 [8
 
-]
-<./figures/perceptron.png, id=251, 1256.695pt x 487.8225pt>
+] [9] [10]
+<./figures/perceptron.png, id=263, 1256.695pt x 487.8225pt>
 File: ./figures/perceptron.png Graphic file (type png)
 <use ./figures/perceptron.png>
-Package pdftex.def Info: ./figures/perceptron.png  used on input line 39.
+Package pdftex.def Info: ./figures/perceptron.png  used on input line 122.
 (pdftex.def)             Requested size: 308.30525pt x 119.6803pt.
- [9 <./figures/perceptron.png>]
-<./figures/gradient.png, id=262, 951.555pt x 531.9875pt>
-File: ./figures/gradient.png Graphic file (type png)
-<use ./figures/gradient.png>
-Package pdftex.def Info: ./figures/gradient.png  used on input line 87.
-(pdftex.def)             Requested size: 267.58063pt x 149.60364pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10] [11 <./figures/gradient.png>]
-<./figures/functions.png, id=275, 1559.8275pt x 540.0175pt>
+[11] [12 <./figures/perceptron.png>]
+<./figures/gradient.png, id=282, 951.555pt x 531.9875pt>
+File: ./figures/gradient.png Graphic file (type png)
+<use ./figures/gradient.png>
+Package pdftex.def Info: ./figures/gradient.png  used on input line 170.
+(pdftex.def)             Requested size: 267.58063pt x 149.60364pt.
+ [13 <./figures/gradient.png>]
+<./figures/functions.png, id=290, 1559.8275pt x 540.0175pt>
 File: ./figures/functions.png Graphic file (type png)
 <use ./figures/functions.png>
-Package pdftex.def Info: ./figures/functions.png  used on input line 127.
+Package pdftex.def Info: ./figures/functions.png  used on input line 210.
 (pdftex.def)             Requested size: 432.10753pt x 149.60364pt.
 
-Overfull \hbox (4.676pt too wide) in paragraph at lines 127--128
+Overfull \hbox (4.676pt too wide) in paragraph at lines 210--211
  [][] 
  []
 
 
-LaTeX Warning: Citation `veerarajan2007numerical' on page 12 undefined on input
- line 143.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14]
+
+LaTeX Warning: Citation `veerarajan2007numerical' on page 15 undefined on input
+ line 226.
 
 
-LaTeX Warning: Citation `pillo2013nonlinear' on page 12 undefined on input line
- 143.
+LaTeX Warning: Citation `pillo2013nonlinear' on page 15 undefined on input line
+ 226.
 
-[12 <./figures/functions.png>]
-<./figures/stochastic.png, id=285, 483.60675pt x 177.0615pt>
+<./figures/stochastic.png, id=296, 483.60675pt x 177.0615pt>
 File: ./figures/stochastic.png Graphic file (type png)
 <use ./figures/stochastic.png>
-Package pdftex.def Info: ./figures/stochastic.png  used on input line 151.
-(pdftex.def)             Requested size: 350.26277pt x 128.23076pt.
- [13 <./figures/stochastic.png>]
-Overfull \hbox (3.98155pt too wide) in paragraph at lines 178--179
+Package pdftex.def Info: ./figures/stochastic.png  used on input line 234.
+(pdftex.def)             Requested size: 326.89273pt x 119.6803pt.
+[15 <./figures/functions.png> <./figures/stochastic.png>]
+Overfull \hbox (3.98155pt too wide) in paragraph at lines 261--262
 \T1/cmr/m/n/10.95 Limited-memory BFGS is an ap-prox-i-ma-tion of Broy-denFletc
 herGoldfarbShanno (BFGS)
  []
 
-<./figures/optimization.png, id=298, 259.97125pt x 194.7275pt>
+<./figures/optimization.png, id=308, 259.97125pt x 194.7275pt>
 File: ./figures/optimization.png Graphic file (type png)
 <use ./figures/optimization.png>
-Package pdftex.def Info: ./figures/optimization.png  used on input line 189.
+Package pdftex.def Info: ./figures/optimization.png  used on input line 272.
 (pdftex.def)             Requested size: 194.02194pt x 145.32515pt.
-[14 <./figures/optimization.png>] [15]
-Overfull \hbox (10.04504pt too wide) in paragraph at lines 270--270
+[16] [17 <./figures/optimization.png>] [18]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 351.
+
+Overfull \hbox (10.04504pt too wide) in paragraph at lines 351--351
 [][][][]\T1/cmr/m/n/10.95 constrained 
  []
 
 
-Overfull \hbox (10.04504pt too wide) in paragraph at lines 270--270
+Overfull \hbox (10.04504pt too wide) in paragraph at lines 351--351
 [][][][]\T1/cmr/m/n/10.95 constrained 
  []
 
 
-Overfull \hbox (3.39218pt too wide) in paragraph at lines 276--276
+Overfull \hbox (3.39218pt too wide) in paragraph at lines 357--357
 [][][][]\T1/cmr/m/n/10.95 describing 
  []
 
 
-Overfull \hbox (3.39218pt too wide) in paragraph at lines 276--276
+Overfull \hbox (3.39218pt too wide) in paragraph at lines 357--357
 [][][][]\T1/cmr/m/n/10.95 describing 
  []
 
 ) (chapters/implementation.tex
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 19 moved.
 
-[16]
+[19]
 Chapter 4.
-) (chapters/summary.tex [17
+) (chapters/summary.tex [20
 
 ]
 Chapter 5.
-) (main.bbl [18
+) (main.bbl [21
 
-]) (appendices/cd.tex) [19
+]) (appendices/cd.tex) [22
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
@@ -1019,7 +1007,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 62FC344B322782DF923733B3FCAE592C;5554.
+(rerunfilecheck)             Checksum: C0C2415F39E01C6B6D2A4427AF9FBD2F;5738.
 
 
 LaTeX Warning: There were undefined references.
@@ -1027,10 +1015,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 23736 strings out of 492970
- 414392 string characters out of 3133676
- 572307 words of memory out of 3000000
- 27085 multiletter control sequences out of 15000+200000
+ 23717 strings out of 492970
+ 413886 string characters out of 3133676
+ 567307 words of memory out of 3000000
+ 27062 multiletter control sequences out of 15000+200000
  18886 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,9n,77p,819b,712s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1056,9 +1044,9 @@ amsfonts/cm/cmr8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/sym
 bols/msbm10.pfb>
-Output written on main.pdf (20 pages, 812800 bytes).
+Output written on main.pdf (23 pages, 822726 bytes).
 PDF statistics:
- 811 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 312 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 829 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 320 words of extra memory for PDF output out of 10000 (max. 10000000)
 

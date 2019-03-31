@@ -2,11 +2,94 @@
 
 \section{Data Mining}
 
-Data mining's applying techniques come from a wider field called \textbf{data analytics}. In a simple explanation data analytics is the process of examining data sets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analysis on existing data sets. A widely used data analytics technique is machine learning, because it can process data sets more quickly than it can be done via conventional analytical modeling. Machine learning automates model building, due to it relies on patterns and inferences, instead of explicit instructions.
+Data mining is a subfield of computer science and statistics that uses machine learning and statistical methods to discover patterns in large data sets. Data mining has various stages to process knowledge and all of the stages run different methods to collect the appropriate datas.\medskip
 
-\todo{mathematical background, tools......}
-\todo{data mining techniques, crucial concepts of data mining}
-\todo{data cleaning (?)}
+The first and most important part is to select the dataset which will be processed. This means two things. Firstly the goal needs to be drawed up. Secondly the information that seems to be useful for the goal needs to be selected. \smallskip
+
+\noindent To decide the usefulness of a feature, it needs to pass a set of quality criteria.
+\begin{verse}
+	$\bullet$ Validity: the degree to which the measures conform to defined business rules or constraints\\
+	$\bullet$ Accuracy: the degree of conformity of a measure to a standard or a true value\\
+	$\bullet$ Completeness: the degree to which all required measures are known\\
+	$\bullet$ Consistency: the degree to which a set of measures are equivalent in across systems\\
+	$\bullet$ Uniformity: the degree to which a set data measures are specified using the same units of measure in all systems
+\end{verse}
+
+After the features has selected, they are just raw data and need a revision to reduce the amount of further data cleaning. There are some other criteria for the qualities of good features. \smallskip
+
+Good feature values should appear more times in a data set. It enables a model to learn how this feature value relates to the label. This means having many examples with the same value helps the model to see the feature in different settings to determine when it is a good predictor. Also, each feature should have a clear and obvious meaning to anyone. 
+
+
+\subsection{Preprocessing}
+
+Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. The selected dataset may include errors, missing values or noisy, inconsistent datas. During the preprocessing stage, these datas need to be filtered out. \smallskip
+
+Data preparation and filtering steps can take considerable amount of processing time. Data preprocessing includes cleaning, integration and reduction. Sometimes data transformation takes place in the preprocessing too. The product of data preprocessing is the final training set.
+
+
+\subsubsection{Data cleaning}
+
+The given data in large datasets often contains information that is not clear enough. That can happen from a number of reasons. For example the data can be incomplete as lacking attribute values or certain attributes of interest. The data can be inconsistent or noisy too if it contains errors or too much outlier values that deviates from the expected. There are several techniques for repairing these useless datas.\medskip
+
+\noindent For missing values, there are two things can be done:\\
+1. Simply ignore the tuple, which is only effective if the tuple contains several missing attributes\\
+2. Fill the missing values manually, that can be done with the mean value or a global constant (like $\infty$)\\
+Both techniques can cause noise and inaccuracy, but the current tuple may contain important information too.\smallskip
+
+Noise is a random error or variance in a measured variable. Noisy data needs to be smoothed to get the accurate prediction. "Binning" methods smoothes the value with its neighbour's, so it is just a local smoothing technique. Clustering can be used to detect outlier values by organizing them into similar groups. Data can be smoothed by fitting the data to a function such as regression.\smallskip
+
+Data inconsistencies can be solved manually by external references, or with the use of knowledge engineering.
+
+
+\subsubsection{Integration and Reduction}
+
+Data integration and reduction aims on the same goal, to have a smaller dataset. During integration, an algorithm is looking through the dataset and looking for redundacies and multiple data. \medskip
+
+Data reduction is reducing the volume or the dimension of the dataset, without compromising the integrity of the original dataset. As the analysing can be time consuming, these data reduction techniques are really helpful in large datasets:\\
+1. Dimension reduction: drop the irrelevant or weakly relevant values from the dataset\\
+2. Data compression: use various encoding techniques to reduce the size of the dataset
+
+
+\subsubsection{Transformation and Future Scaling}
+
+Some features of the dataset need some transformation to get an appropriate form for mining. Data transformation involves a bunch of statistical techniques, called future scaling. \smallskip
+
+Future scaling is a method used to standardize the range of the data. The raw data have a wide range of values that can make noisy data, and in some machine learning algorithms, objective functions will not work properly without normalization. To scale the range of the datas, mathematical procedures can be used.\medskip
+
+\textbf{Normalization} is the process of scaling individual samples to have unit norm. Min-max scaling or min-max normalization is the simplest method that rescales the range of features to $[0, 1]$ or $[-1, 1]$. Selecting the target range depends on the nature of the data. The general formula is given as:
+$$ x' = \frac{x-min(x)}{max(x)-min(x)} $$
+where $x$ is the original value and $x'$ is the normalized value.\\
+Mean normalization is similar to min-max scaling, where $\bar x = average(x)$:
+$$ x' = \frac{x-\bar x}{max(x)-min(x)} $$ \medskip
+
+\textbf{Standardization} of datasets is a common method to transform the given data as if they comes from standard normally distributed data set. Feature standardization makes the values of each feature in the data have zero-mean and unit-variance. \smallskip
+	
+In practice the shape of the distribution is often ignored and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.
+$$ x'= \frac{x-\bar x}{\sigma} $$
+where $x$ is the original feature vector, $\bar x$ is the mean of that feature vector and $\sigma$ is its standard deviation.\bigskip
+
+\textbf{Encoding} is the process of converting data into a form that is  required for a number of information processing needs. It can be used effectively on categorical features since they have a discrete set of possible values. \smallskip
+
+Integer encoding converts the nomimal values to numeric values, but it will impose some constraints. These numeric values are integers in increasing order, so they can be problematic during the training process. They can cause inconsistency with the given weights.\smallskip
+
+One-hot encoding offers a solution for this problem. It creates a binary vector for each categorical feature in the model that represents values as follows:\\
+$\bullet$ For values that apply to the example, set corresponding vector elements to 1.\\
+$\bullet$ Set all other elements to 0.\\
+The length of this vector is equal to the number of elements in that current feature set.
+
+
+\subsection{Data Mining Algorithms}
+
+After the appropriate training set is given, the following data mining techniques can be used to discover the patterns:\\
+1. Classification: this method helps to classify data in different classes\\
+2. Clustering: identifies data that are like each other to understand the differences and similarities between the data\\
+3. Regression: this is the method of identifying and analyzing the relationship between variables\\
+4. Association: it discovers a hidden pattern in the data set\\
+5. Outer detection: collects the data which do not match an expected pattern or expected behavior\\
+6. Sequential Patterns: this method helps to discover or identify similar patterns or trends in transaction data for certain period\\
+7. Prediction: it analyzes past events or instances in a right sequence for predicting a future event \medskip
+
+Data mining's applying techniques come from a wider field called \textbf{data analytics}. In a simple explanation data analytics is the process of examining data sets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analysis on existing data sets. A widely used data analytics technique is machine learning, because it can process data sets more quickly than it can be done via conventional analytical modeling. Machine learning automates model building, due to it relies on patterns and inferences, instead of explicit instructions.
 
 
 
@@ -148,8 +231,8 @@ Artificial neural networks have different phases in the process of their operati
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[height=0.3\linewidth]{./figures/stochastic}
-	\caption{The difference between the process of the gradient descent and the stochastic gradient descent methods}
+	\includegraphics[height=0.28\linewidth]{./figures/stochastic}
+	\caption{The difference between the process of GD and SGD methods}
 	\label{fig:stochastic}
 \end{figure}
 Stochastic gradient descent \cite{Bottou2012} is a stochastic approximation of gradient descent optimization, used effectively in large-scaled data sets. It can also work in a system of linear and non-linear equations and can effectively solve unconstrained optimization problems. In constrant to gradient descent, the stochastic method can approximate the true gradient of the cost function because it updates the parameters for each training example, one by one. To demonstrate assume that $\eta$ is the learning rate, $L$ stands for the loss function and $\nabla_w L = \frac{\partial L}{\partial w}$ is the gradient. Now the update equation of the weights $w$ in each iteration is:
@@ -250,9 +333,7 @@ for every $\delta k$:
 $$ \delta j = \begin{cases} \varphi'_j(o_j)(o_j-t_j):, & ~ j \in O \\ 
 \varphi'_j(o_j)\sum_{m\in H,O}\delta_j w_{jm}:, & j \in I, H \end{cases} $$
 
-\noindent $I$ - the set of input neurons\\
-$O$ - the set of output neurons\\
-$H$ - the set of hidden neurons\\
+\noindent $I, O, H$ - the set of input, output and hidden neurons\\
 $w_{jm}$ - the weight value from neuron $j$ to neuron $m$\\
 $\varphi'_j$ - the derivative of the $j$th neuron squashing function\\
 $o_j$ - the activation of the $j$th neuron\\
