@@ -1,15 +1,29 @@
 \chapter{Implementation}
 
+This work belongs in the realm of machine learning application research. There are three main tasks examinated in this paper: data mining for extracting information from a data set, building and testing multilayer perceptron models for, and inverting these feedforward neural network models. \medskip
+
+The first task is to choose a dataset which contains usable data. The selected one is called the Online News Popularity Dataset by Mashable news, that was served by the  \href{http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity}{UCI's Machine Learning Repository}. \smallskip
+
+The dataset is preprocessed by Pandas to get is ready for data mining. Since being a publicly available dataset, its preprocessing and transformation has already made, but the dataset even needs some cleaning, like scaling, with the assistance of Scikit-Learn. Then the training set is made for the training.\smallskip
+
+The training phase consists of the application of machine learning techniques. With the utilization of the inputs, Scikit-Learn trains the training dataset and make predictions to the testing set. The training is very time consuming, since the used dataset is very large, and also the length is depending on the amount of attributes of multi-layer perceptron models. In the end of each process, the testing set's output and the predicted output are compared and the difference between them is calculated. If all of the iterations are ended, the best estimator's parameters are shown with its score, and the tested target values and the predicted ones are plotted by Matplotlib.\smallskip
+
+From the results of the training, the single-element inversion can be performed by Scikit-Learn. It is an iterative process, where the target values are the new predictors with the knowledge comes from the other features. Every iteration calculates one single feature's values and also its accuracy between the feature's original and the calculated values. The results are also plotted by Matplotlib. \smallskip
+
+These results show the influence of the features to the target. The larger the score, the more important the feature is.
+
 
 
 \section{Python}
 
-asd
+Python can be used effectively with the assistance of some of its third-party libraries \cite{g2015learning} \cite{bressert2012scipy}, which provide numerous effective and easy-to-use models in scientific research. 
 
 
 \subsection{Training Libraries}
 
-asd
+Scikit-Learn is a free Python package, that is a separately-developed and distributed third-party extension to SciPy. It integrates classic machine learning algorithms into the scientific Python packages. Scikit-Learn can be used to solve multi-layer neural network learning problems. Among many others, it features various classification, regression and clustering algorithms.
+
+\todo{more libraries, descriptions}
 
 
 \subsection{Inversion Libraries}

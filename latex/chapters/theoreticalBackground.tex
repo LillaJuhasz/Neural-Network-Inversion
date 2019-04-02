@@ -323,8 +323,8 @@ During the training, the neural network is trained to learn a mapping from input
 
 Assume that the initial input vector $i_0$ is given. Now the recursive equation of the training phase is the following: 
 \begin{equation} i_k^{t+1} = i_k+t - \eta \frac{\partial E}{\partial i_k^t} \label{eq:wlk} \end{equation} 
-$t$ - the index of the iteration \\
-$i_k^t$ - the $k$th component of the $i^t$ vector \\
+$t$ - the index of the iteration, \\
+$i_k^t$ - the $k$th component of the $i^t$ vector, \\
 $\eta$ - the learning rate \medskip
 
 Due to the general feedforward topology, the iteration for inversion in \eqref{eq:wlk} can be solved by the dervative of 
@@ -333,10 +333,10 @@ for every $\delta k$:
 $$ \delta j = \begin{cases} \varphi'_j(o_j)(o_j-t_j):, & ~ j \in O \\ 
 \varphi'_j(o_j)\sum_{m\in H,O}\delta_j w_{jm}:, & j \in I, H \end{cases} $$
 
-\noindent $I, O, H$ - the set of input, output and hidden neurons\\
-$w_{jm}$ - the weight value from neuron $j$ to neuron $m$\\
-$\varphi'_j$ - the derivative of the $j$th neuron squashing function\\
-$o_j$ - the activation of the $j$th neuron\\
+\noindent $I, O, H$ - the set of input, output and hidden neurons,\\
+$w_{jm}$ - the weight value from neuron $j$ to neuron $m$,\\
+$\varphi'_j$ - the derivative of the $j$th neuron squashing function,\\
+$o_j$ - the activation of the $j$th neuron,\\
 $t_j$ - the desired output of the $j$th neuron \medskip
 
 The derivatives of the neurons need to be solved by backward order from the output to the input. Thus everything is given in the equation, but the absence of feedback, so the relationship of the neurons is only an assumption.
@@ -354,4 +354,13 @@ Assume that $f(i)$ is a given function, $c$ is the level of the desired output a
 
 \section{Problem Statement}
 
-\todo{describing the problem -> inversion!!}
+This case study aims on to make the inversion of a single-element feedforward neural network. However the implementation of the inversion is just the last step during the process, due to it needs a lot of preprocessing to make the appropriate model.\smallskip
+
+There are three main tasks are being tackled in this paper: data mining for extracting information from the data set, neural networks for training the data set, and the inversion itself. The most important thing which interweaves these tasks is machine learning.\medskip
+
+First, the appropriate dataset was selected. This is the Online News Popularity dataset of Mashable News. It is well-usable, due to it contains information that is already preprocessed and transformed into a usable dataset. However the dataset was not even prepared for applying data mining techniques, it needed some cleaning. There were a lot of outlying values that should be handled, and the dataset necessiated a standard scaling. Furthermore as the dataset is large-scaled, the less important features were simply removed. After this processing phase the dataset was splitted into training and testing sets.\smallskip
+
+The dataset is ready to be trained. To solve the training, different multi-layer perceptron models was fitted on the training set with various parameters. These attributes changed in their hidden layer sizes, activation functions, optimization algorithms, learning rate sizes and alpha values. Due to the huge amount of combination of the parameters, the training was a really long process, but a necessary step to find the most accurate one. In the end of all of the iterations the test set was used for predicting new target values. \smallskip
+
+After prediction, inversion can be applied on the dataset. WLK inversion algorithm was used, since it uses gradient descent like the multi-layer perceptron. As a single-element search method, only one point is found by the algorithm in every single process. \todo{FINISH!!!}
+
