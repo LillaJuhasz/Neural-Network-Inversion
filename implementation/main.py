@@ -119,9 +119,52 @@ gs.fit(X_train, y_train)
 print(gs.best_params_)
 print(gs.score(X_test, y_test))
 y_pred = gs.predict(X_test)
+print("shares", gs.best_params_, gs.score(X_test,y_test), sep='; ', file=open('InversionResults.txt', 'a'))
 
 ###################################################################
 
 with open('gridSearchResults.txt', 'a') as f:
     print("{} \n \n {} \n  \n Best Estimator: \n {} \n with {}".format(
         param_grid, gs.cv_results_, gs.best_estimator_, gs.best_score_), file=f)
+
+###################################################################
+
+plt.plot(X_test, y_test, 'o', color='blue')
+plt.plot(X_test, y_pred, 'o', color='orange')
+plt.savefig("plots/"+ 'shares_prediction.pdf')
+plt.show()
+
+
+############################# INVERSION ###########################
+
+X = pd.DataFrame(X)
+X.columns = ds_copy.drop(columns='shares').columns
+
+for i in X:
+    X2 = X.drop(columns=i).values
+    X2_a = pd.DataFrame(y_train)
+    y_pred = pd.DataFrame(y_pred)
+
+    for value in y_pred.values:
+        value = pd.Series(value)
+        X2_a = X2_a.append(value, ignore_index=True)
+    X2 = pd.DataFrame(X2)
+    X2.insert(0, "shares", X2_a)
+    X2 = X2.values
+
+    y2 = X.get(key=i).values
+
+    X2_train, X2_test, y2_train, y2_test = train_test_split(
+        X2, y2, test_size=0.3, random_state=0, shuffle=True)
+
+    gs.fit(X2_train, y2_train)
+
+    print(gs.best_params_)
+    print(gs.score(X2_test, y2_test))
+    y2_pred = gs.predict(X2_test)
+    print(i, gs.best_params_, gs.score(X2_test, y2_test), sep='; ', file=open('InversionResults.txt', 'a'))
+
+    plt.plot(X2_test, y2_test, 'o', color='blue')
+    plt.plot(X2_test, y2_pred, 'o', color='orange')
+    plt.savefig("plots/" + str(i) + '_prediction.pdf')
+    plt.show()
