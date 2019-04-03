@@ -7,6 +7,12 @@ Craig A.~Jensen, Russell D.~Reed, Robert J~Marks, Mohamed El-Sharkawi,
   applications.
 \newblock 02 2001.
 
+\bibitem{bengfort2018applied}
+B.~Bengfort, R.~Bilbro, and T.~Ojeda.
+\newblock {\em Applied Text Analysis with Python: Enabling Language-Aware Data
+  Products with Machine Learning}.
+\newblock O'Reilly Media, 2018.
+
 \bibitem{Bottou2012}
 L{\'e}on Bottou.
 \newblock {\em Stochastic Gradient Descent Tricks}, pages 421--436.
@@ -16,6 +22,11 @@ L{\'e}on Bottou.
 E.~Bressert.
 \newblock {\em SciPy and NumPy}.
 \newblock Oreilly and Associate Series. O'Reilly, 2012.
+
+\bibitem{chen2017pandas}
+D.Y. Chen.
+\newblock {\em Pandas for Everyone: Python Data Analysis}.
+\newblock Addison-Wesley Data \& Analytics Series. Pearson Education, 2017.
 
 \bibitem{Fernandes2015API}
 Kelwin Fernandes, Pedro Vinagre, and Paulo Cortez.
