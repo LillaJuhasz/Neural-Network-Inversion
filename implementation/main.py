@@ -1,87 +1,29 @@
 import pandas as pd
-import numpy as np
-from numpy import array
-import seaborn as sns
 import matplotlib.pyplot as plt
-import sklearn as sk
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.neural_network import MLPRegressor
 
 
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
-pd.set_option('display.width', 1000)
+dataset = pd.read_csv('OnlineNewsPopularity.csv')
+dataset_copy = dataset.drop(columns=['url','timedelta'])
 
-
-ds = pd.read_csv('OnlineNewsPopularity.csv')
-ds_copy = ds.drop(columns='url')
-#ds_corr = ds.corr()
-
-'''ds_norm= (ds_corr - ds_corr.values.min(0)) / ds_corr.values.ptp(0)
-print(ds_norm, file=open('news_norm.txt', 'a'))'''
-
-
-
-####################### FEATURE CROSSING #########################
-
-
-data_channels = ds_copy[['data_channel_is_lifestyle', 'data_channel_is_entertainment',
-                        'data_channel_is_bus', 'data_channel_is_socmed', 'data_channel_is_tech',
-                        'data_channel_is_world']]
-data_channels = list(data_channels.values)
-ds_copy.insert(60, 'data_channels', data_channels)
-
-##################################################################
-
-weeks = ds_copy[['weekday_is_monday', 'weekday_is_tuesday', 'weekday_is_wednesday',
-                 'weekday_is_thursday', 'weekday_is_friday', 'weekday_is_saturday',
-                 'weekday_is_sunday']]
-weeks = list(weeks.values)
-ds_copy.insert(61, "weeks", weeks)
-
+#dataset_copy.describe()
 
 
 ##################### DROP USELESS FEATURES ######################
 
 
-ds_copy = ds_copy.drop(columns=['timedelta', 'data_channel_is_lifestyle', 'data_channel_is_entertainment',
-                        'data_channel_is_bus', 'data_channel_is_socmed', 'data_channel_is_tech',
-                        'data_channel_is_world', 'weekday_is_monday', 'weekday_is_tuesday',
-                        'weekday_is_wednesday', 'weekday_is_thursday', 'weekday_is_friday',
-                        'weekday_is_saturday', 'weekday_is_sunday', 'is_weekend'])
+dataset_copy = dataset_copy[dataset_copy.n_tokens_content != 0]
+dataset_copy = dataset_copy[dataset_copy.n_unique_tokens < 1]
+dataset_copy = dataset_copy[dataset_copy.average_token_length != 0]
 
-ds_copy = ds_copy.drop(columns=['data_channels','weeks'])
-
-##################################################################
-
-ds_copy = ds_copy[ds_copy.n_unique_tokens < 1]
-ds_copy = ds_copy[ds_copy.n_tokens_content != 0]
-ds_copy = ds_copy[ds_copy.n_unique_tokens != 0]
-ds_copy = ds_copy[ds_copy.average_token_length != 0]
-ds_copy = ds_copy[ds_copy.num_hrefs <= 100]
-ds_copy = ds_copy[ds_copy.num_self_hrefs <= 10]
-ds_copy = ds_copy[ds_copy.num_imgs <= 10]
-ds_copy = ds_copy[ds_copy.num_videos <= 2]
-ds_copy = ds_copy.reset_index(drop=True)
-
-
-
-####################### DISPLAYS AND PLOTS #######################
-
-
-#print(ds_copy.describe())
-#print(ds_copy.describe(), file=open('corr_describe.txt', 'w'))
-
-'''mask = np.zeros_like(ds_corr, dtype=np.bool)
-mask[np.triu_indices_from(mask)] = True
-f, ax = plt.subplots(figsize=(11, 9))
-cmap = sns.diverging_palette(220, 10, as_cmap=True)
-sns.heatmap(ds_corr, mask=mask, cmap=cmap, vmax=.3, center=0, square=True, linewidths=.5,
-            annot=True, annot_kws={"size": 5}, fmt='1.1f', cbar_kws={"shrink": .5})
-plt.show()'''
+dataset_copy = dataset_copy[dataset_copy.num_hrefs <= 100]
+dataset_copy = dataset_copy[dataset_copy.num_self_hrefs <= 10]
+dataset_copy = dataset_copy[dataset_copy.num_imgs <= 10]
+dataset_copy = dataset_copy[dataset_copy.num_videos <= 2]
+dataset_copy = dataset_copy.reset_index(drop=True)
 
 
 
@@ -89,10 +31,10 @@ plt.show()'''
 
 
 scaler = StandardScaler()
-ds_copy[:]=scaler.fit_transform(ds_copy[:])
+dataset_copy[:] = scaler.fit_transform(dataset_copy[:])
 
-y = ds_copy.get(key='shares').values
-X = ds_copy.drop(columns='shares').values
+y = dataset_copy.get(key='shares').values
+X = dataset_copy.drop(columns='shares').values
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=0)
@@ -113,58 +55,59 @@ param_grid = {
 }
 gs = GridSearchCV(mlp, param_grid, cv=2)
 gs.fit(X_train, y_train)
+y_pred = gs.predict(X_test)
 
 ###################################################################
 
 print(gs.best_params_)
 print(gs.score(X_test, y_test))
-y_pred = gs.predict(X_test)
-print("shares", gs.best_params_, gs.score(X_test,y_test), sep='; ', file=open('InversionResults.txt', 'a'))
+print('shares', gs.best_params_, gs.score(X_test,y_test), sep='; ',
+      file=open('InversionResults.txt', 'a'))
 
-###################################################################
-
-with open('gridSearchResults.txt', 'a') as f:
-    print("{} \n \n {} \n  \n Best Estimator: \n {} \n with {}".format(
-        param_grid, gs.cv_results_, gs.best_estimator_, gs.best_score_), file=f)
+with open('gridSearchResults.txt', 'a') as f:print(
+    "{} \n \n {} \n  \n Best Estimator: \n {} \n with "
+    "{}".format(param_grid, gs.cv_results_, gs.best_estimator_,
+                gs.best_score_), file=f)
 
 ###################################################################
 
 plt.plot(X_test, y_test, 'o', color='blue')
 plt.plot(X_test, y_pred, 'o', color='orange')
-plt.savefig("plots/"+ 'shares_prediction.pdf')
+plt.savefig('plots/' + 'shares_prediction.pdf')
 plt.show()
 
 
 ############################# INVERSION ###########################
 
 X = pd.DataFrame(X)
-X.columns = ds_copy.drop(columns='shares').columns
+X.columns = dataset_copy.drop(columns='shares').columns
 
-for i in X:
-    X2 = X.drop(columns=i).values
-    X2_a = pd.DataFrame(y_train)
+for X_value in X:
+    X_inverse = X.drop(columns=X_value).values
+    X_inverse_help = pd.DataFrame(y_train)
     y_pred = pd.DataFrame(y_pred)
 
-    for value in y_pred.values:
-        value = pd.Series(value)
-        X2_a = X2_a.append(value, ignore_index=True)
-    X2 = pd.DataFrame(X2)
-    X2.insert(0, "shares", X2_a)
-    X2 = X2.values
+    for y_pred_value in y_pred.values:
+        y_pred_value = pd.Series(y_pred_value)
+        X_inverse_help = X_inverse_help.append(y_pred_value, ignore_index=True)
 
-    y2 = X.get(key=i).values
+    X_inverse = pd.DataFrame(X_inverse)
+    X_inverse.insert(0,'shares',X_inverse_help)
+    X_inverse = X_inverse.values
 
-    X2_train, X2_test, y2_train, y2_test = train_test_split(
-        X2, y2, test_size=0.3, random_state=0, shuffle=True)
+    y_inverse = X.get(key=X_value).values
 
-    gs.fit(X2_train, y2_train)
+
+    X_inverse_train, X_inverse_test, y_inverse_train, y_inverse_test = train_test_split(X_inverse, y_inverse, test_size=0.3, random_state=0)
+
+    gs.fit(X_inverse_train, y_inverse_train)
+    y_inverse_pred = gs.predict(X_inverse_test)
 
     print(gs.best_params_)
-    print(gs.score(X2_test, y2_test))
-    y2_pred = gs.predict(X2_test)
-    print(i, gs.best_params_, gs.score(X2_test, y2_test), sep='; ', file=open('InversionResults.txt', 'a'))
+    print(gs.score(X_inverse_test, y_inverse_test))
+    print(X_value, gs.best_params_, gs.score(X_inverse_test,y_inverse_test), sep='; ', file=open('InversionResults.txt', 'a'))
 
-    plt.plot(X2_test, y2_test, 'o', color='blue')
-    plt.plot(X2_test, y2_pred, 'o', color='orange')
-    plt.savefig("plots/" + str(i) + '_prediction.pdf')
+    plt.plot(X_inverse_test, y_inverse_test, 'o', color='blue')
+    plt.plot(X_inverse_test, y_inverse_pred, 'o', color='orange')
+    plt.savefig('plots/' + str(X_value) + '_prediction.pdf')
     plt.show()
