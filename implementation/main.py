@@ -98,7 +98,8 @@ for X_value in X:
     y_inverse = X.get(key=X_value).values
 
 
-    X_inverse_train, X_inverse_test, y_inverse_train, y_inverse_test = train_test_split(X_inverse, y_inverse, test_size=0.3, random_state=0)
+    X_inverse_train, X_inverse_test, y_inverse_train, y_inverse_test = \
+        train_test_split(X_inverse, y_inverse, test_size=0.3, random_state=0)
 
     gs.fit(X_inverse_train, y_inverse_train)
     y_inverse_pred = gs.predict(X_inverse_test)
