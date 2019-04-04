@@ -64,11 +64,6 @@ print(gs.score(X_test, y_test))
 print('shares', gs.best_params_, gs.score(X_test,y_test), sep='; ',
       file=open('InversionResults.txt', 'a'))
 
-with open('gridSearchResults.txt', 'a') as f:print(
-    "{} \n \n {} \n  \n Best Estimator: \n {} \n with "
-    "{}".format(param_grid, gs.cv_results_, gs.best_estimator_,
-                gs.best_score_), file=f)
-
 ###################################################################
 
 plt.plot(X_test, y_test, 'o', color='blue')
