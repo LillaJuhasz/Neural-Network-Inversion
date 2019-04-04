@@ -2,17 +2,17 @@
 
 \section{Problem Statement}
 
-This case study aims on to make the inversion of a single-element feedforward neural network. However the implementation of the inversion is just the last step during the process, due to it needs a lot of preprocessing to make the appropriate model.\smallskip
+This case study aims on to make the inversion of a single-element feedforward neural network. However the implementation of the inversion is just the last step during the process, due to it needs a lot of preprocessing to make the appropriate model.\medskip
 
-This work belongs in the realm of machine learning application research. There are three main tasks examinated in this paper: data mining for extracting information from a data set, building and testing multilayer perceptron models for, and inverting these feedforward neural network models. \medskip
+This work belongs in the realm of machine learning application research. There are three main tasks examinated in this paper: data mining for extracting information from a data set, building and testing multilayer perceptron models for, and inverting these feedforward neural network models. \bigskip
 
 The first task is to choose a dataset which contains usable data. The selected one is called the Online News Popularity Dataset by Mashable news, that was served by the  \href{http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity}{UCI's Machine Learning Repository}. \smallskip
 
-The dataset is preprocessed by Pandas to be ready for data mining. Since being a publicly available dataset, its preprocessing and transformation has already made, but the dataset even needs some cleaning with the assistance of Scikit-Learn. The dataset contains a lot of outlying values that should be handled, and the dataset necessiates a standard scaling. Furthermore as the dataset is large-scaled, the less important features are simply removed. After this processing phase the dataset can be splitted into training and testing sets by Scikit-Learn. \smallskip
+The dataset is preprocessed by Pandas to a DataDrame to be ready for data mining. Since being a publicly available dataset, its preprocessing and transformation has already made, but the dataset even needs some cleaning with the assistance of Scikit-Learn. The dataset contains a lot of outlying values that should be handled, and the dataset necessiates a standard scaling. Furthermore as the dataset is large-scaled, the less important features are simply removed. Then the dataset can be splitted into training and testing sets by Scikit-Learn. \medskip
 
-The training phase consists of the application of machine learning techniques. Different multi-layer perceptron models are fitted on the training set with various parameters. These attributes changed in their hidden layer sizes, activation functions, optimization algorithms, learning rate sizes and alpha values. With the utilization of the inputs, Scikit-Learn trains the training dataset and make predictions to the testing set. The training is very time consuming, since the used dataset is very large, and also the length is depending on the amount of attributes of multi-layer perceptron models. In the end of each process, the testing set's output and the predicted output are compared and the difference between them is calculated. If all of the iterations are ended, the best estimator's parameters are shown with its score, and the tested target values and the predicted ones are plotted by Matplotlib.\smallskip
+The training phase consists of the application of machine learning techniques. Different multi-layer perceptron models are fitted on the training set with various parameters. These attributes changed in their hidden layer sizes, activation functions, optimization algorithms, learning rate sizes and alpha values. With the utilization of the inputs, Scikit-Learn trains the training dataset and make predictions to the testing set. The training is very time consuming, since the used dataset is very large, and also the length is depending on the amount of attributes of multi-layer perceptron models. In the end of each process, the testing set's output and the predicted output are compared and the difference between them is calculated. If all of the iterations are ended, the best estimator's parameters are shown with its score, and the tested target values and the predicted ones are plotted by Matplotlib.\medskip
 
-From the results of the training, the single-element inversion can be performed by Scikit-Learn. It is an iterative process, where the target values are the new predictors with the knowledge comes from the other features. Every iteration calculates one single feature's values and also its accuracy between the feature's original and the calculated values. The results are also plotted by Matplotlib. \smallskip
+From the results of the training, the single-element inversion can be performed by Scikit-Learn. It is an iterative process, where the target values are the new predictors with the knowledge comes from the other features. Every iteration calculates one single feature's values and the accuracy between the feature's original and the calculated values. The results are also plotted by Matplotlib. \medskip
 
 These results show the influence of the features to the target. The larger the score, the more important the feature is.
 
@@ -20,7 +20,7 @@ These results show the influence of the features to the target. The larger the s
 
 \subsection{Used Third-Party Libraries}
 
-Python can be used effectively with the assistance of some of its third-party libraries \cite{g2015learning} \cite{bressert2012scipy}, which provide numerous effective and easy-to-use models in scientific research. \medskip
+Python can be used effectively with the assistance of some of its third-party libraries \cite{g2015learning} \cite{bressert2012scipy}, which provide numerous effective and easy-to-use models in scientific research. \bigskip
 
 \textbf{Pandas} \cite{chen2017pandas} is an open source library providing high-performance, easy-to-use data structures and data analysis tools for Python. Pandas has a main object called DataFrame, that is for data manipulation using a set of labeled array data structures. Pandas has tools for reading tabular data and writing data between in-memory data structures and different file formats. The data can be handled integratedly and the data sets are transformable. Some of the examples of this transformation are column insertion and deleting, data set merging and joining, or the hierarchical axis indexing in high-dimensional data models.\bigskip
 
@@ -44,16 +44,16 @@ The standard score of a sample $x$ is calculated as: $z = \frac{(x - u)}{s}$ whe
 
 \noindent StandardScaler has some methods:
 \begin{verse}
-	$\bullet$ $fit(X[, y])$ computes the mean and std to be used for later scaling\\
-	$\bullet$ $fit\char`_transform(X[, y])$ fits to data, then transform it\\
+	$\bullet$ $fit(X[, y])$ computes the mean and the standard deviation to be used for later scaling\\
+	$\bullet$ $fit\char`_transform(X[, y])$ fits to data, then transforms it\\
 	$\bullet$ $get\char`_params([deep])$ gets parameters for this estimator\\
 	$\bullet$ $inverse\char`_transform(X[, copy])$ scales back the data to the original representation\\
-	$\bullet$ $partial\char`_fit(X[, y])$ is the online computation of mean and std on X for later scaling\\
+	$\bullet$ $partial\char`_fit(X[, y])$ is the online computation of mean and standard deviation on $X$ for later scaling\\
 	$\bullet$ $set\char`_params(**params)$ sets the parameters of this estimator\\
 	$\bullet$ $transform(X[, y, copy])$ performs standardization by centering and scaling
-\end{verse}
+\end{verse}\smallskip
 
-\textbf{Train\char`_test\char`_split} is a subclass of Scikit Learn's selection class, which splits arrays or matrices into random train and test subsets. The randomization is important in ordered data sets. Allowed inputs are lists, numpy arrays, scipy-sparse matrices or pandas dataframes. Train\char`_test\char`_split returns with four lists that contains the train-test splits of inputs.\medskip
+\textbf{Train\char`_test\char`_split} is a subclass of Scikit Learn's selection class, which splits arrays or matrices into random train and test subsets. The randomization is important in ordered data sets. Allowed inputs are lists, NumPy arrays, SciPy-sparse matrices or Pandas DataFrames. Train\char`_test\char`_split returns with four lists that contains the train-test splits of inputs.\medskip
 
 \noindent The parameters are the following:\smallskip
 
@@ -76,7 +76,7 @@ The standard score of a sample $x$ is calculated as: $z = \frac{(x - u)}{s}$ whe
 	\hspace{10pt} - ‘relu’ provides the rectified linear unit function, returns $f(x) = max(0, x)$. \\
 	\hspace{10pt} - ‘tanh’ provides the hyperbolic tan function, returns $f(x) = tanh(x)$.
 	
-	$\bullet solver$ is the solver for the weight optimization.\\
+	$\bullet solver$ is the optimization algorithm used in weight optimization.\\
 	\hspace{10pt} - ‘sgd’ refers to stochastic gradient descent.\\
 	\hspace{10pt} - ‘adam’ refers to a transition between adaptive methods and momentum-based methods.\\
 	\hspace{10pt} - ‘lbfgs’ is an optimizer in the family of quasi-Newton methods.
@@ -103,7 +103,7 @@ MLPRegressor contains built-in methods to perform regression:\\
 \noindent The parameters of GridSearchCV are quite wide, but only a few of them are used during the implementation:
 \begin{verse}
 	$\bullet estimator$ implements the estimator interface. \\
-	$\bullet param\char`_grid$ is a dictionary with the names of the used\\ parameters as keys and lists of parameter settings to try as values\\
+	$\bullet param\char`_grid$ is a dictionary with the names of the used parameters as keys and lists of parameter settings to try as values\\
 	$\bullet cv$ is an integer that determines the cross-validation splitting strategy
 \end{verse}
 
@@ -129,13 +129,13 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.neural_network import MLPRegressor
 \end{lstlisting}
 
-After, the selected dataset has captured by Pandas. In this case the used dataset is a .csv file, which contains 39644 instances and 61 attributes. The attributes consist of 58 predictive features, 2 other attributes of accessory information and 1 goal field, which is the number of shares. The dataset represents as a matrix, where the columns are the features and the rows are the datas. This dataset is preprocessed by Pandas as a DataFrame object $dataset$. The $url$ and $timedelta$ columns have been omitted, since they are meta-data and cannot be treated as features. 
+After, the selected dataset has captured by Pandas. In this case the used dataset is a .csv file, which contains 39644 instances and 61 attributes. The attributes consist of 58 predictive features, 2 other attributes of accessory information and 1 goal field, which is the number of shares. The dataset represents as a matrix, where the columns are the features and the rows are the datas. This dataset is preprocessed by Pandas as a DataFrame object. The $url$ and $timedelta$ columns have been omitted, since they are meta-data and cannot be treated as features. 
 \begin{lstlisting}
 dataset = pd.read_csv('OnlineNewsPopularity.csv')
 dataset_copy = dataset.drop(columns=['url','timedelta'])
 \end{lstlisting}
 
-As already mentioned, the dataset's preprocessing and transformation has made, but the dataset even needs some cleaning. Before doing that, let's give a check on the summarization:
+\medskip As already mentioned, the dataset's preprocessing and transformation has made, but the dataset even needs some cleaning. Before doing that, let's give a check on the summarization:
 \begin{lstlisting}
 dataset_copy.describe()
 \end{lstlisting}
@@ -143,19 +143,19 @@ where the first 5 columns results the following:
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=0.34\linewidth]{./figures/describe1}
-	\caption{The summarization of the initial dataset}
+	\caption{A part of the summarization of the initial dataset}
 	\label{fig:describe1}
 \end{figure}
 
-\noindent As it can be seen in the table, there are outlier values that would cause noise if they will not be handled. Also, in the known of the meaning of each columns, some inconsistencies are occured, like the $n\char`_tokens\char`_content$ feature contains the number of words in the content, which can not be zero. These inconsistent values needs a correction.
+\noindent As it can be seen in the table, there are outlier values that would cause noise if they will not be handled. Also, in the known of the meaning of each columns, some inconsistencies are occured, like the $n\char`_tokens\char`_content$ feature contains the number of words in the content, which cannot be zero. These inconsistent values needs a correction.
 
 
-\subsection{Optimising the Dataset}
+\subsection{Optimizing the Dataset}
 
-There are a lot of techniques in data mining for optimising the datas into appropriate forms. In the case of outlying and inconsistent values, due to the huge number of datas, the chosen technique was to simply ignore that tuple. 
+There are a lot of techniques in data mining for optimizing the datas into appropriate forms. In the case of outlying and inconsistent values, due to the huge number of datas, the chosen technique was to simply ignore those tuples. 
 \begin{lstlisting}
 dataset_copy = dataset_copy[dataset_copy.n_tokens_content != 0]
-dataset_copy = dataset_copy[dataset_copy.n_unique_tokens < 1]
+dataset_copy = dataset_copy[dataset_copy.n_unique_tokens <= 1]
 dataset_copy = dataset_copy[dataset_copy.average_token_length != 0]
 
 dataset_copy = dataset_copy[dataset_copy.num_hrefs <= 100]
@@ -165,25 +165,25 @@ dataset_copy = dataset_copy[dataset_copy.num_videos <= 2]
 dataset_copy = dataset_copy.reset_index(drop=True)
 \end{lstlisting}
 
-These reductions need some explanation. As mentioned above, $n\char`_tokens\char`_content$ is the number of words in the content, so it can not be zero. $n\char`_unique\char`_tokens$ contains the rate of unique words in the content. Due to it is a rate, it need to be between [0,1]. $average\char`_token\char`_length$ contains the average length of the words in the content, which also can not be zero. \smallskip
+These reductions need some explanation. As mentioned above, $n\char`_tokens\char`_content$ is the number of words in the content, so it cannot be zero. $n\char`_unique\char`_tokens$ contains the rate of unique words in the content. Due to it is a rate, it need to be between [0,1]. $average\char`_token\char`_length$ contains the average length of the words in the content, which also cannot be zero. \smallskip
 
-The other optimizations are for handling the outlying values. $num\char`_hrefs$ contains the number of links, $num\char`_self\char`_hrefs$ is the number of links to other articles published by Mashable, $num\char`_imgs$ has the number of images and $num\char`_videos$ is for the number of videos. Furthermore because this dataset is a Pandas DataFrame and $drop$ is a function for removing the whole row, the dataset needs to be reindexed.\medskip
+The other optimizations are for handling the outlying values. $num\char`_hrefs$ contains the number of links, $num\char`_self\char`_hrefs$ is the number of links to other articles published by Mashable, $num\char`_imgs$ has the number of images and $num\char`_videos$ stands for the number of videos. Furthermore because this dataset is a Pandas DataFrame and $drop$ is a function for removing the whole row, the dataset needs to be reindexed.\medskip
 
-After the cleaning, the dataset's other part is still has a big difference between its values, so it should be scaled. 
+After the cleaning, the dataset's other part is still has a big difference between its values, so the whole dataset should be scaled. 
 \begin{lstlisting}
 scaler = StandardScaler()
 dataset_copy[:] = scaler.fit_transform(dataset_copy[:])
 \end{lstlisting}
 With the usage of StandardScaler's $fit\char`_transform$ method, the dataset has been fitted and transformed in one step. \medskip
 
-\noindent Then the dataset has splitted into feature $X$ and target $y$ groups.
+\noindent Then the dataset has separated into feature $X$ and target $y$ groups.
 \begin{lstlisting}
 y = dataset_copy.get(key='shares').values
 X = dataset_copy.drop(columns='shares').values
 \end{lstlisting}
-The column $shares$ contains the target values which is the number of shares.\medskip
+The column $shares$ contains the target values which are the number of shares.\medskip
 
-Learning the parameters of a prediction function and testing it on the same data is a methodological mistake: a model that would just repeat the labels of the samples that it has just seen would have a perfect score but would fail to predict anything useful on yet-unseen data. This situation is called overfitting. To avoid it, it is common practice when performing a supervised machine learning experiment to hold out part of the available data as a testint set $X\char`_test$, $y\char`_test$. 
+Learning the parameters of a prediction function and testing it on the same data is a methodological mistake: a model that would just repeat the labels of the samples that it has just seen would have a perfect score but would fail to predict anything useful on yet-unseen data. This situation is called overfitting. To avoid it, it is a common practice when performing a supervised machine learning experiment to hold out a part of the available data as a testing set $X\char`_test$, $y\char`_test$. 
 \begin{lstlisting}
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 \end{lstlisting}
@@ -208,14 +208,12 @@ gs = GridSearchCV(mlp, param_grid, cv=2)
 gs.fit(X_train, y_train)
 y_pred = gs.predict(X_test)
 \end{lstlisting}
-This process is very time consuming due to the amount of the given parameters trained on the large-scale dataset. After the trained multi-layer perceptron is ready, the results can be stored and the
+This process is very time consuming due to the amount of the given parameters are trained on the large-scale dataset. After the trained multi-layer perceptron is ready, the results can be stored and the
 received values can be plotted by Matplotlib. The score was computed by the L2 norm of the loss function, which means the difference between the original and the predicted value.
 \begin{lstlisting}
 print(gs.best_params_)
 print(gs.score(X_test, y_test))
 print('shares', gs.best_params_, gs.score(X_test,y_test), sep='; ', file=open('InversionResults.txt', 'a'))
-
-with open('gridSearchResults.txt', 'a') as f:print("{} \n \n {} \n  \n Best Estimator: \n {} \n with {}".format(param_grid, gs.cv_results_, gs.best_estimator_, gs.best_score_), file=f)
 
 plt.plot(X_test, y_test, 'o', color='blue')
 plt.plot(X_test, y_pred, 'o', color='orange')
@@ -242,7 +240,8 @@ This really bad score does not mean that the model will be bad at inversion, due
 \subsection{Inverting the MLP}
 
 
-The inversion is an iterative process, which lasts for very long. Here the target values are the new predictors $X\char`_inverse$ with the knowledge comes from the other features $X$. Every iteration calculates one single feature's values $y\char`_inverse$ and also its accuracy between the feature's original and the calculated values. \\
+The inversion is an iterative process, which lasts for very long. Here the target values are the new predictors $X\char`_inverse$ with the knowledge comes from the other features $X$. Every iteration calculates one single feature's values $y\char`_inverse$ and also its accuracy between the feature's original and the calculated values. \medskip
+
 The new training ($X\char`_inverse\char`_train$, $X\char`_inverse\char`_test$) and testing ($y\char`_inverse\char`_train$, $y\char`_inverse\char`_test$) sets has to be made first.
 \begin{lstlisting}
 X = pd.DataFrame(X)
@@ -310,7 +309,7 @@ In the end of each process, the resulted score and the parameters that was used 
 
 \section{Results}
 
-The obtained results helps to understand the operation of the Online News Popularity dataset. The inversion revealed that what kind of extent of which features affect the number of shares. The inversion revealed the extent of how features affect the number of shares one by one. Those features that converge the most to 1, have the greatest influence.\medskip
+The obtained results helps to understand the operation of the Online News Popularity dataset. The inversion revealed the extent of how features affect the number of shares one by one. Those features that converge the most to 1, have the greatest influence.\medskip
 
 These features's scores resulted at least 0.95 accuracy which means, these features affect the number of shares the most.
 \begin{lstlisting}

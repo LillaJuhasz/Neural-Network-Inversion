@@ -4,9 +4,9 @@
 
 Data mining is a subfield of computer science and statistics that uses machine learning and statistical methods to discover patterns in large data sets. Data mining has various stages to process knowledge and all of the stages run different methods to collect the appropriate datas.\medskip
 
-The first and most important part is to select the dataset which will be processed. This means two things. Firstly the goal needs to be drawed up. Secondly the information that seems to be useful for the goal needs to be selected. \smallskip
+The first and most important part is to select the dataset which will be processed. This means two things. Firstly the goal needs to be drawed up. Secondly the information that seems to be useful for the goal needs to be selected. \medskip
 
-\noindent To decide the usefulness of a feature, it needs to pass a set of quality criteria.
+\noindent To decide the usefulness of a feature, it should pass a set of quality criteria.
 \begin{verse}
 	$\bullet$ Validity: the degree to which the measures conform to defined business rules or constraints\\
 	$\bullet$ Accuracy: the degree of conformity of a measure to a standard or a true value\\
@@ -15,28 +15,26 @@ The first and most important part is to select the dataset which will be process
 	$\bullet$ Uniformity: the degree to which a set data measures are specified using the same units of measure in all systems
 \end{verse}
 
-After the features has selected, they are just raw data and need a revision to reduce the amount of further data cleaning. There are some other criteria for the qualities of good features. \smallskip
-
-Good feature values should appear more times in a data set. It enables a model to learn how this feature value relates to the label. This means having many examples with the same value helps the model to see the feature in different settings to determine when it is a good predictor. Also, each feature should have a clear and obvious meaning to anyone. 
+After the features has selected, they are just raw data and need a revision to reduce the amount of further data cleaning. There are some other criteria for the qualities of good features. Good feature values should appear more times in a data set. It enables a model to learn how this feature value relates to the label. This means having many examples with the same value helps the model to see the feature in different settings to determine when it is a good predictor. Also, each feature should have a clear and obvious meaning to anyone. 
 
 
 \subsection{Preprocessing}
 
-Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. The selected dataset may include errors, missing values or noisy, inconsistent datas. During the preprocessing stage, these datas need to be filtered out. \smallskip
+Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. The selected dataset may include errors, missing values or noisy, inconsistent datas. During the preprocessing stage, these datas need to be filtered out. \medskip
 
 Data preparation and filtering steps can take considerable amount of processing time. Data preprocessing includes cleaning, integration and reduction. Sometimes data transformation takes place in the preprocessing too. The product of data preprocessing is the final training set.
 
 
 \subsubsection{Data cleaning}
 
-The given data in large datasets often contains information that is not clear enough. That can happen from a number of reasons. For example the data can be incomplete as lacking attribute values or certain attributes of interest. The data can be inconsistent or noisy too if it contains errors or too much outlier values that deviates from the expected. There are several techniques for repairing these useless datas.\medskip
+The given data in large datasets often contains information that is not clear enough. That can happen from a number of reasons. For example the data can be incomplete as lacking attribute values or certain attributes of interest. The data can be inconsistent or noisy too if it contains errors or too much outlier values that deviates from the expected. There are several techniques for repairing these useless datas.\bigskip
 
-\noindent For missing values, there are two things can be done:\\
-1. Simply ignore the tuple, which is only effective if the tuple contains several missing attributes\\
-2. Fill the missing values manually, that can be done with the mean value or a global constant (like $\infty$)\\
-Both techniques can cause noise and inaccuracy, but the current tuple may contain important information too.\smallskip
+\noindent For fixing the missing values, there are two things can be done:\\
+1. Simply ignore the tuple, which is only effective if the tuple contains several missing attributes.\\
+2. Fill the missing values manually, that can be done with the mean value or a global constant (like $\infty$).\\
+Both techniques can cause noise and inaccuracy, but the current tuple may contain important information too.\medskip
 
-Noise is a random error or variance in a measured variable. Noisy data needs to be smoothed to get the accurate prediction. "Binning" methods smoothes the value with its neighbour's, so it is just a local smoothing technique. Clustering can be used to detect outlier values by organizing them into similar groups. Data can be smoothed by fitting the data to a function such as regression.\smallskip
+Noise is a random error or variance in a measured variable. Noisy data needs to be smoothed to get the accurate prediction. Binning methods smooth the value with its neighbour's, so it is just a local smoothing technique. Clustering can be used to detect outlier values by organizing them into similar groups. Data can be smoothed by fitting the data to a function such as regression.\medskip
 
 Data inconsistencies can be solved manually by external references, or with the use of knowledge engineering.
 
@@ -52,17 +50,17 @@ Data reduction is reducing the volume or the dimension of the dataset, without c
 
 \subsubsection{Transformation and Future Scaling}
 
-Some features of the dataset need some transformation to get an appropriate form for mining. Data transformation involves a bunch of statistical techniques, called future scaling. \smallskip
+Some features of the dataset need some transformation to get an appropriate form for data mining. Data transformation involves a bunch of statistical techniques, called future scaling. \bigskip
 
-Future scaling is a method used to standardize the range of the data. The raw data have a wide range of values that can make noisy data, and in some machine learning algorithms, objective functions will not work properly without normalization. To scale the range of the datas, mathematical procedures can be used.\medskip
+\textbf{Future scaling} is a method used to standardize the range of the data. The raw data has a wide range of values that can make noisy data, and in some machine learning algorithms, objective functions will not work properly without normalization. To scale the range of the datas, mathematical procedures can be used.\medskip
 
-\textbf{Normalization} is the process of scaling individual samples to have unit norm. Min-max scaling or min-max normalization is the simplest method that rescales the range of features to $[0, 1]$ or $[-1, 1]$. Selecting the target range depends on the nature of the data. The general formula is given as:
+\textbf{Normalization} is the process of scaling individual samples to have unit norm. Min-max scaling or min-max normalization is the simplest method that rescales the range of features to $[0, 1]$ or $[-1, 1]$. Selecting the target range depends on the nature of the data. The general formula is the following, where $x$ is the original, and $x'$ is the normalized value:
 $$ x' = \frac{x-min(x)}{max(x)-min(x)} $$
-where $x$ is the original value and $x'$ is the normalized value.\\
-Mean normalization is similar to min-max scaling, where $\bar x = average(x)$:
+
+\noindent Mean normalization is similar to min-max scaling, where $\bar x = average(x)$:
 $$ x' = \frac{x-\bar x}{max(x)-min(x)} $$ \medskip
 
-\textbf{Standardization} of datasets is a common method to transform the given data as if they comes from standard normally distributed data set. Feature standardization makes the values of each feature in the data have zero-mean and unit-variance. \smallskip
+\textbf{Standardization} of datasets is a common method to transform the given data as if they comes from standard normally distributed data set. Feature standardization makes the values of each feature in the data to have zero-mean and unit-variance. \smallskip
 	
 In practice the shape of the distribution is often ignored and just transform the data to center it by removing the mean value of each feature, then scale it by dividing non-constant features by their standard deviation.
 $$ x'= \frac{x-\bar x}{\sigma} $$
@@ -82,14 +80,14 @@ The length of this vector is equal to the number of elements in that current fea
 
 After the appropriate training set is given, the following data mining techniques can be used to discover the patterns:\\
 1. Classification: this method helps to classify data in different classes\\
-2. Clustering: identifies data that are like each other to understand the differences and similarities between the data\\
+2. Clustering: identifies data that are similar to each other to understand the differences and similarities between the data\\
 3. Regression: this is the method of identifying and analyzing the relationship between variables\\
 4. Association: it discovers a hidden pattern in the data set\\
 5. Outer detection: collects the data which do not match an expected pattern or expected behavior\\
 6. Sequential Patterns: this method helps to discover or identify similar patterns or trends in transaction data for certain period\\
 7. Prediction: it analyzes past events or instances in a right sequence for predicting a future event \medskip
 
-Data mining's applying techniques come from a wider field called \textbf{data analytics}. In a simple explanation data analytics is the process of examining data sets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analysis on existing data sets. A widely used data analytics technique is machine learning, because it can process data sets more quickly than it can be done via conventional analytical modeling. Machine learning automates model building, due to it relies on patterns and inferences, instead of explicit instructions.
+Data mining's applying techniques come from a wider field called \textbf{data analytics}. In a simple explanation data analytics is the process of examining data sets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analyzis on existing data sets. A widely used data analytics technique is machine learning, because it can process data sets more quickly than it can be done via conventional analytical modeling. Machine learning automates model building, due to it relies on patterns and inferences, instead of explicit instructions.
 
 
 
@@ -97,9 +95,9 @@ Data mining's applying techniques come from a wider field called \textbf{data an
 
 There are many different types of neural networks, one of them is the feedforward neural network \cite{fine2006feedforward}. It aims on to create a mapping from a properly trained input dataset to an estimated output and it is able to model complex non-linear functions. \medskip
 
-A feedforward neural networks units are the artificial neurons, that are conventionally called \textbf{nodes}. To determine the value of a node, all the inputs would be multiplied one by one with their weights, and then adding their sums. This type of neural network is called feedforward due to there are no feedback connections in which outputs of the model are fed back into itself. \medskip
+A feedforward neural network's units are the artificial neurons, that are conventionally called \textbf{nodes}. To determine the value of a node, all the inputs would be multiplied one by one with their weights, and then adding their sums. This type of neural network is called feedforward due to there are no feedback connections in which outputs of the model are fed back into itself. \medskip
 
-A typical feedforward neural network consists of inputs, weights and an output. The \textbf{input layer} is a set of input neurons, where each neuron represents a feature in our data set. The \textbf{output} of any feedforward network is the sum of the inputs multiplied by the weights. There is an intermediate part between inputs and outputs, called hidden layers. The \textbf{hidden layer} contains those type of units which can transform the inputs into a mapping which the output layer can use. The relationship between the input and hidden layer is determined by the weights of the network. \medskip
+A typical feedforward neural network consists of inputs, weights and an output. The \textbf{input layer} is a set of input neurons, where each neuron represents a feature in our data set. The \textbf{output} of any feedforward network is the sum of the inputs multiplied by the weights. There is an intermediate part between inputs and outputs, called hidden layers. The \textbf{hidden layer} contains those type of units which can transform the inputs into a mapping that the output layer can use. The relationship between the input and hidden layer is determined by the weights of the network. \medskip
 
 \noindent The output of a trained feedforward neural network can be characterized by
 $$ o_k = f_k(i,w) $$
@@ -109,11 +107,11 @@ where $o_k$ is the $k$th neural network output, $(i,w)$ is a vector of the weigh
 
 \subsection{Single-Layer Perceptron}
 
-The perceptron is a single layer feedforward neural network \cite{tho2010perceptron}. A single-layer perceptron has only one input and output layer and no hidden layers. The input values are presented to the perceptron, and if the predicted output is the same as the desired output, then the performance is considered satisfactory and no changes to the weights are made. However, if the output does not match the desired output and then the weights need to be changed to reduce the error. \smallskip
+The perceptron is a single layer feedforward neural network \cite{tho2010perceptron}. A single-layer perceptron has only one input and output layer and no hidden layers. The input values are presented to the perceptron, and if the predicted output is the same as the desired output, then the performance is considered satisfactory and no changes to the weights are made. However, if the output does not match the desired output and then the weights need to be changed to reduce the error. \medskip
 
 In order to avoid unnecessary iterations, it is important to adjust the weights properly.
 $$ \Delta w = \eta * d * x $$
-where $\Delta w$ stands for the current weight, $\eta \leq 1$ is the learning rate which is the size of the required steps, $d$ represents the desired output and $x$ is the input data. \medskip
+where $\Delta w$ stands for the current weight, $\eta \leq 1$ is the learning rate which is the size of the required steps, $d$ represents the desired output and $x$ is the input data.\medskip
 
 The sum of the inputs multiplied by the appropriate weights are led directly to the output layer. This weighted sum stands for \textbf{dot product} in this context: $ z = w_1 x_1 + w_2 x_2 + \dots + w_m x_m = \sum_{j=1}^m w_j x_j $
 
@@ -143,11 +141,11 @@ A neural network was made to learn from changing the connected weights after eve
 
 \subsubsection{Backpropagation}
 
-The main goal of backpropagation is to update all of the weights in the neural network, so they cause the predicted output to be closer to the target output with minimizing the error of each output neuron and also the network. \medskip
+The main goal of backpropagation is to update all of the weights in the neural network, so they cause the predicted output to be closer to the target output with minimizing the error of each output neuron and also the network.
 
 The algorithm consists of two phases: the forward phase where the activations are propagated from the input to the output layer, and the backward phase, where the error between the actual and the desired nominal value in the output layer is propagated backwards in order to modify the weights values. \medskip
 
-The function that is used to compute this error is known as \textbf{loss function}. The loss function is a function that maps values of one or more variables onto a real number intuitively representing some "cost" associated with those values. For backpropagation, the loss function calculates the difference between the network output and its expected output, after a training example has propagated through the network. \smallskip
+The function that is used to compute this error is known as \textbf{loss function}. The loss function is a function that maps values of one or more variables onto a real number intuitively representing some "cost" associated with those values. For backpropagation, the loss function calculates the difference between the network output and its expected output, after a training example has propagated through the network. \medskip
 
 Different loss functions will give different errors for the same prediction, and thus have a considerable effect on the performance of the model. In the training of multi-layer perceptrons, L2 loss function $L$ has been used, which is the square of the L2 norm of the difference between actual value $y$ and predicted value $\hat{y}$.
 $$ L = \sum^n_{i=1}(y - \hat{y})^2 $$
@@ -156,7 +154,7 @@ $$ L = \sum^n_{i=1}(y - \hat{y})^2 $$
 
 \subsubsection{Gradient descent}
 
-Backpropagation uses gradient descent in the calculation of the weights used in the neural network. It is an optimization method, which aims on to minimize a given function to its local minimum by iteratively updating the weights of the model. The input is defined with an initial value and the algorithm calculates the gradient i.e. the partial derivative of the loss curve at this starting point. \smallskip
+Backpropagation uses gradient descent in the calculation of the weights used in the neural network. It is an optimization method, which aims on to minimize a given function to its local minimum by iteratively updating the weights of the model. The input is defined with an initial value and the algorithm calculates the gradient i.e. the partial derivative of the loss curve at this starting point. \medskip
 
 \noindent The components of gradient descent are the following:
 \begin{verse}
@@ -187,7 +185,7 @@ The components of a neural network model i.e the activation function, optimizati
 
 Regression is a supervised learning task of machine learning that is used to predict values of a desired target variable. It is a statistical technique which requires a data set with the desired output that is consists of one or more continuous variables and real numbers.\smallskip
 
-Using regression the input vector is mapped onto a given set of values by the network. The network regresses the independent variables, provided by the inputs, onto the dependent variable. The multi-layer perceptron uses non-linear regression.  \medskip
+By using regression the input vector is mapped onto a given set of values by the network. The network regresses the independent variables, provided by the inputs, onto the dependent variable. The multi-layer perceptron uses non-linear regression.  \medskip
 
 In a linear regression task there is one independent variable $x$, to explain or predict the outcome of the dependent variable $y$.
 $$ y = \beta_0 + \beta_1x + \epsilon $$
@@ -201,7 +199,7 @@ that relates a vector of independent variables $X$, and its associated observed 
 
 \subsection{Activation Functions}
 
-In artificial neural networks, the activation function is a transitional state of the neurons between other layers. It is a mapping of the previous layers and it maps the resulting value into the desired range, which is usually between -1 and 1. The output of the activation function is then used as input for the next layer, until a desired solution is found. There are several activation functions, and each of them utilizes different algorithms for mapping. \smallskip
+In connection with artificial neural networks, the activation function is a transitional state of the neurons between other layers. It is a mapping of the previous layers and it maps the resulting value into the desired range, which is usually between -1 and 1. The output of the activation function is then used as input for the next layer, until a desired solution is found. There are several activation functions, and each of them utilizes different algorithms for mapping. \medskip
 
 As the multi-layer perceptron applies non-linear approximator functions, it will be the most accurate by using non-linear activation functions as well. They are known about having more than one degrees and they have a curve in their graph. Due to non-linear functions can generate non-linear mappings from inputs to outputs, they can be applied in complex data sets. 
 
@@ -276,13 +274,11 @@ Limited-memory BFGS is an approximation of Broyden–Fletcher–Goldfarb–Shann
 
 
 
-
-
 \section{Inversion}
 
 As mentioned in \autoref{para:inversion}, a properly trained neural network can model the process that is generating the training data and the inverse process too. Inversion of a neural network consists of clamping the weights and the neural network output while adjusting the input in the neural network until an equality or a best possible fit occurs for one or more values of the input. \medskip
 
-Feedforward neural networks aim on to capture system mapping from training data. The goal is to find the input values that will result the desired output for the given synaptic weights. Generally it can be determined that a single input can generate numerous outputs. \smallskip
+Feedforward neural networks aim on to capture system mapping from the given training data. The goal is to find the input values that will result the desired output for the given synaptic weights. Generally it can be determined that a single input can generate numerous outputs. \bigskip
 
 \noindent The process is the following:\\
 1. Fix the weights and the outputs.\\
@@ -291,7 +287,7 @@ Feedforward neural networks aim on to capture system mapping from training data.
 \noindent To achieve the goal, it is necessary to:\\
 1. find every point that can fit the input\\
 2. define the external points as thresholds\\
-3. the evenly distributed points can be located in the solution set.
+Then the evenly distributed points can be located in the solution set.
 
 
 
@@ -303,11 +299,9 @@ In the task of single-element inversion only one point is found by the algorithm
 
 \subsection{Inversion Methods}
 
-To solve the inversion of an unconstrained optimization problem, the inversion method needs to solve the optimization itself in its training phase. After the dataset is properly trained, the inversion problem is the following:
+To solve the inversion of an unconstrained optimization problem, the inversion method needs to solve the optimization itself in its training phase. After the dataset is properly trained, the inversion problem is the following:\medskip
 
-Given some network function $f : X \mapsto Y$, for some $y \in Y$, the appropriate $x \in X$ needs to be found, such that $f(x) = y$. Or more generally, if $L : Y \mapsto \mathbb{R}$ is the loss function defined over the network output, an input $x$ have to be found that minimizes $L(f(x))$. \smallskip
-
-Some applications have been proposed that rely on single-element inversion methods.
+Given some network function $f : X \mapsto Y$, for some $y \in Y$, the appropriate $x \in X$ needs to be found, such that $f(x) = y$. Or more generally, if $L : Y \mapsto \mathbb{R}$ is the loss function defined over the network output, an input $x$ have to be found that minimizes $L(f(x))$. 
 
 
 \subsubsection{WLK Inversion}
@@ -319,13 +313,13 @@ Kindermann, who firstly introduced the single-element search method for inversio
 1. \textbf{training} the network \\
 2. \textbf{inversion}\medskip
 
-During the training, the neural network is trained to learn a mapping from input to output. The proper set can be find by minimizing the loss. Thus the neural network learns a functional relationship between the inputs and the outputs. Now all the weights are fixed. After the training, the network is initialized with a random input vector. Output is calculated and compared with the given output. Now the error can be calculated and backpropagated to minimize the loss function and the input vector is updated. This iterative process continues until the error is less than the minimum set value.\medskip
+During the training, the neural network is trained to learn a mapping from input to output. The proper set can be find by minimizing the loss. Thus the neural network learns a functional relationship between the inputs and the outputs. Now all the weights are fixed. After the training, the network is initialized with a random input vector. Output is calculated and compared with the given output. Now the error can be calculated and backpropagated to minimize the loss function and the input vector has updated too. This iterative process continues until the error is less than the minimum set value.\medskip
 
 Assume that the initial input vector $i_0$ is given. Now the recursive equation of the training phase is the following: 
 \begin{equation} i_k^{t+1} = i_k+t - \eta \frac{\partial E}{\partial i_k^t} \label{eq:wlk} \end{equation} 
 $t$ - the index of the iteration, \\
 $i_k^t$ - the $k$th component of the $i^t$ vector, \\
-$\eta$ - the learning rate \medskip
+$\eta$ - the learning rate \bigskip
 
 Due to the general feedforward topology, the iteration for inversion in \eqref{eq:wlk} can be solved by the dervative of 
 $$ \frac{\partial E}{\partial i_k} = \delta k ~~~~ k \in I$$
@@ -337,7 +331,7 @@ $$ \delta j = \begin{cases} \varphi'_j(o_j)(o_j-t_j):, & ~ j \in O \\
 $w_{jm}$ - the weight value from neuron $j$ to neuron $m$,\\
 $\varphi'_j$ - the derivative of the $j$th neuron squashing function,\\
 $o_j$ - the activation of the $j$th neuron,\\
-$t_j$ - the desired output of the $j$th neuron \medskip
+$t_j$ - the desired output of the $j$th neuron \bigskip
 
 The derivatives of the neurons need to be solved by backward order from the output to the input. Thus everything is given in the equation, but the absence of feedback, so the relationship of the neurons is only an assumption.
 
