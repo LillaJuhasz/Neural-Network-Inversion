@@ -73,6 +73,8 @@ plt.show()
 
 
 ############################# INVERSION ###########################
+from inversion import invert
+
 
 X = pd.DataFrame(X)
 X.columns = dataset_copy.drop(columns='shares').columns

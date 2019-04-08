@@ -7,26 +7,54 @@ Craig A.~Jensen, Russell D.~Reed, Robert J~Marks, Mohamed El-Sharkawi,
   applications.
 \newblock 02 2001.
 
+\bibitem{allen2007understanding}
+M.P. Allen.
+\newblock {\em Understanding Regression Analysis}.
+\newblock Springer US, 2007.
+
+\bibitem{alpaydin2009introduction}
+E.~Alpaydin.
+\newblock {\em Introduction to Machine Learning}.
+\newblock Adaptive Computation and Machine Learning series. MIT Press, 2009.
+
+\bibitem{anastassiou2011intelligent}
+G.A. Anastassiou.
+\newblock {\em Intelligent Systems: Approximation by Artificial Neural
+  Networks}.
+\newblock Intelligent Systems Reference Library. Springer Berlin Heidelberg,
+  2011.
+
+\bibitem{anderson1995introduction}
+J.A. Anderson.
+\newblock {\em An Introduction to Neural Networks}.
+\newblock Bradford book. MIT Press, 1995.
+
 \bibitem{bengfort2018applied}
 B.~Bengfort, R.~Bilbro, and T.~Ojeda.
 \newblock {\em Applied Text Analysis with Python: Enabling Language-Aware Data
   Products with Machine Learning}.
 \newblock O'Reilly Media, 2018.
 
-\bibitem{Bottou2012}
-L{\'e}on Bottou.
-\newblock {\em Stochastic Gradient Descent Tricks}, pages 421--436.
-\newblock Springer Berlin Heidelberg, Berlin, Heidelberg, 2012.
-
 \bibitem{bressert2012scipy}
 E.~Bressert.
 \newblock {\em SciPy and NumPy}.
 \newblock Oreilly and Associate Series. O'Reilly, 2012.
 
+\bibitem{chauvin2013backpropagation}
+Y.~Chauvin and D.E. Rumelhart.
+\newblock {\em Backpropagation: Theory, Architectures, and Applications}.
+\newblock Developments in Connectionist Theory Series. Taylor \& Francis, 2013.
+
 \bibitem{chen2017pandas}
 D.Y. Chen.
 \newblock {\em Pandas for Everyone: Python Data Analysis}.
 \newblock Addison-Wesley Data \& Analytics Series. Pearson Education, 2017.
+
+\bibitem{dong2018feature}
+G.~Dong and H.~Liu.
+\newblock {\em Feature Engineering for Machine Learning and Data Analytics}.
+\newblock Chapman \& Hall/CRC Data Mining and Knowledge Discovery Series. CRC
+  Press, 2018.
 
 \bibitem{Fernandes2015API}
 Kelwin Fernandes, Pedro Vinagre, and Paulo Cortez.
@@ -39,35 +67,119 @@ T.L. Fine.
 \newblock {\em Feedforward Neural Network Methodology}.
 \newblock Information Science and Statistics. Springer New York, 2006.
 
-\bibitem{g2015learning}
-S.J.R. G, E.A. Christensen, and F.J. Blanco-Silva.
-\newblock {\em Learning SciPy for Numerical and Scientific Computing - Second
-  Edition}.
-\newblock Community experience distilled. Packt Publishing, 2015.
+\bibitem{han2011data}
+J.~Han, J.~Pei, and M.~Kamber.
+\newblock {\em Data Mining: Concepts and Techniques}.
+\newblock The Morgan Kaufmann Series in Data Management Systems. Elsevier
+  Science, 2011.
+
+\bibitem{jolly2018machine}
+K.~Jolly.
+\newblock {\em Machine Learning with scikit-learn Quick Start Guide:
+  Classification, regression, and clustering techniques in Python}.
+\newblock Packt Publishing, 2018.
+
+\bibitem{karayiannis2013artificial}
+N.~Karayiannis and A.N. Venetsanopoulos.
+\newblock {\em Artificial Neural Networks: Learning Algorithms, Performance
+  Evaluation, and Applications}.
+\newblock The Springer International Series in Engineering and Computer
+  Science. Springer US, 2013.
 
 \bibitem{KINDERMANN1990277}
 J~Kindermann and A~Linden.
 \newblock Inversion of neural networks by gradient descent.
 \newblock {\em Parallel Computing}, 14(3):277 -- 286, 1990.
 
+\bibitem{michalski2014machine}
+R.S. Michalski, J.G. Carbonell, and T.M. Mitchell.
+\newblock {\em Machine Learning: An Artificial Intelligence Approach}.
+\newblock Number 1. k. Elsevier Science, 2014.
+
+\bibitem{mitchell1997machine}
+T.M. Mitchell.
+\newblock {\em Machine Learning}.
+\newblock McGraw-Hill International Editions. McGraw-Hill, 1997.
+
+\bibitem{nazari1992implementation}
+J.~Nazari and O.K. Ersoy.
+\newblock {\em Implementation of Back-propagation Neural Networks with Matlab}.
+\newblock Technical report (Purdue University. School of Electrical
+  Engineering). Purdue University, School of Electrical Engineering, 1992.
+
+\bibitem{Pedregosa2011ScikitlearnML}
+Fabian Pedregosa, Ga{\"e}l Varoquaux, Alexandre Gramfort, Vincent Michel,
+  Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron
+  Weiss, Vincent Dubourg, Jacob VanderPlas, Alexandre Passos, David Cournapeau,
+  Matthieu Brucher, Matthieu Perrot, and Edouard Duchesnay.
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
 \bibitem{pillo2013nonlinear}
 G.~Pillo and F.~Giannessi.
 \newblock {\em Nonlinear Optimization and Applications}.
 \newblock SpringerLink : B{\"u}cher. Springer US, 2013.
+
+\bibitem{priddy2005artificial}
+K.L. Priddy and P.E. Keller.
+\newblock {\em Artificial Neural Networks: An Introduction}.
+\newblock SPIE tutorial texts. Society of Photo Optical, 2005.
+
+\bibitem{pujari2001data}
+A.K. Pujari.
+\newblock {\em Data Mining Techniques}.
+\newblock Universities Press, 2001.
+
+\bibitem{pyle1999data}
+D.~Pyle.
+\newblock {\em Data Preparation for Data Mining}.
+\newblock The Morgan Kaufmann Series in Data Management Systems. Elsevier
+  Science, 1999.
+
+\bibitem{Ren2015PredictingAE}
+He~Ren and Quan Yang.
+\newblock Predicting and evaluating the popularity of online news.
+\newblock 2015.
+
+\bibitem{sathasivam2003optimization}
+S.~Sathasivam.
+\newblock {\em Optimization Methods in Training Neural Networks}.
+\newblock Universiti Sains Malaysia, 2003.
 
 \bibitem{tho2010perceptron}
 D.X. Tho.
 \newblock {\em Perceptron Problem in Neural Network}.
 \newblock GRIN Verlag, 2010.
 
-\bibitem{inproceedings}
-Md~Taufeeq Uddin, Muhammed Patwary, Tanveer Ahsan, and Mohammed~Shamsul Alam.
-\newblock Predicting the popularity of online news from content metadata.
-\newblock pages 1--5, 10 2016.
+\bibitem{van2011introduction}
+G.~Van~Rossum and F.L. Drake.
+\newblock {\em An Introduction to Python}.
+\newblock Network Theory Limited, 2011.
+
+\bibitem{vanderplas2016python}
+J.~VanderPlas.
+\newblock {\em Python Data Science Handbook: Essential Tools for Working with
+  Data}.
+\newblock O'Reilly Media, 2016.
 
 \bibitem{veerarajan2007numerical}
 T.~Veerarajan.
 \newblock {\em Numerical Methods}.
 \newblock Sigma series. McGraw-Hill Education (India) Pvt Limited, 2007.
+
+\bibitem{zaki2010advances}
+M.J. Zaki, J.X. Yu, B.~Ravindran, and V.~Pudi.
+\newblock {\em Advances in Knowledge Discovery and Data Mining, Part I: 14th
+  Pacific-Asia Conference, PAKDD 2010, Hyderabat, India, June 21-24, 2010,
+  Proceedings}.
+\newblock Advances in knowledge discovery and data mining : 14th Pacific-Asia
+  conference, PAKDD 2010, Hyderabad, India, June 21-24, 2010 : proceedings.
+  Springer, 2010.
+
+\bibitem{zheng2018feature}
+A.~Zheng and A.~Casari.
+\newblock {\em Feature Engineering for Machine Learning: Principles and
+  Techniques for Data Scientists}.
+\newblock O'Reilly Media, 2018.
 
 \end{thebibliography}

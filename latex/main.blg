@@ -1,15 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-Repeated entry---line 170 of file references.bib
- : @book{fine2006feedforward
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 180 of file references.bib
- : @book{tho2010perceptron
- :                        ,
-I'm skipping whatever remains of this entry
 Warning--empty journal in article
-Warning--can't use both author and editor fields in Bottou2012
-Warning--empty booktitle in inproceedings
-(There were 2 error messages)
+Warning--there's a number but no series in michalski2014machine
+Warning--empty booktitle in Ren2015PredictingAE
+(There were 3 warnings)
