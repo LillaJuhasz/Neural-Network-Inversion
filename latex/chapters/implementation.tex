@@ -227,7 +227,7 @@ It can be seen, that stochastic gradient descent is not on the list of the optim
 After the trained multi-layer perceptron is ready, the results can be stored and the received values can be plotted by Matplotlib.
 \begin{lstlisting}
 regressor = gs.best_estimator_
-print(regressor, 'score: ', gs.score(X_test, y_test), sep='\n ', file=open('TrainingResult.txt', 'w'))
+print(regressor, 'score: ', gs.best_score_, sep='\n ', file=open('TrainingResult.txt', 'w'))
 
 y_pred = regressor.predict(X_test)
 
