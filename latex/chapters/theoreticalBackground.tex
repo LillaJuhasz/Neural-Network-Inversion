@@ -27,7 +27,7 @@ Data preparation and filtering steps can be time consuming. Data preprocessing i
 The given data in large datasets often contains information that is not clear enough. There are several techniques for repairing these uncertain data. \bigskip
 
 \noindent For resolving missing values, the following steps can be taken:\\
-1. Simply remove the feaure vector, which is only effective if the vector contains several missing attributes.\\
+1. Simply remove the feature vector, which is only effective if the vector contains several missing attributes.\\
 2. Fill the missing values manually, which can be done with the mean value.\\
 Both techniques can create noise and inaccuracy, but it is important to deal the appropriate technique, because the incorrect feature vector may contain necessary information too. \bigskip
 
@@ -67,7 +67,7 @@ where $x$ is the original feature vector, $\bar x$ is the mean of that feature v
 
 \textbf{Encoding} is the process of converting data into an acceptable form for information processing. It can be used effectively on categorical features, because they just use a set of values. \smallskip
 
-Integer encoding converts the nomimal values to numeric values. These numeric values are integers in increasing order, and they can cause inconsistency with the given weights.\smallskip
+Integer encoding converts the nominal values to numeric values. These numeric values are integers in increasing order, and they can cause inconsistency with the given weights.\smallskip
 
 One-hot encoding offers a solution for the inconsistency problem. It creates a binary vector for each categorical feature in the dataset where the values appears as follows:\\
 $\bullet$ For those values, which apply to the example, set the vector values to 1.\\
@@ -77,7 +77,7 @@ The length of the binary vector is equal to the number values in the current fea
 
 \subsubsection{Data Mining Algorithms}
 
-As mentioned, the product of data mining is the training set. For the application of data mining algorithms, the original data set is usually splitted into multiple sets. There are two data sets, which are separated during the creation of the model. The first one is called \textbf{training set}, which is used by the machine learning algorithm to gather knowledge and increase accuracy. The other one is the \textbf{testing set}, which is used to provide a data set to test function estimation accuracy of the learning algorithm on the training data set.\medskip
+As mentioned, the product of data mining is the training set. For the application of data mining algorithms, the original data set is usually split into multiple sets. There are two data sets, which are separated during the creation of the model. The first one is called \textbf{training set}, which is used by the machine learning algorithm to gather knowledge and increase accuracy. The other one is the \textbf{testing set}, which is used to provide a data set to test function estimation accuracy of the learning algorithm on the training data set.\medskip
 
 After the split, the following data mining techniques \cite{pujari2001data} can be used on the training set to discover the patterns:\\
 1. Classification: This method helps to retrieve information by classifying data into different classes. It can be use to draw further conclusions.\\
@@ -176,7 +176,7 @@ In backpropagation, the calculation of the gradient passes the network backwards
 
 \section{Training a MLP Model}
 
-The task that is being tackled in this paper is to make the inversion of a single-element feedforward neural network. To eventuate this successfully, the appropriate dataset is given and already preprocessed. Hence the main task is now to train a neural network to predict new outputs for the testing set and minimize the loss between the given and the desired outputs from the training set. \medskip
+The task that is being tackled in this paper is to make the inversion of a single element feedforward neural network. To eventuate this successfully, the appropriate dataset is given and already preprocessed. Hence the main task is now to train a neural network to predict new outputs for the testing set and minimize the loss between the given and the desired outputs from the training set. \medskip
 
 The components of a neural network model i.e the activation function, optimization algorithm and the size of the layers play a very important role in effectively training a model and produce accurate results. Different tasks require a different set of functions to give the most optimum results. The used methods and functions are described in the following subsections.
 
@@ -276,24 +276,23 @@ Limited-memory BFGS is an approximation of Broyden–Fletcher–Goldfarb–Shann
 
 \section{Inversion}
 
+The inverse function means the reverse of another function in mathematics. For a given $f: X \mapsto Y$, the inverse function of $f$ is that $g: Y \mapsto X$, where $f(x) = y$ and $g(y) = x$. Thus $g = f^{-1}$. Not all of the functions have inverse functions. A function $f$ has an inverse function, if it is accomplished for every $y$ in $Y$ that there must be one, and only one $x$ in $X$ so that $f(x) = y$.\medskip
+
 Inversion of a neural network consists of clamping the weights and the neural network output while adjusting the input in the neural network until an equality or a best possible fit occurs for one or more values of the input. \medskip
 
-Feedforward neural networks aim on to capture system mapping from the given training data. The goal is to find the input values that will result the desired output for the given synaptic weights. Generally it can be determined that a single input can generate numerous outputs. \bigskip
+Feedforward neural networks aim on to capture system mapping from the given training data. The goal is to find the input values that will result the desired output for the given weights. Generally it can be determined that a single input can generate numerous outputs. 
 
-\noindent The process is the following:\\
-1. Fix the weights and the outputs.\\
-2. Find such an input that concurs or mostly fits the supposed input. \medskip
-
-\noindent To achieve the goal, it is necessary to:\\
-- find every point that can fit the input\\
-- define the external points as thresholds\\
-Then the evenly distributed points can be located in the solution set.
+\bigskip \noindent The process of finding the inversion $f^{-1}(x)$ of a function $f(x)$ is the following:\\
+1. First, replace $f(x)$ with $y$.\\
+2. Replace every $x$ with a $y$ and replace every $y$ with an $x$. \\
+3. Solve the equation from Step 2 for $y$. \\
+4. Replace $y$ with $f^{-1}(x)$. 
 
 
 
-\subsection{Single-Element Inversion Methods}
+\subsection{Single Element Inversion Methods}
 
-In the task of single-element inversion only one point is found by the algorithm depending on the initialization. This means it will result a nearer outcome in further processes. Hence it is very important to find a properly training algorithm, because it notes the previously founded points and reuses them. The process of finding the best estimator is time consuming. As the quantity of parameter combinations increases during the training phase, so does the time that the training takes. However, the number of parameter combinations also potentionally increase the inversion accuracy.\bigskip
+In the task of single element inversion only one point is found by the algorithm depending on the initialization. This means it will result a nearer outcome in further processes. Hence it is very important to find a properly training algorithm, because it notes the previously founded points and reuses them. The process of finding the best estimator is time consuming. As the quantity of parameter combinations increases during the training phase, so does the time that the training takes. However, the number of parameter combinations also potentionally increase the inversion accuracy.\bigskip
 
 To solve the inversion of an unconstrained optimization problem, the inversion method needs to solve the optimization itself in its training phase. After the dataset is properly trained, the inversion problem is the following:\medskip
 
@@ -302,7 +301,7 @@ Given some network function $f : X \mapsto Y$, for some $y \in Y$, the appropria
 
 \subsection{Williams-Linder-Kindermann Inversion}
 
-\label{para:wlk-inv}The WLK inversion was named after R. L. Williams, A. Linder and J. Kindermann \cite{KINDERMANN1990277}, who firstly introduced the single-element search method for inversion of real valued neural network. In this algorithm, the inversion problem is set up as an unconstrained optimization problem and solved by gradient descent, similarly to backpropagation. \medskip
+\label{para:wlk-inv}The WLK inversion was named after R. L. Williams, A. Linder and J. Kindermann \cite{KINDERMANN1990277}, who firstly introduced the single element search method for inversion of real valued neural network. In this algorithm, the inversion problem is set up as an unconstrained optimization problem and solved by gradient descent, similarly to backpropagation. \medskip
 
 \noindent The method of WLK inversion involves two main steps: \\
 1. computing the deltas for every value \\

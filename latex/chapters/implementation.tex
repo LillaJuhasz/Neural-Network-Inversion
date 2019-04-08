@@ -2,7 +2,7 @@
 
 \section{Problem Statement}
 
-This case study aims on to make the inversion of a single-element feedforward neural network. However the implementation of the inversion is just the last step during the process, because the dataset needs a lot of preprocessing to make the predictable model.\smallskip
+This case study aims on to make the inversion of a single element feedforward neural network. However the implementation of the inversion is just the last step during the process, because the dataset needs a lot of preprocessing to make the predictable model.\smallskip
 
 This work belongs in the realm of machine learning application research. There are three main tasks examinated in this paper: data mining for extracting information from a data set, building and testing multilayer perceptron models for, and inverting these feedforward neural network models. \medskip
 
@@ -206,7 +206,7 @@ Now the training ($X\char`_train$, $X\char`_test$) and testing ($y\char`_train$,
 
 \subsection{Training the Neural Network}
 
-Then the dataset is ready to be trained. The training consists of the application of machine learning techniques. Different multi-layer perceptron models are fitted on the training sets with a set of parameters $param\char`_grid$. These parameters are the number of hidden layers, the activation functions, the optimization algorithms, the alpha value, the learning rate's type and the learning rate's initialize value. Scikit-Learn's training toolkit is called MLPRegressor, which is used as an estimator of GridSearchCV. The process of the training fits the neural network model to the training sets, then tests the accuracy on the testing sets by predicting the output $y\char`_pred$.  \todo{hidden layereket beirni, ha lefutottak}
+Then the dataset is ready to be trained. The training consists of the application of machine learning techniques. Different multi-layer perceptron models are fitted on the training sets with a set of parameters $param\char`_grid$. These parameters are the number of hidden layers, the activation functions, the optimization algorithms, the alpha value, the learning rate's type and the learning rate's initialize value. Scikit-Learn's training toolkit is called MLPRegressor, which is used as an estimator of GridSearchCV. The process of the training fits the neural network model to the training sets, then tests the accuracy on the testing sets by predicting the output $y\char`_pred$.  
 \begin{lstlisting}
 mlp = MLPRegressor()
 param_grid = {
@@ -236,13 +236,14 @@ plt.plot(X_test, y_pred, 'o', color='orange')
 plt.savefig('./' + 'prediction.pdf')
 plt.show()
 \end{lstlisting}
-The results of the training contains a summarization of the best estimator and the score. It can be seen that the score was $-1.51336177157304122$ and the best estimator parameters were the ReLU activation function and L-BFGS as optimization algorithm, with the use of $0.001$ alpha value and $0.03$ initial learning rate. The training uses $3$ hidden layers with $(3,10,3)$ neurons in the layers.\todo{kicserelni, ha lefutottak az algoritmusok}
+The results of the training contains a summarization of the best estimator and the score. It can be seen that the score was $0.018810289564545335$ and the best estimator parameters were the logistic activation function and L-BFGS as optimization algorithm, with the use of $0.03$ alpha value and $0.01$ initial learning rate. The training uses $3$ hidden layers with $(100,200,500)$ neurons in each layers.
 \begin{lstlisting}
-MLPRegressor(activation='relu', alpha=0.001, batch_size='auto', beta_1=0.9, beta_2=0.999, early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(3, 10, 3), learning_rate='adaptive', learning_rate_init=0.03, max_iter=200, momentum=0.9, n_iter_no_change=10, nesterovs_momentum=True, power_t=0.5, random_state=None, shuffle=True, solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False, warm_start=False)
-score: -1.5133617715730412
+MLPRegressor(activation='logistic', alpha=0.03, batch_size='auto', 
+	beta_1=0.9, beta_2=0.999, early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(100, 200, 500), learning_rate='adaptive', learning_rate_init=0.01, max_iter=200, momentum=0.9, n_iter_no_change=10, nesterovs_momentum=True, power_t=0.5, random_state=None, shuffle=True, solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False, warm_start=False) 
+score: 0.018810289564545335
 \end{lstlisting}
 
-\smallskip The results of the training are shown on the following \autoref{fig:shares}, where the original values are colored blue and the predicted ones have color orange:\todo{kicserelni a kepet, ha lefutottak}
+\smallskip The results of the training are shown on the following \autoref{fig:shares}, where the original values are colored blue and the predicted ones have color orange:
 \begin{figure}[h]
 	\centering
 	\includegraphics[height=0.38\linewidth]{./figures/prediction}
@@ -349,9 +350,9 @@ The guessed and predicted input vectors, the desired output values, the error an
 
 \section{Results}
 
-Inversion have not received much attention since the rise of deep learning. Neural network inversion procedures seek to find those input values, which produces the given output values. WLK inversion is a type of single-element search methods, which can solve the inversion problem.\medskip
+Inversion have not received much attention since the rise of deep learning. Neural network inversion procedures seek to find those input values, which produces the given output values. WLK inversion is a type of single element search methods, which can solve the inversion problem.\medskip
 
-The results of the inversion are stored and the summarization of the accuracy percents is the following:\todo{kicserelni majd, ha lefutottak az algoritmusok}
+The results of the inversion are stored and the summarization of the accuracy percents is the following:
 \begin{lstlisting}
        		accuracy_percent
 count          3.000000
