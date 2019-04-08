@@ -1,45 +1,78 @@
-shares; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; 0.01229680126603272
-n_tokens_title; {'activation': 'relu', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'adam'}; -0.93463729689143
-n_tokens_content; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.5842894406419892
-n_unique_tokens; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.8729111083605421
-n_non_stop_words; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.769953232661214
-n_non_stop_unique_tokens; {'activation': 'tanh', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.5359676155443062
-num_hrefs; {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; -0.6863244401825042
-num_self_hrefs; {'activation': 'logistic', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; -7.285406601065247e-05
-num_imgs; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'sgd'}; -0.7915143913965994
-num_videos; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; -0.13240164496413365
-average_token_length; {'activation': 'logistic', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; -0.0037046382113683496
-num_keywords; {'activation': 'tanh', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'sgd'}; -0.4415475579055655
-kw_min_min; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.9978265596014307
-kw_max_min; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.7230528546195711
-kw_avg_min; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.8313621431288761
-kw_min_max; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.0
-kw_max_max; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.999283661233451
-kw_avg_max; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.7153508082758968
-kw_min_avg; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.0
-kw_max_avg; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.9058093920111084
-kw_avg_avg; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.8019528388590245
-self_reference_min_shares; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.7808891657101008
-self_reference_max_shares; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.8956194072855355
-self_reference_avg_sharess; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.9583727915872209
-LDA_00; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.989874004275313
-LDA_01; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; 0.016431475472337365
-LDA_02; {'activation': 'relu', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'adam'}; 0.273166186914936
-LDA_03; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.9631754471905054
-LDA_04; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.9978949301566046
-global_subjectivity; {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'sgd'}; 0.10678071018760127
-global_sentiment_polarity; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.7595881884996835
-global_rate_positive_words; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'adam'}; 0.4349978066562398
-global_rate_negative_words; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.7537968871989081
-rate_positive_words; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.9858555965431666
-rate_negative_words; {'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'lbfgs'}; 0.9827638672011125
-avg_positive_polarity; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.1945909150643811
-min_positive_polarity; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'adam'}; 0.13499850547740377
-max_positive_polarity; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.001, 'solver': 'adam'}; 0.35473235662335156
-avg_negative_polarity; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.8005880822186517
-min_negative_polarity; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.49999078922847706
-max_negative_polarity; {'activation': 'logistic', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'adam'}; -0.08207090226612768
-title_subjectivity; {'activation': 'relu', 'alpha': 0.001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'lbfgs'}; 0.6176467598049472
-title_sentiment_polarity; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.0001, 'solver': 'adam'}; -1.4034495807595027
-abs_title_subjectivity; {'activation': 'tanh', 'alpha': 0.0001, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'sgd'}; 0.0865841199796985
-abs_title_sentiment_polarity; {'activation': 'relu', 'alpha': 0.01, 'hidden_layer_sizes': (30, 90, 180, 90, 30), 'learning_rate': 'adaptive', 'learning_rate_init': 0.01, 'solver': 'lbfgs'}; 0.2780912484415764
+guessed input vector in X_test: 
+ [[ 1.53961804e-01  7.12150538e-01  9.05082528e-02  3.19338549e-01
+   1.05809357e-01  6.77719048e-01  5.97563560e-01  8.33413609e-01
+   2.69291033e-01  7.61821720e-01  8.27080291e-01  1.83458215e-01
+   9.43405089e-01  5.87955190e-02  1.86101986e-01  8.49988251e-01
+   7.88143173e-01  5.30590377e-01  3.31807931e-01  3.67088849e-01
+   7.52394100e-01  2.61436636e-01  4.10598523e-02 -5.94236892e-04
+   1.82273931e-01  4.57289422e-01  3.67581034e-01  1.10597191e-01
+   9.14934774e-01  7.11518126e-01  1.89284107e-01  2.17192693e-01
+   2.80555829e-01  8.06620441e-01  3.77124414e-01  9.65212700e-01
+   4.53709060e-01  4.42138712e-01  4.93387805e-02  9.11129792e-01
+  -4.82548376e-03  6.90833575e-01  8.37864405e-01  5.28430414e-01
+   5.96607549e-02  6.43801874e-01  4.48400979e-02  5.58954860e-01
+   4.65534746e-01  4.87236770e-01  7.24525890e-01  9.04100026e-01
+   1.16950675e-01  1.79703954e-01  7.57772712e-01  9.96245777e-01
+   1.43120435e-01  3.55093698e-01]]
+ predicted output vector for y_test: 
+ [-0.36305981]
+ desired output value in y_test: 
+ [-0.1615942304516615]
+ error: 
+ [-0.20146558]
+ accuracy percent: 
+ [0.59468121]
+ 
+
+guessed input vector in X_test: 
+ [[0.3269372  0.12312775 0.08861689 0.15153969 0.5586146  0.81932629
+  0.79341991 0.04897085 0.36776011 0.106406   0.04817347 0.22178993
+  0.82816316 0.88936722 0.45135271 0.87744136 0.64427066 0.01832832
+  0.83571047 0.86325113 0.36392868 0.87637878 0.51234397 0.06357932
+  0.20139838 0.1305659  0.11425379 0.27844508 0.11945244 0.36346574
+  0.31034146 0.27939759 0.5476857  0.75615452 0.01765145 0.76613029
+  0.9690517  0.83182177 0.0119208  0.19511064 0.20978868 0.82391102
+  0.16370764 0.31715711 0.38104384 0.16218335 0.52919373 0.72034411
+  0.65362639 0.31109479 0.0811808  0.31418622 0.13201765 0.39965844
+  0.78830676 0.65449561 0.37012174 0.70908256]]
+ predicted output vector for y_test: 
+ [-0.35272675]
+ desired output value in y_test: 
+ [-0.11652883352949023]
+ error: 
+ [-0.23619791]
+ accuracy percent: 
+ [0.69720327]
+ 
+
+guessed input vector in X_test: 
+ [[0.01559794 0.19458252 0.81984066 0.05164327 0.58474228 0.35470264
+  0.79670134 0.16351415 0.7451994  0.54326798 0.77736369 0.91697859
+  0.36055494 0.68544281 0.84693119 0.62845739 0.14861863 0.45378634
+  0.72299616 0.59212456 0.89634778 0.85143107 0.91183888 0.10170304
+  0.66830427 0.45431911 0.66965634 0.63808859 0.0611816  0.08868816
+  0.85751722 0.70656869 0.29552304 0.78610748 0.08436965 0.31603586
+  0.04891791 0.87041173 0.78939462 0.93837833 0.16213496 0.21552996
+  0.16540321 0.02145608 0.79215254 0.8199967  0.91191508 0.84783419
+  0.93471751 0.26361287 0.12256017 0.44338469 0.3763877  0.26629797
+  0.61375952 0.40252695 0.75891294 0.12645064]]
+ predicted output vector for y_test: 
+ [-0.37744713]
+ desired output value in y_test: 
+ [-0.2342621829886626]
+ error: 
+ [-0.14318495]
+ accuracy percent: 
+ [0.42264986]
+ 
+
+summarization: 
+        accuracy_percent
+count          3.000000
+mean           0.571511
+std            0.138735
+min            0.422650
+25%            0.508666
+50%            0.594681
+75%            0.645942
+max            0.697203

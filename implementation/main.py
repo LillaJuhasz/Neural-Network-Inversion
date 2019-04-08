@@ -1,19 +1,17 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
-from sklearn.neural_network import MLPRegressor
+import inversion
 
 
 dataset = pd.read_csv('OnlineNewsPopularity.csv')
-dataset_copy = dataset.drop(columns=['url','timedelta'])
+dataset_copy = dataset.drop(columns=['url', 'timedelta'])
 
 #dataset_copy.describe()
-
-
-##################### DROP USELESS FEATURES ######################
-
 
 dataset_copy = dataset_copy[dataset_copy.n_tokens_content != 0]
 dataset_copy = dataset_copy[dataset_copy.n_unique_tokens < 1]
@@ -26,86 +24,62 @@ dataset_copy = dataset_copy[dataset_copy.num_videos <= 2]
 dataset_copy = dataset_copy.reset_index(drop=True)
 
 
-
-######################## DATASET SCALING ##########################
-
-
 scaler = StandardScaler()
 dataset_copy[:] = scaler.fit_transform(dataset_copy[:])
+dataset_copy = dataset_copy[:10]
 
-y = dataset_copy.get(key='shares').values
-X = dataset_copy.drop(columns='shares').values
+y = dataset_copy.pop('shares')
+X = dataset_copy
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=0)
-
-
-
-########################## TRAINING ###############################
+    X.values, y.values, test_size=0.3, random_state=0)
 
 
 mlp = MLPRegressor()
 param_grid = {
-    'hidden_layer_sizes': [(30, 90, 180, 90, 30)],
-    'activation': ['logistic', 'tanh', 'relu'],
-    'solver': ['lbfgs','sgd', 'adam'],
-    'alpha': [0.03, 0.01, 0.003, 0.001, 0.0003, 0.0001],
-    'learning_rate_init': [0.03, 0.01, 0.003, 0.001, 0.0003, 0.0001],
+    'hidden_layer_sizes': [(3,10,3)],
+    'activation': ['relu', 'logistic', 'tanh'],
+    'solver': ['lbfgs', 'adam'],
+    'alpha': [0.03, 0.01, 0.003, 0.001],
+    'learning_rate_init': [0.03, 0.01, 0.003, 0.001],
     'learning_rate': ['adaptive'],
 }
-gs = GridSearchCV(mlp, param_grid, cv=2)
+gs = GridSearchCV(mlp, param_grid, cv=2, n_jobs=-1)
 gs.fit(X_train, y_train)
-y_pred = gs.predict(X_test)
 
-###################################################################
+with open('gridSearchResults.txt', 'a') as f:print(
+    "{} \n \n {} \n  \n Best Estimator: \n {} \n with "
+    "{}".format(param_grid, gs.cv_results_, gs.best_estimator_,
+                gs.best_score_), file=f)
 
-print(gs.best_params_)
-print(gs.score(X_test, y_test))
-print('shares', gs.best_params_, gs.score(X_test,y_test), sep='; ',
-      file=open('InversionResults.txt', 'a'))
+regressor = gs.best_estimator_
+print(regressor, 'score: ', gs.best_score_, sep='\n ', file=open('TrainingResult.txt', 'w'))
 
-###################################################################
+y_pred = regressor.predict(X_test)
 
 plt.plot(X_test, y_test, 'o', color='blue')
 plt.plot(X_test, y_pred, 'o', color='orange')
-plt.savefig('plots/' + 'shares_prediction.pdf')
+plt.savefig('./' + 'prediction.pdf')
 plt.show()
 
 
-############################# INVERSION ###########################
-from inversion import invert
+inversionResults = pd.DataFrame(columns=['accuracy_percent'])
 
+for i, value in enumerate(y_test):
+    desired_output = [value]
+    guessedInput = inversion.invert(regressor, desired_output, pd.DataFrame(X_test).columns.size,
+                                    gs.best_params_['learning_rate_init'])
+    guessedInput = pd.DataFrame(guessedInput).T
 
-X = pd.DataFrame(X)
-X.columns = dataset_copy.drop(columns='shares').columns
+    accuracy = abs((regressor.predict(guessedInput) - desired_output) / (y.max() - y.min()))
+    inversionResults = inversionResults.append(
+        {'accuracy_percent': accuracy[0]}, ignore_index=True)
 
-for X_value in X:
-    X_inverse = X.drop(columns=X_value).values
-    X_inverse_help = pd.DataFrame(y_train)
-    y_pred = pd.DataFrame(y_pred)
+    print('guessed input vector in X_test: ', np.array(guessedInput),
+          'predicted output vector for y_test: ', regressor.predict(guessedInput),
+          'desired output value in y_test: ', desired_output,
+          'error: ', regressor.predict(guessedInput) - desired_output,
+          'accuracy percent: ', accuracy, '\n',
+          sep='\n ', file=open('InversionResults.txt', 'a'))
 
-    for y_pred_value in y_pred.values:
-        y_pred_value = pd.Series(y_pred_value)
-        X_inverse_help = X_inverse_help.append(y_pred_value, ignore_index=True)
-
-    X_inverse = pd.DataFrame(X_inverse)
-    X_inverse.insert(0,'shares',X_inverse_help)
-    X_inverse = X_inverse.values
-
-    y_inverse = X.get(key=X_value).values
-
-
-    X_inverse_train, X_inverse_test, y_inverse_train, y_inverse_test = \
-        train_test_split(X_inverse, y_inverse, test_size=0.3, random_state=0)
-
-    gs.fit(X_inverse_train, y_inverse_train)
-    y_inverse_pred = gs.predict(X_inverse_test)
-
-    print(gs.best_params_)
-    print(gs.score(X_inverse_test, y_inverse_test))
-    print(X_value, gs.best_params_, gs.score(X_inverse_test,y_inverse_test), sep='; ', file=open('InversionResults.txt', 'a'))
-
-    plt.plot(X_inverse_test, y_inverse_test, 'o', color='blue')
-    plt.plot(X_inverse_test, y_inverse_pred, 'o', color='orange')
-    plt.savefig('plots/' + str(X_value) + '_prediction.pdf')
-    plt.show()
+print('summarization: ', inversionResults.describe(), sep='\n ', file=open('InversionResults.txt', 'a'))
