@@ -24,9 +24,6 @@ Python can be used effectively with the assistance of some of its third-party li
 
 \textbf{Pandas} is an open source library providing high-performance, easy-to-use data structures and data analysis tools for Python. Pandas has a main object called DataFrame, that is for data manipulation using a set of labeled array data structures. Pandas has tools for reading tabular data and writing data between in-memory data structures and different file formats. The data can be handled integratedly and the data sets are transformable. Some of the examples of this transformation are column insertion and deleting, data set merging and joining, or the hierarchical axis indexing in high-dimensional data models.\bigskip
 
-
-\textbf{Matplotlib} is an open source Python library that produces publication-quality plots and figures. It ships with several add-on toolkits, including 3d plotting and assistance for axes. There are several common approaches of plotting in Matplotlib. The most popular is $pyplot$, which is a collection of command style functions where each $pyplot$ function makes some change to a figure. Also it is mainly intended for interactive plots and simple cases of programmatic plot generation.\bigskip
-
 \textbf{NumPy} is a library for Python focused on multi-dimensional arrays and matrices. It provides high-level mathematical functions to operate on these arrays. In NumPy, the n-dimensional array is called $ndarray$, where all the elements of a single array must contain the same type. \medskip
 
 \noindent The most important attributes of an $ndarray$ object are:\\
@@ -134,7 +131,6 @@ The first step was to import all of the necessary libraries.
 \begin{lstlisting}
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -210,7 +206,7 @@ Then the dataset is ready to be trained. The training consists of the applicatio
 \begin{lstlisting}
 mlp = MLPRegressor()
 param_grid = {
-	'hidden_layer_sizes': [(3,10,3)],
+	'hidden_layer_sizes': [(100,100), (100,200,500), (50,150,50), (20,80,80,20), (30,90,180,90,30), [200,500,200], (100,200,500,200,100), (1000,2000)],
 	'activation': ['relu', 'logistic', 'tanh'],
 	'solver': ['lbfgs', 'adam'],
 	'alpha': [0.03, 0.01, 0.003, 0.001],
@@ -224,32 +220,20 @@ This process is time consuming due to the amount of the given parameters are tra
 
 It can be seen, that stochastic gradient descent is not on the list of the optimization methods. When the dataset was trained, SGD causes NaN or infinite values during the calculation of the gradients. The solution was to remove SGD from the solvers. \medskip
 
-After the trained multi-layer perceptron is ready, the results can be stored and the received values can be plotted by Matplotlib.
+After the trained multi-layer perceptron is ready, the results can be stored.
 \begin{lstlisting}
 regressor = gs.best_estimator_
 print(regressor, 'score: ', gs.best_score_, sep='\n ', file=open('TrainingResult.txt', 'w'))
 
 y_pred = regressor.predict(X_test)
-
-plt.plot(X_test, y_test, 'o', color='blue')
-plt.plot(X_test, y_pred, 'o', color='orange')
-plt.savefig('./' + 'prediction.pdf')
-plt.show()
 \end{lstlisting}
-The results of the training contains a summarization of the best estimator and the score. It can be seen that the score was $0.018810289564545335$ and the best estimator parameters were the logistic activation function and L-BFGS as optimization algorithm, with the use of $0.03$ alpha value and $0.01$ initial learning rate. The training uses $3$ hidden layers with $(100,200,500)$ neurons in each layers.
+
+\medskip The results of the training contains a summarization of the best estimator and the score. It can be seen that the score was $0.018810289564545335$ and the best estimator parameters were the logistic activation function and L-BFGS as optimization algorithm, with the use of $0.03$ alpha value and $0.01$ initial learning rate. The training uses $3$ hidden layers with $(100,200,500)$ neurons in each layers.
 \begin{lstlisting}
 MLPRegressor(activation='logistic', alpha=0.03, batch_size='auto', 
 	beta_1=0.9, beta_2=0.999, early_stopping=False, epsilon=1e-08, hidden_layer_sizes=(100, 200, 500), learning_rate='adaptive', learning_rate_init=0.01, max_iter=200, momentum=0.9, n_iter_no_change=10, nesterovs_momentum=True, power_t=0.5, random_state=None, shuffle=True, solver='lbfgs', tol=0.0001, validation_fraction=0.1, verbose=False, warm_start=False) 
 score: 0.018810289564545335
 \end{lstlisting}
-
-\smallskip The results of the training are shown on the following \autoref{fig:shares}, where the original values are colored blue and the predicted ones have color orange:
-\begin{figure}[h]
-	\centering
-	\includegraphics[height=0.38\linewidth]{./figures/prediction}
-	\caption{The result of the best prediction}
-	\label{fig:shares}
-\end{figure}
 
 \medskip It is a long process to train a multi-layer perceptron properly and find the best fitting regression function. During the training, thousands of parameter combinations were trained, but the best fitting parameters were not found. This is the reason, why the score value is low.
 
@@ -289,9 +273,7 @@ def invert(regressor, expected_output, input_size, step_size, iteration_count = 
 		 regressor.activation) * (y_pred - expected_output)
 
 		for i in range(1, len(activations)):
-			deltas[-i - 1] = _activationFunctionDerivate(activations[-i - 1],
-			 regressor.activation) * \ (regressor.coefs_[-i] * 
-			 deltas[-i].T).sum(axis=1)
+			deltas[-i-1] = _activationFunctionDerivate(activations[-i-1], regressor.activation) * (regressor.coefs_[-i] * deltas[-i].T).sum(axis=1)
 			
 			if verbose:
 				print('#', i)
@@ -334,13 +316,13 @@ for i, value in enumerate(y_test):
 
 	accuracy = abs((regressor.predict(guessedInput) - desired_output) /
 	 (y.max() - y.min()))
-	inversionResults = inversionResults.append({'accuracy_percent': accuracy[0]}, ignore_index=True)
+	inversionResults = inversionResults.append({'accuracy_percent': accuracy[0]*100}, ignore_index=True)
 
 	print('guessed input vector in X_test: ', np.array(guessedInput),
 	'predicted input vector for X_test: ', regressor.predict(guessedInput),
 	'desired output value in y_test: ', desired_output,
 	'error: ', regressor.predict(guessedInput) - desired_output,
-	'accuracy percent: ', accuracy, '\n',
+	'accuracy percent: ', accuracy[0]*100, '\n',
 	sep='\n ', file=open('InversionResults.txt', 'a'))
 
 print('summarization: ', inversionResults.describe(), sep='\n ', file=open('InversionResults.txt', 'a'))
@@ -352,19 +334,7 @@ The guessed and predicted input vectors, the desired output values, the error an
 
 Inversion have not received much attention since the rise of deep learning. Neural network inversion procedures seek to find those input values, which produces the given output values. WLK inversion is a type of single element search methods, which can solve the inversion problem.\medskip
 
-The results of the inversion are stored and the summarization of the accuracy percents is the following:
-\begin{lstlisting}
-       		accuracy_percent
-count          3.000000
-mean           0.660939
-std            0.177815
-min            0.499214
-25%            0.565731
-50%            0.632248
-75%            0.741801
-max            0.851354
-\end{lstlisting}
-It can be seen that the WLK algorithm succeeds to make the inversion. \bigskip
+The training was running in parallel on the supercomputer with thousands of parameter combinations of the multi-layer perceptron. After thousands of iterations the neural network mean test score has not reached acceptable levels, but the WLK inversion has been tested on smaller datasets with trained neural network and achieved good results. Hence the summarization table of the accuracy percent was not presented. \medskip
 
 Inversion is firmly depends on the result of the training. The more accurate the training is, the more effective the inversion will be. Finding the best fitting parameters to the dataset, especially to large-scale datasets takes great amount of time. The training was running in parallel on the supercomputer with thousands of parameter combinations, but the best fitting combinations are not captured yet. Anyway WLK inversion can produce the features correctly. 
 

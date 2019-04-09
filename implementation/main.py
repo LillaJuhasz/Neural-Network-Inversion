@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -11,7 +10,7 @@ import inversion
 dataset = pd.read_csv('OnlineNewsPopularity.csv')
 dataset_copy = dataset.drop(columns=['url', 'timedelta'])
 
-#dataset_copy.describe()
+dataset_copy.describe()
 
 dataset_copy = dataset_copy[dataset_copy.n_tokens_content != 0]
 dataset_copy = dataset_copy[dataset_copy.n_unique_tokens < 1]
@@ -26,18 +25,19 @@ dataset_copy = dataset_copy.reset_index(drop=True)
 
 scaler = StandardScaler()
 dataset_copy[:] = scaler.fit_transform(dataset_copy[:])
-dataset_copy = dataset_copy[:10]
 
 y = dataset_copy.pop('shares')
 X = dataset_copy
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X.values, y.values, test_size=0.3, random_state=0)
+    X, y, test_size=0.3, random_state=0)
 
 
 mlp = MLPRegressor()
 param_grid = {
-    'hidden_layer_sizes': [(3,10,3)],
+    'hidden_layer_sizes': [(100,100), (100,200,500), (50,150,50), (20,80,80,20),
+                           (30,90,180,90,30), [200,500,200], (100,200,500,200,100),
+                           (1000,2000)],
     'activation': ['relu', 'logistic', 'tanh'],
     'solver': ['lbfgs', 'adam'],
     'alpha': [0.03, 0.01, 0.003, 0.001],
@@ -57,11 +57,6 @@ print(regressor, 'score: ', gs.best_score_, sep='\n ', file=open('TrainingResult
 
 y_pred = regressor.predict(X_test)
 
-plt.plot(X_test, y_test, 'o', color='blue')
-plt.plot(X_test, y_pred, 'o', color='orange')
-plt.savefig('./' + 'prediction.pdf')
-plt.show()
-
 
 inversionResults = pd.DataFrame(columns=['accuracy_percent'])
 
@@ -73,13 +68,13 @@ for i, value in enumerate(y_test):
 
     accuracy = abs((regressor.predict(guessedInput) - desired_output) / (y.max() - y.min()))
     inversionResults = inversionResults.append(
-        {'accuracy_percent': accuracy[0]}, ignore_index=True)
+        {'accuracy_percent': accuracy[0]*100}, ignore_index=True)
 
     print('guessed input vector in X_test: ', np.array(guessedInput),
           'predicted output vector for y_test: ', regressor.predict(guessedInput),
           'desired output value in y_test: ', desired_output,
           'error: ', regressor.predict(guessedInput) - desired_output,
-          'accuracy percent: ', accuracy, '\n',
+          'accuracy percent: ', accuracy[0]*100, '\n',
           sep='\n ', file=open('InversionResults.txt', 'a'))
 
 print('summarization: ', inversionResults.describe(), sep='\n ', file=open('InversionResults.txt', 'a'))
