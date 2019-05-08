@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.12)  9 APR 2019 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.12)  8 MAY 2019 09:17
 entering extended mode
 **./main.tex
 (main.tex
@@ -7,8 +7,8 @@ LaTeX2e <2018-04-01> patch level 5
 Document Class: Thesis 2007/22/02 v1.0 LaTeX document class
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\base\book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\base\bk11.clo
-File: bk11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\base\bk12.clo
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -791,7 +791,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip63
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 111.
+Package hyperref Info: Option `colorlinks' set `true' on input line 112.
 )
 (main.aux)
 \openout1 = `main.aux'.
@@ -859,215 +859,341 @@ LaTeX Info: Redefining \nameref on input line 34.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-<./figures/miskolc_logo.png, id=133, 72.27pt x 65.043pt>
+<./figures/miskolc_logo.png, id=141, 72.27pt x 65.043pt>
 File: ./figures/miskolc_logo.png Graphic file (type png)
 <use ./figures/miskolc_logo.png>
 Package pdftex.def Info: ./figures/miskolc_logo.png  used on input line 53.
 (pdftex.def)             Requested size: 170.97pt x 153.88123pt.
- [1
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 57.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 57.
+
+[1
 
 
 {C:/Users/Lilcsa/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures/
-miskolc_logo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+miskolc_logo.png>] (chapters/feladatkiiras.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
-(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
 
-(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1] (main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
-
-[2
-
-
-] (chapters/introduction.tex
-Chapter 1.
-) (chapters/relatedWorks.tex [3
-
-]
-Chapter 2.
-[4
-
-]
-<./figures/feedforward.png, id=215, 564.1075pt x 355.3275pt>
-File: ./figures/feedforward.png Graphic file (type png)
-<use ./figures/feedforward.png>
-Package pdftex.def Info: ./figures/feedforward.png  used on input line 58.
-(pdftex.def)             Requested size: 237.50883pt x 149.60364pt.
- [5] [6 <./figures/feedforward.png>]
-<./figures/python_scikit.png, id=242, 505.89pt x 181.42781pt>
-File: ./figures/python_scikit.png Graphic file (type png)
-<use ./figures/python_scikit.png>
-Package pdftex.def Info: ./figures/python_scikit.png  used on input line 88.
-(pdftex.def)             Requested size: 297.96303pt x 106.85788pt.
-) (chapters/theoreticalBackground.tex
-[7 <./figures/python_scikit.png>]
-Chapter 3.
-[8
-
-]
-<./figures/data_mining.jpeg, id=257, 1034.86626pt x 356.33125pt>
-File: ./figures/data_mining.jpeg Graphic file (type jpg)
-<use ./figures/data_mining.jpeg>
-Package pdftex.def Info: ./figures/data_mining.jpeg  used on input line 53.
-(pdftex.def)             Requested size: 434.48296pt x 149.60364pt.
-
-Overfull \hbox (7.05142pt too wide) in paragraph at lines 53--54
- [][] 
  []
 
-[9 <./figures/data_mining.jpeg>] [10]
-<./figures/perceptron.png, id=284, 1256.695pt x 487.8225pt>
-File: ./figures/perceptron.png Graphic file (type png)
-<use ./figures/perceptron.png>
-Package pdftex.def Info: ./figures/perceptron.png  used on input line 107.
-(pdftex.def)             Requested size: 308.30525pt x 119.6803pt.
- [11 <./figures/perceptron.png>] [12]
-<./figures/gradient.png, id=313, 951.555pt x 531.9875pt>
-File: ./figures/gradient.png Graphic file (type png)
-<use ./figures/gradient.png>
-Package pdftex.def Info: ./figures/gradient.png  used on input line 168.
-(pdftex.def)             Requested size: 267.58063pt x 149.60364pt.
 
-[13 <./figures/gradient.png>]
-<./figures/regression.png, id=326, 381.67593pt x 260.47313pt>
-File: ./figures/regression.png Graphic file (type png)
-<use ./figures/regression.png>
-Package pdftex.def Info: ./figures/regression.png  used on input line 192.
-(pdftex.def)             Requested size: 250.52663pt x 170.97pt.
- [14 <./figures/regression.png>]
-<./figures/functions.png, id=335, 1559.8275pt x 540.0175pt>
-File: ./figures/functions.png Graphic file (type png)
-<use ./figures/functions.png>
-Package pdftex.def Info: ./figures/functions.png  used on input line 208.
-(pdftex.def)             Requested size: 432.10753pt x 149.60364pt.
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
-Overfull \hbox (4.676pt too wide) in paragraph at lines 208--210
- [][] 
  []
 
-<./figures/stochastic.png, id=342, 483.60675pt x 177.0615pt>
-File: ./figures/stochastic.png Graphic file (type png)
-<use ./figures/stochastic.png>
-Package pdftex.def Info: ./figures/stochastic.png  used on input line 234.
-(pdftex.def)             Requested size: 326.89273pt x 119.6803pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
-[15 <./figures/functions.png>]
-Overfull \hbox (3.98155pt too wide) in paragraph at lines 259--260
-\T1/cmr/m/n/10.95 Limited-memory BFGS is an ap-prox-i-ma-tion of Broy-denFletc
-herGoldfarbShanno (BFGS)
  []
 
-[16 <./figures/stochastic.png>]
-<./figures/optimization.png, id=370, 259.97125pt x 194.7275pt>
-File: ./figures/optimization.png Graphic file (type png)
-<use ./figures/optimization.png>
-Package pdftex.def Info: ./figures/optimization.png  used on input line 270.
-(pdftex.def)             Requested size: 194.02194pt x 145.32515pt.
- [17 <./figures/optimization.png>])
-(chapters/implementation.tex [18]
-Chapter 4.
-[19
-
-] [20]
-Overfull \hbox (9.66823pt too wide) in paragraph at lines 67--72
-\T1/cmr/m/n/10.95 - $\OML/cmm/m/it/10.95 random[]state$ \T1/cmr/m/n/10.95 : If 
-$\OML/cmm/m/it/10.95 int$\T1/cmr/m/n/10.95 , it is the seed used by the ran-dom
- num-ber gen-er-a-tor. If $\OML/cmm/m/it/10.95 RandomState$
- []
-
-[21] [22]
-<./figures/describe1.png, id=424, 500.62032pt x 171.64125pt>
-File: ./figures/describe1.png Graphic file (type png)
-<use ./figures/describe1.png>
-Package pdftex.def Info: ./figures/describe1.png  used on input line 155.
-(pdftex.def)             Requested size: 423.86401pt x 145.32515pt.
- [23 <./figures/describe1.png>] [24] [25]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 273.
-
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
- [26] [27])
-(chapters/summary.tex [28]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+
+Overfull \hbox (19.44107pt too wide) in paragraph at lines 25--26
+[]\T1/cmr/m/n/12 Pandas, Numpy, Scikit-Learn, Mat-plotlib és egyéb tu-dományos 
+Python könyvtárak
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 49
+\T1/cmr/m/n/12 szakfelel®s
+ []
+
+[1]
+Overfull \hbox (11.08722pt too wide) in paragraph at lines 59--62
+[]\T1/cmr/m/n/12 Alulírott []; Neptun-kód: []
+ []
+
+
+Overfull \hbox (12.98364pt too wide) in paragraph at lines 59--62
+\T1/cmr/m/n/12 a Miskolci Egyetem Gépészmérnöki és In-for-matikai Kará-nak végz
+®s []
+ []
+
+
+Overfull \hbox (27.62584pt too wide) in paragraph at lines 59--62
+\T1/cmr/m/n/12 zom és aláírá-som-mal iga-zolom, hogy []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
+
+ []
+
+
+Overfull \hbox (4.73228pt too wide) in paragraph at lines 70--72
+[]\T1/cmr/m/n/12 Alulírott ki-je-len-tem, hogy a plágium fo-galmát megis-mertem
+, és tu-domá-sul veszem,
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 79.
+(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 79.
+
+(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (0.53185pt too wide) in paragraph at lines 79--83
+[]| [] 
+ []
+
+[2]
+Overfull \hbox (3.02573pt too wide) in paragraph at lines 104--110
+[][] 
+ []
+
+
+Overfull \hbox (7.56378pt too wide) in paragraph at lines 124--134
+\T1/cmr/m/n/12 4. [] 
+ []
+
+)
+Overfull \hbox (4.70168pt too wide) in paragraph at lines 171--85
+\T1/cmr/m/n/12 Miskolc, [] |  []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--85
+
+ []
+
+[3] (main.toc)
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ (chapters/introduction.tex [4
+
+]
+Chapter 1.
+[5
+
+]) (chapters/relatedWorks.tex [6]
+Chapter 2.
+[7
+
+] [8]
+<./figures/neuron2.png, id=248, 517.18219pt x 224.33812pt>
+File: ./figures/neuron2.png Graphic file (type png)
+<use ./figures/neuron2.png>
+Package pdftex.def Info: ./figures/neuron2.png  used on input line 59.
+(pdftex.def)             Requested size: 344.90039pt x 149.60364pt.
+ [9 <./figures/neuron2.png>] [10]
+<./figures/python_scikit.png, id=267, 505.89pt x 181.42781pt>
+File: ./figures/python_scikit.png Graphic file (type png)
+<use ./figures/python_scikit.png>
+Package pdftex.def Info: ./figures/python_scikit.png  used on input line 95.
+(pdftex.def)             Requested size: 297.96303pt x 106.85788pt.
+ [11 <./figures/python_scikit.png>]
+Overfull \hbox (5.21815pt too wide) in paragraph at lines 116--117
+[]\T1/cmr/m/n/12 - \T1/cmr/bx/n/12 NumPy \T1/cmr/m/n/12 for pro-vid-ing ef-fi-c
+ient stor-age and com-put-ing multi-dimensional
+ []
+
+) (chapters/theoreticalBackground.tex [12]
+Chapter 3.
+<./figures/data_mining_stages.png, id=284, 515.67656pt x 492.33937pt>
+File: ./figures/data_mining_stages.png Graphic file (type png)
+<use ./figures/data_mining_stages.png>
+Package pdftex.def Info: ./figures/data_mining_stages.png  used on input line 9
+.
+(pdftex.def)             Requested size: 246.23148pt x 235.08864pt.
+[13
+
+ <./figures/data_mining_stages.png>] [14]
+<./figures/data_mining.jpeg, id=299, 1034.86626pt x 356.33125pt>
+File: ./figures/data_mining.jpeg Graphic file (type jpg)
+<use ./figures/data_mining.jpeg>
+Package pdftex.def Info: ./figures/data_mining.jpeg  used on input line 64.
+(pdftex.def)             Requested size: 434.48296pt x 149.60364pt.
+
+Overfull \hbox (7.05142pt too wide) in paragraph at lines 64--65
+ [][] 
+ []
+
+[15 <./figures/data_mining.jpeg>] [16]
+<./figures/regression.png, id=325, 381.67593pt x 260.47313pt>
+File: ./figures/regression.png Graphic file (type png)
+<use ./figures/regression.png>
+Package pdftex.def Info: ./figures/regression.png  used on input line 112.
+(pdftex.def)             Requested size: 263.05383pt x 179.52045pt.
+ [17 <./figures/regression.png>]
+Overfull \hbox (4.56006pt too wide) in paragraph at lines 148--149
+[]\T1/cmr/m/n/12 Suppose that we have a se-ries of $\OML/cmm/m/it/12 N \OMS/cms
+y/m/n/12 2 \U/msb/m/n/12 Z[]$ \T1/cmr/m/n/12 data points $\OT1/cmr/m/n/12 (\OML
+/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/
+cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; \OT1/cmr/m/n/12 (\
+OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ,
+ []
+
+[18]
+<./figures/perceptron.png, id=349, 1256.695pt x 487.8225pt>
+File: ./figures/perceptron.png Graphic file (type png)
+<use ./figures/perceptron.png>
+Package pdftex.def Info: ./figures/perceptron.png  used on input line 168.
+(pdftex.def)             Requested size: 308.30525pt x 119.6803pt.
+ [19 <./figures/perceptron.png>]
+<./figures/feedforward.png, id=361, 564.1075pt x 355.3275pt>
+File: ./figures/feedforward.png Graphic file (type png)
+<use ./figures/feedforward.png>
+Package pdftex.def Info: ./figures/feedforward.png  used on input line 184.
+(pdftex.def)             Requested size: 237.50883pt x 149.60364pt.
+ [20 <./figures/feedforward.png>] [21]
+[22]
+<./figures/gradient.png, id=396, 951.555pt x 531.9875pt>
+File: ./figures/gradient.png Graphic file (type png)
+<use ./figures/gradient.png>
+Package pdftex.def Info: ./figures/gradient.png  used on input line 261.
+(pdftex.def)             Requested size: 305.81058pt x 170.97pt.
+ [23 <./figures/gradient.png>]
+<./figures/functions.png, id=404, 1559.8275pt x 540.0175pt>
+File: ./figures/functions.png Graphic file (type png)
+<use ./figures/functions.png>
+Package pdftex.def Info: ./figures/functions.png  used on input line 285.
+(pdftex.def)             Requested size: 432.10753pt x 149.60364pt.
+
+Overfull \hbox (4.676pt too wide) in paragraph at lines 285--287
+ [][] 
+ []
+
+[24 <./figures/functions.png>]
+<./figures/stochastic.png, id=421, 483.60675pt x 177.0615pt>
+File: ./figures/stochastic.png Graphic file (type png)
+<use ./figures/stochastic.png>
+Package pdftex.def Info: ./figures/stochastic.png  used on input line 319.
+(pdftex.def)             Requested size: 326.89273pt x 119.6803pt.
+ [25 <./figures/stochastic.png>]
+<./figures/optimization.png, id=436, 259.97125pt x 194.7275pt>
+File: ./figures/optimization.png Graphic file (type png)
+<use ./figures/optimization.png>
+Package pdftex.def Info: ./figures/optimization.png  used on input line 349.
+(pdftex.def)             Requested size: 205.4385pt x 153.87561pt.
+ [26 <./figures/optimization.png>]
+<./figures/injection.png, id=447, 602.25pt x 551.81157pt>
+File: ./figures/injection.png Graphic file (type png)
+<use ./figures/injection.png>
+Package pdftex.def Info: ./figures/injection.png  used on input line 364.
+(pdftex.def)             Requested size: 107.28838pt x 98.30742pt.
+<./figures/surjection.png, id=448, 602.25pt x 551.81157pt>
+File: ./figures/surjection.png Graphic file (type png)
+<use ./figures/surjection.png>
+Package pdftex.def Info: ./figures/surjection.png  used on input line 373.
+(pdftex.def)             Requested size: 107.28838pt x 98.30742pt.
+<./figures/bijection.png, id=449, 602.25pt x 554.82281pt>
+File: ./figures/bijection.png Graphic file (type png)
+<use ./figures/bijection.png>
+Package pdftex.def Info: ./figures/bijection.png  used on input line 382.
+(pdftex.def)             Requested size: 106.70943pt x 98.30742pt.
+ [27 <./figures/injection.png> <./figures/surjection.png> <./figures/bijection.
+png>] [28]) (chapters/implementation.tex [29]
+Chapter 4.
+[30
+
+] [31] [32]
+Overfull \hbox (11.5484pt too wide) in paragraph at lines 92--92
+[]  \T1/cmr/m/n/12 - `adam' refers to a tran-si-tion be-tween adap-tive meth-od
+s and momentum-
+ []
+
+[33] [34]
+<./figures/describe1.png, id=525, 500.62032pt x 171.64125pt>
+File: ./figures/describe1.png Graphic file (type png)
+<use ./figures/describe1.png>
+Package pdftex.def Info: ./figures/describe1.png  used on input line 161.
+(pdftex.def)             Requested size: 423.86401pt x 145.32515pt.
+
+Overfull \hbox (6.1266pt too wide) in paragraph at lines 183--184
+[]\T1/cmr/m/n/12 These re-duc-tions need some ex-pla-na-tion. As men-tioned abo
+ve, $\OML/cmm/m/it/12 n[]tokens[]content$
+ []
+
+[35 <./figures/describe1.png>] [36] [37]
+<./figures/plot.png, id=594, 403.5075pt x 304.13625pt>
+File: ./figures/plot.png Graphic file (type png)
+<use ./figures/plot.png>
+Package pdftex.def Info: ./figures/plot.png  used on input line 264.
+(pdftex.def)             Requested size: 255.1962pt x 192.34288pt.
+ [38 <./figures/plot.png>]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
+ [39]
+[40]) (chapters/summary.tex [41]
 Chapter 5.
-) (main.bbl [29
+) (main.bbl [42
 
-] [30
+] [43
 
-]) (appendices/cd.tex) [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+] [44]) [45] (appendices/cd.tex) [46
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 38861B7F84AB0DAB3FEC37C9001D3C70;5862.
 
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
 
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: EE909A65756EB8134754851E716A115B;5353
-(rerunfilecheck)             After:  7DE257E5BE18B871C4AB0CAE96477377;5353.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 24412 strings out of 492970
- 420875 string characters out of 3133676
- 682307 words of memory out of 3000000
- 27562 multiletter control sequences out of 15000+200000
- 23371 words of font info for 58 fonts, out of 3000000 for 9000
+ 24528 strings out of 492970
+ 422647 string characters out of 3133676
+ 706311 words of memory out of 3000000
+ 27618 multiletter control sequences out of 15000+200000
+ 24237 words of font info for 59 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,7n,77p,986b,1883s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{chapter.197} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.196} has been referenced but does not exist
-, replaced by a fixed one
-
+ 69i,15n,77p,1281b,1893s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecrm1000.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecbx1440.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\Lilcsa\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Lilcsa\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440.pk> <C:\Users\
+Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk>
  <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm0900.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecsl1095.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Lilcsa\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Lilcsa\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Li
-lcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1095.pk> <
-C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
-m1095.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecti1095.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
-jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Lilcsa\AppData\Local\MiKTe
-X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><D:/Lilcsa/Tanszeki_dolgok
-/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Lilcsa/Tanszeki_dolgok/mi
-ktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Lilcsa/Tanszeki_dolgok/mikte
-x/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type
-1/public/amsfonts/cm/cmr8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public
-/amsfonts/cm/cmsy6.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfont
-s/cm/cmsy9.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/sy
-mbols/msbm10.pfb>
-Output written on main.pdf (32 pages, 1040113 bytes).
+cbx1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\eccc1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Lilcsa\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Lilcsa\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Li
+lcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><D
+:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/L
+ilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Lilc
+sa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Lilcsa/T
+anszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Lilcsa/Tansz
+eki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Lilcsa/Tanszeki_
+dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Lilcsa/Tanszeki_dolgo
+k/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Lilcsa/Tanszeki_dolgok/mik
+tex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex
+/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (47 pages, 1568773 bytes).
 PDF statistics:
- 1213 PDF objects out of 1440 (max. 8388607)
- 264 named destinations out of 1000 (max. 500000)
- 316 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1396 PDF objects out of 1440 (max. 8388607)
+ 315 named destinations out of 1000 (max. 500000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 

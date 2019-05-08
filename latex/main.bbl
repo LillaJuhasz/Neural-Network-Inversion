@@ -56,6 +56,11 @@ G.~Dong and H.~Liu.
 \newblock Chapman \& Hall/CRC Data Mining and Knowledge Discovery Series. CRC
   Press, 2018.
 
+\bibitem{feldman2013neural}
+J.~Feldman and R.~Rojas.
+\newblock {\em Neural Networks: A Systematic Introduction}.
+\newblock Springer Berlin Heidelberg, 2013.
+
 \bibitem{Fernandes2015API}
 Kelwin Fernandes, Pedro Vinagre, and Paulo Cortez.
 \newblock A proactive intelligent decision support system for predicting the
@@ -66,6 +71,11 @@ Kelwin Fernandes, Pedro Vinagre, and Paulo Cortez.
 T.L. Fine.
 \newblock {\em Feedforward Neural Network Methodology}.
 \newblock Information Science and Statistics. Springer New York, 2006.
+
+\bibitem{graybill1994regression}
+F.A. Graybill and H.K. Iyer.
+\newblock {\em Regression Analysis: Concepts and Applications}.
+\newblock An Alexander Kugushev book. Duxbury Press, 1994.
 
 \bibitem{han2011data}
 J.~Han, J.~Pei, and M.~Kamber.
@@ -166,6 +176,12 @@ J.~VanderPlas.
 T.~Veerarajan.
 \newblock {\em Numerical Methods}.
 \newblock Sigma series. McGraw-Hill Education (India) Pvt Limited, 2007.
+
+\bibitem{wolberg2006data}
+J.~Wolberg.
+\newblock {\em Data Analysis Using the Method of Least Squares: Extracting the
+  Most Information from Experiments}.
+\newblock Springer Berlin Heidelberg, 2006.
 
 \bibitem{zaki2010advances}
 M.J. Zaki, J.X. Yu, B.~Ravindran, and V.~Pudi.

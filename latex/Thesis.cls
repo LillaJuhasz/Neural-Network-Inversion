@@ -32,7 +32,7 @@ LaTeX document class]
 	\let\@this\@empty
 	\if@tempswa \else \PassOptionsToClass{#1}{\baseclass}\fi
 }
-\@checkoptions{11pt}{{10pt}{11pt}{12pt}}
+\@checkoptions{13pt}{{10pt}{11pt}{12pt}{13pt}}
 \PassOptionsToClass{a4paper}{\baseclass}
 \ProcessOptions\relax
 \LoadClass{\baseclass}
@@ -61,6 +61,7 @@ LaTeX document class]
 \usepackage{vmargin}
 \usepackage{todonotes}
 \usepackage{wrapfig}
+%\usepackage[fontsize=13pt]{scrextend}
 
 \usepackage{color}
 \definecolor{deepblue}{rgb}{0,0,0.5}
@@ -151,7 +152,7 @@ LaTeX document class]
 } 
 %-------------------------------------------------   
 % Your degree name - this is currently used in the title page and abstract
-\degree{Student Research} 
+\degree{Bachelor's Thesis} 
 %-------------------------------------------------   
 % Your name - this is used in the title page and abstract
 \authors{
