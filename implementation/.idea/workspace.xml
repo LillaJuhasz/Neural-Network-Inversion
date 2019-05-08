@@ -9,22 +9,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/szakdoga$main.coverage" NAME="main Coverage Results" MODIFIED="1554798433486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/szakdoga$main.coverage" NAME="main Coverage Results" MODIFIED="1557242749674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1354289872">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.116" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.50" value="1" />
-          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.51" value="2" />
           <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.55" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.58" value="1" />
           <entry key="project.open.time.59" value="3" />
           <entry key="project.open.time.60" value="2" />
           <entry key="project.open.time.62" value="2" />
@@ -37,42 +53,52 @@
           <entry key="project.open.time.71" value="1" />
           <entry key="project.open.time.74" value="2" />
           <entry key="project.open.time.87" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.open.time.92" value="1" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="170" />
+          <entry key="Python Console" value="205" />
           <entry key="Unnamed" value="19" />
-          <entry key="py" value="11178" />
+          <entry key="py" value="12650" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="11367" />
+          <entry key="Python" value="12874" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="10" />
+          <entry key="py" value="12" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="10" />
+          <entry key="Python" value="12" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../untitled/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="990">
+              <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+            <state relative-caret-position="738">
+              <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -83,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/inversion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="666">
+              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <marker date="1554717511347" expanded="true" signature="122:123" ph="..." />
               </folding>
@@ -113,6 +139,7 @@
       <list>
         <option value="$PROJECT_DIR$/QuadraticFunctionRegressionTest.py" />
         <option value="$PROJECT_DIR$/inversion.py" />
+        <option value="$PROJECT_DIR$/quadratic_sinus.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -150,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,12 +193,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/QuadraticFunctionRegressionTest.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -239,7 +266,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="D:\Lilcsa\Tanszeki_dolgok\Miniconda\envs\szakdoga\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -272,20 +299,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636805" visible="true" weight="0.18277946" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636805" visible="true" weight="0.19486405" />
       <window_info id="Structure" order="1" sideWeight="0.50363195" side_tool="true" weight="0.17220543" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848944" visible="true" weight="0.34146342" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848944" weight="0.34146342" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3284553" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
@@ -296,8 +332,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" x="0" y="19" width="1366" height="709" id="SciView" order="3" show_stripe_button="false" sideWeight="0.50246304" type="FLOATING" weight="0.22280967" />
-      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="4" sideWeight="0.49753696" side_tool="true" visible="true" weight="0.22280967" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="4" sideWeight="0.5012346" side_tool="true" visible="true" weight="0.093655586" />
+      <window_info anchor="right" x="465" y="263" width="436" height="202" id="Database" order="5" sideWeight="0.49876544" type="WINDOWED" weight="0.32930514" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,13 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../untitled/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-251">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/InversionResults.txt" />
     <entry file="file://$PROJECT_DIR$/simpleRegressionTest.py" />
     <entry file="file://$PROJECT_DIR$/../../Miniconda/envs/untitled/Lib/site-packages/sklearn/neural_network/multilayer_perceptron.py">
@@ -331,9 +360,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/QuadraticFunctionRegressionTest.py" />
-    <entry file="file://$USER_HOME$/Documents/GitHub/Neural-Network-Inversion/implementation/simpleRegressionTest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/Documents/GitHub/Neural-Network-Inversion/implementation/simpleRegressionTest.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -341,10 +368,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../untitled/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quadratic_sinus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/inversion.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="666">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <marker date="1554717511347" expanded="true" signature="122:123" ph="..." />
           </folding>
@@ -353,8 +394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="57" column="34" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        <state relative-caret-position="738">
+          <caret line="41" column="40" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

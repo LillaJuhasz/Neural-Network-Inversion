@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -29,6 +30,7 @@ dataset_copy[:] = scaler.fit_transform(dataset_copy[:])
 y = dataset_copy.pop('shares')
 X = dataset_copy
 
+
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.3, random_state=0)
 
@@ -57,6 +59,10 @@ print(regressor, 'score: ', gs.best_score_, sep='\n ', file=open('TrainingResult
 
 y_pred = regressor.predict(X_test)
 
+plt.plot(X_test, y_test, 'o', color='orange')
+plt.plot(X_test, y_pred, 'o', color='blue')
+plt.savefig("./" + 'plot.pdf')
+plt.show()
 
 inversionResults = pd.DataFrame(columns=['accuracy_percent'])
 
@@ -66,7 +72,7 @@ for i, value in enumerate(y_test):
                                     gs.best_params_['learning_rate_init'])
     guessedInput = pd.DataFrame(guessedInput).T
 
-    accuracy = abs((regressor.predict(guessedInput) - desired_output) / (y.max() - y.min()))
+    accuracy = 1 - abs((regressor.predict(guessedInput) - desired_output) / (y_test.max() - y_test.min()))
     inversionResults = inversionResults.append(
         {'accuracy_percent': accuracy[0]*100}, ignore_index=True)
 
