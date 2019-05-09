@@ -36,13 +36,12 @@ Data preparation and filtering steps can be time consuming. Data preprocessing i
 The given data in large datasets often contains information that is not clear enough. There are several techniques for repairing these uncertain data. \bigskip
 
 \noindent For resolving missing values, the following steps can be taken:
-\begin{itemize}
-	\setlength\itemsep{0em}
-	\item Simply remove the feature vector, which is only effective if the vector contains several missing attributes.
-	\item Fill the missing values manually, which can be done with the mean value.
-\end{itemize}
+\begin{verse}
+	$\bullet$ Simply remove the feature vector, which is only effective if the vector contains several missing attributes.\\
+	$\bullet$ Fill the missing values manually, which can be done with the mean value.
+\end{verse}
 
-Both techniques can create noise and inaccuracy, but it is important to deal the appropriate technique, because the incorrect feature vector may contain necessary information too. \bigskip
+Both techniques can create inaccuracies, but it is important to deal the appropriate technique, because the incorrect feature vector may contain necessary information too. \bigskip
 
 Noise is a random error or variance in a measured variable. Noisy data needs to be smoothed to get the accurate prediction. Binning methods are local smoothing techniques, because they smooth the value with its neighbour's. Clustering can be used to detect outlier values by organizing them into similar groups. Data can be smoothed by fitting a function like regression to the data.\medskip
 
@@ -66,13 +65,13 @@ Some features of the dataset need to be transformed to get an appropriate form f
 	\label{fig:data_mining}
 \end{figure}
 
-\textbf{Normalization} is the process of scaling individual samples to have a unit normal. Min-max scaling is the simplest normalization method that rescales the features to a range of $[0, 1]$ or $[-1, 1]$. The selected range depends of the data. It can be written as the following \eqref{eq:min-max}, where $x$ is the original, and $x'$ is the normalized value:
+\textbf{Normalization} is the process of scaling individual samples to have a unit normal. Min-max scaling is the simplest normalization method that rescales the features to a range of $[0, 1]$ or $[-1, 1]$. The selected range depends on the data. It can be written as the following \autoref{eq:min-max}, where $x$ is the original, and $x'$ is the normalized value:
 \begin{equation} x' = \frac{x-min(x)}{max(x)-min(x)} \label{eq:min-max} \end{equation} 
 
-\smallskip \noindent Mean normalization \eqref{eq:mean} is similar to min-max scaling, where $\bar x$ is the mean of $x$:
+\smallskip \noindent Mean normalization in \autoref{eq:mean} is similar to min-max scaling, where $\bar x$ is the mean of $x$:
 \begin{equation} x' = \frac{x-\bar x}{max(x)-min(x)} \label{eq:mean} \end{equation} \medskip
 
-\textbf{Standardization} is the process of transforming the values of the given dataset into standard normality. Feature standardization \eqref{eq:standard} gets the values of each feature to have zero-mean and unit-variance. 
+\textbf{Standardization} is the process of transforming the values of the given dataset into standard normality. Feature standardization in \autoref{eq:standard} gets the values of each feature to have zero-mean and unit-variance. 
 \begin{equation}  x'= \frac{x-\bar x}{\sigma} \label{eq:standard} \end{equation}
 where $x$ is the original feature vector, $\bar x$ is the mean of that feature vector and $\sigma$ is its standard deviation.\bigskip
 
@@ -88,18 +87,18 @@ The length of the binary vector is equal to the number values in the current fea
 
 \subsubsection{Algorithms of Data Mining}
 
-As mentioned, the product of data mining is the training set. For the application of data mining algorithms, the original dataset is usually split into multiple sets. There are two datasets, which are separated during the creation of the model. The first one is called \textbf{training set}, which is used by the machine learning algorithm to gather knowledge and increase accuracy. The other one is the \textbf{testing set}, which is used to provide a dataset to test function estimation accuracy of the learning algorithm on the training dataset.\medskip
+The algorithms of data mining originates from a wider field called \textbf{data analytics}. Data analytics is the process of examining datasets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analysis on existing datasets. The dataset is processed by data mining techniques that machine learning models can use. \medskip
 
-After the split, the following data mining techniques \cite{pujari2001data} can be used on the training set to discover the patterns:\\
-1. Classification: This method helps to retrieve information by classifying data into different classes. It can be use to draw further conclusions.\\
+The product of data mining is the training set. To apply data mining algorithms, the original dataset has to be split into multiple sets. The first one is called \textbf{training set}, which is used by the machine learning algorithm to gather knowledge and increase accuracy. The other one is the \textbf{testing set}, which is used to provide a dataset to test function estimation accuracy of the learning algorithm on the training dataset.\medskip
+
+After the split, the following data mining techniques \cite{pujari2001data} can be used on the training set to discover patterns:\\
+1. Classification: This method helps to retrieve information by classifying data into different classes. It can be used to draw further conclusions.\\
 2. Clustering: It can be used to identify data which are similar to each other. It is an effective way to understand the similarities and differences between values.\\
-3. Regression:  This method analyzes the relationship between variables, to determine desired unknown values.\\
+3. Regression:  This method analyses the relationship between variables, to determine desired unknown values.\\
 4. Association: It can discover hidden patterns in the dataset by identifying special events, for example high correlations between values.\\
-5. Outer detection: It collects outlier values which do not match an expected pattern or expected behavior. \\
+5. Outlier detection: It collects outlier values which do not match an expected pattern or expected behavior. \\
 6. Sequential Patterns: This method helps to identify similar patterns for a certain period. \\
-7. Prediction: This method can be used for predicting future values in a dataset with the known of the given data and past events.  \medskip
-
-The techniques of data mining originates from a wider field called \textbf{data analytics}. Data analytics is the process of examining datasets in order to draw conclusions about the information they contain. It focuses on processing and performing statistical analysis on existing datasets. A widely used data analytics technique is machine learning.
+7. Prediction: This method can be used for predicting future values in a dataset with the known of the given data and past events.  
 
 
 
@@ -123,8 +122,8 @@ Regression analysis is a form of predictive modelling technique which investigat
 	$\bullet$ The dependent variable: $y\in\mathbb{R}$.
 \end{verse}
 
-\noindent A regression model relates $Y$ to a function of $X$ and $\beta$.
-$$ y \approx f(X,\beta) $$
+\noindent A regression model relates $Y$ to a function of $X$ and $\beta$ in \autoref{eq:regr}.
+\begin{equation} y \approx f(X,\beta) \label{eq:regr} \end{equation}
 
 Assume that the length of the vector of unknown parameters $\beta$ is $k\in \mathbb{Z}$. In order to perform a regression analysis, the information about the dependent variable $y$ must be provided:\smallskip
 
@@ -145,10 +144,10 @@ In regression analysis, there is a standard approach called the method of least 
 
 The method of least squares or least squares fitting method \cite{wolberg2006data} is a mathematical procedure for finding the best-fitting curve to a given set of training data by minimizing the error. Error is the difference between the actual value of the dependent variable and the value predicted by the model. \medskip
 
-Suppose that we have a series of $N\in\mathbb{Z}^+$ data points $(x_1, y_1), (x_2, y_2), \ldots, (x_N, y_N)$, where $x_i$ is an independent variable and $y_i$ is a dependent one. Also suppose that $x_1 < x_2 < \ldots < x_N$, i.e. the points are distinct and are in increasing order depending on $x$. The fit of a model to a data point is measured by the error $E$:
-$$ E_i=y_i-f(x_i,\beta) $$
-The method of least squares fitting aims on to adjust the best-fitting values to the dataset. By performing least squares fitting algorithm, the required parameters $\alpha_1, \alpha_2, \ldots, \alpha_k$ of the function $f_{\alpha_1, \alpha_2, \ldots, \alpha_k} : [x_1, x_n] \rightarrow \mathbb{R}$ have been searched for, to minimize the sum $S$ of squared errors:
-$$ S=\sum_{i = 1}^N ~ [f_{\alpha_1, \alpha_2, \ldots, \alpha_k}(x_i) - y_i]^2 $$
+Suppose that we have a series of $N\in\mathbb{Z}^+$ data points $(x_1, y_1), (x_2, y_2), \ldots, (x_N, y_N)$, where $x_i$ is an independent variable and $y_i$ is a dependent one. Also suppose that $x_1 < x_2 < \ldots < x_N$, i.e. the points are distinct and are in increasing order depending on $x$. The fit of a model to a data point is measured by the error $E_i$ in \autoref{eq:least1}:
+\begin{equation} E_i=y_i-f(x_i,\beta) \label{eq:least1} \end{equation}
+The method of least squares fitting aims to adjust the best-fitting values to the dataset. By performing least squares fitting algorithm, the required parameters $\alpha_1, \alpha_2, \ldots, \alpha_k$ of the function $f_{\alpha_1, \alpha_2, \ldots, \alpha_k} : [x_1, x_n] \rightarrow \mathbb{R}$ have been searched for, to minimize the sum $S$ of squared errors in \autoref{eq:least2}:
+\begin{equation} S=\sum_{i = 1}^N ~ [f_{\alpha_1, \alpha_2, \ldots, \alpha_k}(x_i) - y_i]^2 \label{eq:least2} \end{equation}
 
 
 \section{Perceptron}
@@ -157,9 +156,9 @@ A perceptron \cite{tho2010perceptron} is a single layer feedforward neural netwo
 
 In the input layer, each neuron has a weight connected to it, which represents the influence of that given neuron. The weights are used to decide the importance of the input values that are presented to the perceptron. Also the weights are used during the training of an artificial neural network as changing them in appropriate ways. If the predicted output is the same as the desired output, then the performance is considered satisfactory and no changes to the weights should be made. However, if the output does not match the desired output, then the weights need to be changed to reduce the error. \medskip
 
-In order to avoid unnecessary iterations, it is important to adjust the weights \eqref{eq:slp} properly.
-\begin{equation} \Delta w = \eta * d * x \label{eq:slp} \end{equation} 
-where $\Delta w$ stands for the current weight, $\eta \leq 1$ is the learning rate which is the size of the required steps, $d$ represents the desired output and $x$ is the input data. \medskip
+In order to avoid unnecessary iterations, it is important to adjust the weights in \autoref{eq:slp} properly.
+\begin{equation} \Delta w = \eta * \hat{y} * x \label{eq:slp} \end{equation} 
+where $\Delta w$ stands for the current weight, $\eta \leq 1$ is the learning rate which is the size of the required steps, $\hat{y}$ represents the desired output and $x$ is the input data. \medskip
 
 To determine the value of a node, all the inputs would be multiplied by their respective weights, and then summed. This weighted sum stands for \textbf{dot product} in this context: $ z = w_1 x_1 + w_2 x_2 + \dots + w_m x_m = \sum_{j=1}^m w_j x_j $
 
@@ -170,8 +169,8 @@ To determine the value of a node, all the inputs would be multiplied by their re
 	\label{fig:perceptron}
 \end{figure}
 
-The output $o$ in \eqref{eq:slp-output} is determined by whether the weighted sum $\sum_j(w_j x_j)$ is less than or greater than some threshold value $\theta$, which is the parameter of the neuron. If that value is above a given threshold, it "fires", which means that the neuron gets an activated value. 
-\begin{equation} o = \begin{cases} 0, & \hbox{for}~ \sum_j(w_j x_j) < \theta \\ 1, & \hbox{for}~ \sum_j(w_j x_j) \geq \theta \end{cases} \label{eq:slp-output} \end{equation} 
+The output $y$ in \autoref{eq:slp-output} is determined by whether the weighted sum $\sum_j(w_j x_j)$ is less than or greater than some threshold value $\theta$, which is the parameter of the neuron. If that value is above a given threshold, it "fires", which means that the neuron gets an activated value. 
+\begin{equation} y = \begin{cases} 0, & \hbox{for}~ \sum_j(w_j x_j) < \theta \\ 1, & \hbox{for}~ \sum_j(w_j x_j) \geq \theta \end{cases} \label{eq:slp-output} \end{equation} 
 
 \newpage
 
@@ -188,15 +187,15 @@ The feedforward neural network \cite{fine2006feedforward} is a type of neural ne
 
 A typical feedforward neural network consists of input and output layers. There is an intermediate part between inputs and outputs, called hidden layers. The \textbf{input layer} is a set of input neurons, where each neuron represents a feature in our dataset. The \textbf{output} of any feedforward network is the sum of the inputs multiplied by the weights. The \textbf{hidden layer} contains units which can transform the inputs into a mapping that the output layer can utilize. The relationship between the input and hidden layer is determined by the weights of the network. \bigskip
 
-\noindent The output of a trained feedforward neural network can be characterized by \eqref{eq:feedforward}
-\begin{equation} o_k = f_k(i,w) \label{eq:feedforward} \end{equation}
-where $o_k$ is the $k$th neural network output, $(i,w)$ is a vector of the weights and $f_k(\cdot)$ describes the mapping from the input to the $k$th output, where $f_k(\cdot)$ also contains the structure of the feedforward perceptron. The neural network can be trained if the input and the output are fixed and the weights are adjusted. When a single scalar output can be found, $o_k$ can be replaced by $o$ and $f_k(\cdot)$ by $f(\cdot)$.
+\noindent The output of a trained feedforward neural network can be characterized by the \autoref{eq:feedforward}
+\begin{equation} y_k = f_k(i,w) \label{eq:feedforward} \end{equation}
+where $y_k$ means the $k$th neural network output, $(i,w)$ is a vector of the weights and $f_k(\cdot)$ describes the mapping from the input to the $k$th output, where $f_k(\cdot)$ also contains the structure of the feedforward perceptron. The neural network can be trained if the input and the output are fixed and the weights are adjusted. When a single scalar output can be found, $y_k$ can be replaced by $y$ and $f_k(\cdot)$ by $f(\cdot)$.
 
 
 
 \subsection{Multi-Layer Perceptron}
 
-The multi-layer perceptron is a multi-layered feedforward neural network algorithm that learns a function $f(\cdot) : \mathbb{R}^m \mapsto \mathbb{R}^o$ by training on a dataset, where $m$ is the number of dimensions for the input and $o$ is the number of dimensions for the output. Given a set of features $X = x_1, x_2, \dots, x_m$ and a target $y$, it can be a non-linear function approximator for either classification or regression. \medskip
+The multi-layer perceptron is a multi-layered feedforward neural network algorithm that learns a function $f(\cdot) : \mathbb{R}^m \mapsto \mathbb{R}^n$ by training on a dataset, where $m$ is the number of dimensions for the input and $n$ is the number of dimensions for the output. Given a set of features $X = x_1, x_2, \dots, x_m$ and a target $y$, it can be a non-linear function approximator for either classification or regression. \medskip
 
 The difference between single- and multi-layered neural networks is that the multi-layered perceptron has one or more hidden layers besides the input and output layer. Except for the input nodes, each node is a neuron that uses a linear or non-linear activation function. \medskip
 
@@ -204,9 +203,9 @@ The process of making a multi-layer neural network is simple with the use of the
 1. Assume that there are $m\in\mathbb{Z}$ features in input $X$, so $m\in\mathbb{Z}$ weights are needed to perform a dot product.\\
 2. With $n$ hidden neurons in the hidden layer, $n\in\mathbb{Z}~$ sets of weights $(w_1, w_2, \dots , w_n)$ are needed for performing dot products.\\
 3. With one hidden layer, $n$ dot products can be performed to get the hidden output $h: (h_1, h_2, \dots , h_n).$\\
-4. Then the hidden output that also has $n$ features can be used as input data to perform dot product with a set of $n$ weights and get the final output $o$. \bigskip
+4. Then the hidden output that also has $n$ features can be used as input data to perform dot product with a set of $n$ weights and get the final output $y$. \bigskip
 
-In a multi-layer perceptron, each neuron in one layer is connected with a weight to another neuron in the next layer. Each of these neurons stores a value, which is in general a sum of the weighted neurons which comes from previous layers. There is a special unit, called \textbf{bias}, that are not influenced by any values in the previous layer, so they do not have any incoming connections. However they have outgoing connections and they can contribute to the output of the artificial neural network. Bias units stores a constant value, which helps the model to fit the best for the given data. Hence the definition of dot product expands like this \eqref{eq:mlp}:
+In a multi-layer perceptron, each neuron in one layer is connected with a weight to another neuron in the next layer. Each of these neurons stores a value, which is in general a sum of the weighted neurons which comes from previous layers. There is a special unit, called \textbf{bias}, that are not influenced by any values in the previous layer, so they do not have any incoming connections. However they have outgoing connections and they can contribute to the output of the artificial neural network. Bias units stores a constant value, which helps the model to fit the best for the given data. Hence the definition of dot product expands like the \autoref{eq:mlp}:
 \begin{equation} z = \sum_{j=1}^m w_j x_j + bias \label{eq:mlp} \end{equation}
 
 Neural networks are designed to learn from datasets by using iterative methods. Estimation value error is calculated from the desired and the predicted values to modify the weights of the connections between neurons. A multi-layer perceptron utilizes a supervised learning technique called \textbf{backpropagation} for training.
@@ -214,7 +213,7 @@ Neural networks are designed to learn from datasets by using iterative methods. 
 
 \subsubsection{Backpropagation}
 
-The main goal of backpropagation \cite{chauvin2013backpropagation} is to update all of the weights in the neural network, in such way that the predicted output to be closer to the target output with minimizing the error of each output neuron and also the network.
+The main goal of backpropagation \cite{chauvin2013backpropagation} is to update all of the weights in the neural network, in such way that the predicted output to be closer to the target output while minimizing the error of each output neuron and the network.
 
 The algorithm consists of two phases: the forward phase where the activations are propagated from the input to the output layer, and the backward phase, where the error between the actual and the desired value in the output layer is propagated backwards to modify the weights values. \medskip
 
@@ -222,21 +221,21 @@ Assume that $N$ is a neural network with $e$ connections, $m$ inputs, and $n$ ou
 
 The function that is used to compute this error is known as \textbf{loss function}. For backpropagation, the loss function calculates the difference between the network output and its expected output, after a training example has propagated through the network. \medskip
 
-Different loss functions will give different errors for the same prediction, and thus have a considerable effect on the performance of the model. In the training of multi-layer perceptrons, L2 loss function $L$ has been used in \eqref{eq:backprop}, which is the square of the L2 norm of the difference between actual value $y$ and predicted value $\hat{y}$.
-\begin{equation} L = \sum^n_{i=1}(y - \hat{y})^2 \label{eq:backprop} \end{equation}
+Different loss functions will give different errors for the same prediction, and thus have a considerable effect on the performance of the model. In the training of multi-layer perceptrons, L2 loss function $L$ has been used in \autoref{eq:backprop}, which is the square of the L2 norm of the difference between actual value $y$ and predicted value $\hat{y}$.
+\begin{equation} L = \sum^n_{i=1}(y_i - \hat{y})^2 \label{eq:backprop} \end{equation}
 
 
 
 \subsubsection{Gradient descent}
 
-One generally used method used for backpropagation in the calculation of the weights is gradient descent \cite{anderson1995introduction}. It is an optimization method, which aims on to minimize a given function to its local minimum by iteratively updating the weights of the model. The input is defined with an initial value and the algorithm calculates the gradient i.e. the partial derivative of the loss curve at this starting point. Gradient descent can be used to solve a system of linear and non-linear equations too, but only the linear one will be explicated in \eqref{eq:lin_grad}:
+One generally used method used for backpropagation in the calculation of the weights is gradient descent \cite{anderson1995introduction}. It is an optimization method, which aims to minimize a given function to its local minimum by iteratively updating the weights of the model. The input is defined with an initial value and the algorithm calculates the gradient i.e. the partial derivative of the loss curve at this starting point. Gradient descent can be used to solve a system of linear and non-linear equations too, but only the linear one will be explicated in \autoref{eq:lin_grad}:
 \begin{equation} \hat{y} = wx + b \label{eq:lin_grad} \end{equation}
 where $x$ is the input, $\hat{y}$ is the predicted output, $w$ defines weights and $b$ stands for bias.\medskip
 
-In the operation of gradient descent, cost function $f(w,b)$ in \eqref{eq:cost} utilizes the value of the loss function to define how to update our weights to make the model more accurate.
+In the operation of gradient descent, cost function $f(w,b)$ in \autoref{eq:cost} utilizes the value of the loss function to define how to update our weights to make the model more accurate.
 \begin{equation} f(w,b) ~~=~~ \frac{1}{n} \sum_{i=1}^n(y_i-\hat{y})^2 ~~=~~ \frac{1}{n} \sum_{i=1}^n(y_i-(wx_i+b))^2 \label{eq:cost} \end{equation}
 
-From the cost function, the partial derivatives of the cost function are calculated with respect to each parameter and results are stored in a gradient in \eqref{eq:partial}.
+From the cost function, the partial derivatives of the cost function are calculated with respect to each parameter and results are stored in a gradient in \autoref{eq:partial}.
 \begin{equation} f'(w,b) = \bmatrix{ \aligned \frac{\partial f}{\partial w} \\
 	\frac{\partial f}{\partial b} \endaligned }\endbmatrix
 = \bmatrix{ \aligned \frac{1}{n} \sum - 2x_i(y_i-\hat{y}) \\
@@ -277,7 +276,7 @@ The task that is being tackled in this thesis is to make the inversion of a sing
 
 In connection with artificial neural networks, the activation function is a transitional state of the neurons between other layers. It is a mapping of the previous layers and it maps the resulting value into the desired range, which is usually between -1 and 1. The output of the activation function is then used as input for the next layer, until a desired solution is found. There are several activation functions, and each of them utilizes different methods for mapping. \medskip
 
-As the multi-layer perceptron approximates non-linear functions, it will be the most accurate by using non-linear activation functions as well \cite{pillo2013nonlinear}. These non-linear activation functions are known about having more than one degrees and they have a curve in their graph. As non-linear functions can generate non-linear mappings from inputs to outputs, they can be applied on complex datasets. 
+As the multi-layer perceptron approximates non-linear functions, it will be the most accurate by using non-linear activation functions as well \cite{pillo2013nonlinear}. These non-linear activation functions are known for having more than one degrees and have a curve in their graph. As non-linear functions can generate non-linear mappings from inputs to outputs, they can be applied on complex datasets. 
 
 \begin{figure}[h]
 	\centering
@@ -286,11 +285,11 @@ As the multi-layer perceptron approximates non-linear functions, it will be the 
 	\label{fig:functions}
 \end{figure}
 
-\bigskip \noindent The two common non-linear activation functions are both sigmoids, as they approximate with a curve instead of a straight line. These are the \textbf{hyperbolic tangent} and the \textbf{logistic} functions, described by \eqref{eq:activation}
-\begin{equation} f(x)=tanh(x) ~~~ \hbox{and} ~~~ f(x)=\sigma (x)=\frac{1}{1+e^{-x}} \label{eq:activation} \end{equation}
+\bigskip \noindent The two common non-linear activation functions are both sigmoids, as they approximate with a curve instead of a straight line. These are the \textbf{hyperbolic tangent} and the \textbf{logistic} functions, described by \autoref{eq:activation}
+\begin{equation} f(x)=tanh(x) ~~~~~ \hbox{and} ~~~~~ f(x)=\frac{1}{1+e^{-x}} \label{eq:activation} \end{equation}
 The hyperbolic tangent ranges from -1 to 1, while the logistic function is similar in shape but ranges from 0 to 1. \medskip
 
-The \textbf{ReLU} function is another type of non-linear functions, which stands for rectified linear unit. It is called half-rectified, because no negative values are allowed. This operation affects the resulting graph (\autoref{fig:functions}), as the negative values are shown as zeros \eqref{eq:activation2}.
+The \textbf{ReLU} function is another type of non-linear functions, which stands for rectified linear unit. It is called half-rectified, because no negative values are allowed. This operation affects the resulting graph (\autoref{fig:functions}), as the negative values are shown as zeros in \autoref{eq:activation2}.
 \begin{equation} f(x) = max(0,X) \label{eq:activation2} \end{equation}
 
 
@@ -311,7 +310,7 @@ To demonstrate assume that $\eta$ is the learning rate, $L$ stands for the loss 
 \noindent The process of the stochastic gradient descent algorithm is the following:\\
 1. Choose one sample from the dataset (this is what makes it stochastic gradient descent).\\
 2. Calculate all the partial derivatives of loss with respect to weights or biases. \\
-3. Use the update equation \eqref{eq:sgd} to update each weight and bias.\\
+3. Use the update \autoref{eq:sgd} to update each weight and bias.\\
 4. Go back to step 1.
 
 \begin{figure}[h]
@@ -324,12 +323,12 @@ To demonstrate assume that $\eta$ is the learning rate, $L$ stands for the loss 
 
 \subsubsection{Adaptive Moment Estimation}
 
-Another method is adaptive moment estimation, called Adam. This brand-new optimization method is designed to solve deep learning problems. Adam is a transition between adaptive methods and momentum-based methods. In the algorithm, running averages of both the gradients and the second moments of the gradients are used, which means Adam not only stores the exponentially decaying average of past squared gradients $v_t$, it also keeps the decaying average of past gradients $m_t$, similarly to momentum-based methods. The algorithm computes the decaying averages of past $m_t$ and past squared $v_t$ gradients respectively as follows in \eqref{eq:adam1}:
+Another method is adaptive moment estimation, called Adam. This brand-new optimization method is designed to solve deep learning problems. Adam is a transition between adaptive methods and momentum-based methods. In the algorithm, running averages of both the gradients and the second moments of the gradients are used, which means Adam not only stores the exponentially decaying average of past squared gradients $v_t$, it also keeps the decaying average of past gradients $m_t$, similarly to momentum-based methods. The algorithm computes the decaying averages of past $m_t$ and past squared $v_t$ gradients respectively as follows in \autoref{eq:adam1}:
 \begin{equation} m_t = \beta_1 m_{t-1} + (1-\beta_1)L_t ~~~~\hbox{and}~~~\ v_t = \beta_2 v_{t-1} + (1-\beta_2)L^2_t \label{eq:adam1} \end{equation}
 where $m_t$ and $v_t$ are the estimates of the first and second moments, $\beta_1$ and $\beta_2$ are the decay for gradients and second moments of gradients, and $L_t$ is the loss function.\\
-The first and second moment estimates are in \eqref{eq:adam2}:
+The first and second moment estimates are in \autoref{eq:adam2}:
 \begin{equation} \hat{m_t} = \frac{m_t}{a-\beta^t_1} ~~~~\hbox{and}~~~ \hat{v_t} = \frac{v_t}{a-\beta^t_2} \label{eq:adam2} \end{equation}
-Then these estimates are used to update the parameters $w$ with a simple scalar $\epsilon$ to prevent division by 0 in \eqref{eq:adam3}:
+Then these estimates are used to update the parameters $w$ with a simple scalar $\epsilon$ to prevent division by 0 in \autoref{eq:adam3}:
 \begin{equation} w_{t+1} = w_t - \frac{\mu}{\sqrt{\hat{v_t}}+\epsilon}\hat{m_t} \label{eq:adam3} \end{equation}
 
 
@@ -384,7 +383,7 @@ If a function is \textbf{bijective}, it is injective and surjective at the same 
 	\label{fig:bijective}
 \end{figure}
 
-Bijective functions are mutually unequivocal, so they can be mapped back and forth. When it is fulfilled, it can be said that the given $f(x) = y$ is mappable so that $g(y) = x$. Simply a function $f$ has an inverse function, if it is accomplished for every $y$ in $Y$ that there must be one, and only one $x$ in $X$ so that $f(x) = y$.\bigskip
+Bijective functions are mutually unequivocal, so they can be mapped back and forth. When it is fulfilled, it can be said that the given $f(x) = y$ is mappable so that $g(y) = x$. Simply a function $f$ has an inverse function, if for every $y$ in $Y$ that there must be one, and only one $x$ in $X$ so that $f(x) = y$.\bigskip
 
 Since artificial neural networks can behave as a universal function approximator, the inversion of a neural network is meant to be a process, which consists of clamping the weights and the neural network output while adjusting the input in the neural network until an equality or a best possible fit occurs for one or more values of the input. \medskip
 
@@ -404,7 +403,7 @@ In case of single element inversion, one single point can be estimated in every 
 
 To solve the inversion of an unconstrained optimization problem, the inversion method needs to solve the optimization itself in its training phase. After the dataset is properly trained, the inversion problem is the following:\medskip
 
-Given some network function $f : X \mapsto Y$, for some $y \in Y$, the appropriate $x \in X$ needs to be found, such that $f(x) = y$. Or more generally, if $L : Y \mapsto \mathbb{R}$ is the loss function defined over the network output, an input $x$ have to be found that minimizes $L(f(x))$. 
+Given some neural network function $f : X \mapsto Y$, for some $y \in Y$, the appropriate $x \in X$ needs to be found, such that $f(x) = y$. Or more generally, if $L : Y \mapsto \mathbb{R}$ is the loss function defined over the network output, an input $x$ have to be found that minimizes $L(f(x))$. 
 
 
 \subsection{Williams-Linder-Kindermann Inversion}
@@ -423,9 +422,9 @@ $t$ - the index of the iteration, \\
 $i_k^t$ - the $k$th component of the $i^t$ vector, \\
 $\eta$ - the learning rate \bigskip
 
-Because of the general feedforward topology, the iteration for inversion in \eqref{eq:wlk} can be solved by the derivative of \eqref{eq:wlk_delta}
+Because of the general feedforward topology, the iteration for inversion in \autoref{eq:wlk} can be solved by the derivative of \autoref{eq:wlk_delta}
 \begin{equation} \frac{\partial E}{\partial i_k} = \delta k ~~~~ k \in I \label{eq:wlk_delta} \end{equation}
-for every $\delta k$ in \eqref{eq:wlk_forward}:
+for every $\delta k$ in \autoref{eq:wlk_forward}:
 \begin{equation} \delta j = \begin{cases} \varphi'_j(o_j)(o_j-t_j):, & ~ j \in O \\ 
 \varphi'_j(o_j)\sum_{m\in H,O}\delta_j w_{jm}:, & j \in I, H \end{cases} \label{eq:wlk_forward} \end{equation}
 

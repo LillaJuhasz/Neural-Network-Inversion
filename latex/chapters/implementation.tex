@@ -6,25 +6,49 @@ This work aims to implement and analyse the inversion of a single element feedfo
 
 This work belongs in the realm of machine learning application research. Three main tasks are being tackled in this paper: data mining for extracting information from the dataset, building and testing multi-layer perceptron models, and the single element inversion of the feedforward neural network. \medskip
 
-The first task is to choose a dataset which contains predictable data. The selected dataset is called the Online News Popularity Dataset by Mashable news, that was served by the  \href{http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity}{UCI's Machine Learning Repository}. \smallskip
+The first task is to choose a dataset which contains predictable data. The selected dataset is called the Online News Popularity Dataset by Mashable news, that was served by UCI's Machine Learning Repository \cite{uci-url}. \smallskip
 
 The dataset is preprocessed for data mining by Pandas. Since being a publicly available dataset, its preprocessing and transformation has already done before its publication, but the dataset needs more cleaning with the assistance of Scikit-Learn. The dataset contains numerous outlying values that should be handled. Furthermore the dataset has a wide range of values, which necessitates a standard scaling. Then the dataset can be split into training and testing sets by Scikit-Learn. \medskip
 
-The training phase consists of the application of machine learning techniques \cite{karayiannis2013artificial}. Different multi-layer perceptron models are fitted on the training set with various hyperparameters. These attributes have iterated over different hidden layer sizes, activation functions, optimization algorithms, learning rate sizes and alpha values. Then Scikit-Learn trains the dataset and makes predictions to the testing set. The training is time consuming, since the used dataset is large and its length depends on the amount of attributes of the multi-layer perceptron models. At the end of each process, the testing set's output and the predicted output are compared and the difference between them is calculated. If all of the iterations are over, the best estimator's parameters are shown with the score, and the tested target values and the predicted values are plotted by Matplotlib.\medskip
+The training phase consists of the application of machine learning techniques \cite{karayiannis2013artificial, jolly2018machine}. Different multi-layer perceptron models are fitted on the training set with various hyperparameters. These attributes have iterated over different hidden layer sizes, activation functions, optimization algorithms, learning rate sizes and alpha values. Then Scikit-Learn trains the dataset and makes predictions to the testing set. The training is time consuming, since the used dataset is large and its length depends on the amount of attributes of the multi-layer perceptron models. At the end of each process, the testing set's output and the predicted output are compared and the difference between them is calculated. If all of the iterations are over, the best estimator's parameters are shown with the score, and the tested target values and the predicted values are plotted by Matplotlib.\medskip
 
-To perform the Williams-Linder-Kindermann inversion, the equations which are mentioned in \autoref{para:wlk-inv} have to be implemented \cite{nazari1992implementation}. The inversion is defined as a Python function to be callable in the main program. In the inversion function, the network is initialized with a random input vector. Output is calculated and compared with the given output. Now the error can be calculated and backpropagated to minimize the loss function and the input vector has updated too. This iterative process continues until the error is less than the minimum set value. The return value is the guessed input value. \smallskip
+To perform the Williams-Linder-Kindermann inversion, the equations which are mentioned in \autoref{para:wlk-inv} have to be implemented. The inversion is defined as a Python function to be callable in the main program. In the inversion function, the network is initialized with a random input vector. Output is calculated and compared with the given output. Now the error can be calculated and backpropagated to minimize the loss function and the input vector has updated too. This iterative process continues until the error is less than the minimum set value. The return value is the guessed input value. \smallskip
 
-At the end, the given testing set's values and the guessed input values are written to a .txt file with the accuracy percent of the inversion. A summarization about the accuracy is described.
+At the end, the given testing set's values and the guessed input values are written to a .txt file with the accuracy percent of the inversion. A summarization about the accuracy is represented in the .txt file too.
 
 
 
 \subsection{Used Third-Party Libraries}
 
-Python can be used effectively with the assistance of its third-party libraries \cite{bressert2012scipy, chen2017pandas}, which provide numerous effective and easy-to-use models in scientific research. \bigskip
+Python can be used effectively with the assistance of its third-party libraries \cite{scipy-url}, which provide numerous effective and easy-to-use models in scientific research. 
 
-\textbf{Pandas} is an open source library that is providing high-performance, easy-to-use data structures and data analysis tools for Python. Pandas has a main object called DataFrame, that is for data manipulation by using a set of labeled array data structures. Pandas has tools for reading tabular data and writing data between in-memory data structures and different file formats. The data can be handled integratedly and the datasets are transformable. Some of the examples of this transformation are column insertion and deleting, dataset merging and joining, or the hierarchical axis indexing in high-dimensional data models.\bigskip
+\begin{figure}[h]
+	\centering
+	\includegraphics[height=0.3\linewidth]{./figures/scipy}
+	\caption{The used scientific third-party packages for Python}
+	\label{fig:scipy}
+\end{figure}
 
-\textbf{NumPy} is a library for Python focused on multi-dimensional arrays and matrices. It provides high-level mathematical functions to operate on these arrays. In NumPy, the n-dimensional array is called $ndarray$, where all the elements of a single array must contain the same type. \medskip
+\subsection*{SciPy}
+
+SciPy is a Python-based library of open-source software for mathematics, science, and engineering. It contains modules for optimization, linear algebra, integration, interpolation, special functions and other tasks common in science and engineering. SciPy builds upon a small core of scientific packages, and the functions are built to Python's scientific computing capabilities. \bigskip
+
+\noindent SciPy has various sub-packages included:
+\begin{verse}
+	$\bullet$ $integrate$ is a numerical integration routine.\\
+	$\bullet$ $interpolate$ is an interpolation tool.\\
+	$\bullet$ $io$ stands for data input and output.\\
+	$\bullet$ $lib$ is a Python wrapper to external libraries.\\
+	$\bullet$ $linalg$ is for linear algebra routines.\\
+	$\bullet$ $ndimage$ produces various functions for multi-dimensional image processing.\\
+	$\bullet$ $optimize$ is an optimization algorithm including linear programming.\\
+	$\bullet$ $stats$ are the statistical functions.
+\end{verse}\bigskip
+
+\textbf{Pandas} is an open source library that is providing high-performance, easy-to-use data structures and data analysis tools for Python. The built-in tasks in Pandas originates from classic R tasks. Pandas has a main object called DataFrame, that is for data manipulation by using a set of labeled array data structures. Pandas has tools for reading tabular data and writing data between in-memory data structures and different file formats. The data can be handled integratedly and the datasets are transformable. Some of the examples of this transformation are column insertion and deleting, dataset merging and joining, or the hierarchical axis indexing in high-dimensional data models.\bigskip
+
+
+\textbf{NumPy} is a library for Python focused on multi-dimensional arrays and matrices. It provides high-level mathematical functions to operate on these arrays. The built-in methods originates from the Matlab programming language. In NumPy, the n-dimensional array is called $ndarray$, where all the elements of a single array must contain the same type. \medskip
 
 \noindent The most important attributes of an $ndarray$ object are:\\
 - $ndarray.ndim$ produces the number of axes of the array\\
@@ -32,14 +56,19 @@ Python can be used effectively with the assistance of its third-party libraries 
 - $ndarray.size$ is the total number of elements of the array\\
 - $ndarray.dtype$ is an object describing the type of the elements in the array\\
 - $ndarray.itemsize$ produces the size in bytes of each element of the array\\
-- $ndarray.data$ is a buffer, which contains the actual elements of the array
+- $ndarray.data$ is a buffer, which contains the actual elements of the array\bigskip
 
 
-\subsubsection{Scikit-Learn}
+\textbf{Matplotlib} is an open source Python library which produces publication-quality plots and figures. It ships with several add-on toolkits, including 3d plotting and helpers for axes. There are several common approaches of plotting with Matplotlib. The most popular is $pyplot$, which is a collection of command style functions where each pyplot function makes some change to a figure. Also it is mainly intended for interactive plots and simple cases of programmatic plot generation.
 
-The most important package that is used during the implementation is Scikit-Learn \cite{Pedregosa2011ScikitlearnML}. It is a separately-developed and distributed third-party extension to SciPy. It integrates classic machine learning algorithms into the scientific Python packages. \smallskip
+
+\subsection*{Scikit-Learn}
+
+The most important package that is used during the implementation is Scikit-Learn \cite{Pedregosa2011ScikitlearnML, scikit-url}. It is a separately-developed and distributed third-party extension to SciPy, which integrates classic machine learning algorithms into the scientific Python packages. \smallskip
 
 Scikit-Learn can be used to solve multi-layer neural network learning problems. Among many others, it features various classification, regression and clustering algorithms. Scikit-Learn contains all the various functions which can be used during the training of the neural network. The training lasts from the processing of the dataset, via the iterations, to the inversion itself. \bigskip
+
+\newpage
 
 \textbf{StandardScaler} is a subclass of Scikit-Learn's preprocessing class that standardizes features by removing the mean and scaling to unit variance. It has three parameters that are boolean values and the default of all is True: \smallskip
 
@@ -72,11 +101,11 @@ The standard score of a sample $x$ is calculated as: $z = \frac{(x - u)}{s}$ whe
 
 \noindent- $shuffle$ : Whether or not to shuffle the data before splitting.\smallskip
 
-\noindent - $stratify$ : It shows if the data is split in a stratified fashion, using this as the class labels.
+\noindent - $stratify$ : It shows if the data is split in a stratified fashion, using this as the class labels.\bigskip
 
 \newpage
 
-\textbf{MLPRegressor} \cite{bengfort2018applied} is a class of Scikit-Learn, which implements a multi-layer perceptron to solve regression problems. It uses the square error as the loss function. MLPRegressor trains iteratively because the partial derivatives of the loss function are computed in each step to update the parameters of the layers. MLPRegressor also supports multi-output regression, in which a sample can have more than one target outputs.\medskip
+\textbf{MLPRegressor} is a class of Scikit-Learn, which implements a multi-layer perceptron to solve regression problems. It uses the square error as the loss function. MLPRegressor trains iteratively because the partial derivatives of the loss function are computed in each step to update the parameters of the layers. MLPRegressor also supports multi-output regression, in which a sample can have more than one target outputs.\medskip
 
 \noindent MLPRegressor has several parameters, but only a few of them will be listed, which were used in the implementation:
 \begin{verse}
@@ -106,11 +135,11 @@ MLPRegressor contains built-in methods to perform regression:\\
 - $get\char`_params([deep])$ gets parameters for this estimator\\
 - $predict(X)$ predicts an output based on previous training and a given testing dataset\\
 - $score(X, y[, sample\char`_weight])$ returns with the coefficient of the determinated prediction\\
-- $set\char`_params(^{**} params)$ sets the parameters of the estimator
+- $set\char`_params(^{**} params)$ sets the parameters of the estimator\bigskip
 
 \newpage
 
-\textbf{GridSearchCV} \cite{jolly2018machine} is an exhaustive searching class of Scikit-Learn over specified parameter values for an estimator. It can be used in the tuning of the hyper-parameters, which are those parameters that are not directly learnt within estimators. The parameters of the estimator used to apply the methods of GridSearchCV are optimized by cross-validated grid-search over a parameter grid.\medskip
+\textbf{GridSearchCV} is an exhaustive searching class of Scikit-Learn over specified parameter values for an estimator. It can be used in the tuning of the hyper-parameters, which are those parameters that are not directly learnt within estimators. The parameters of the estimator used to apply the methods of GridSearchCV are optimized by cross-validated grid-search over a parameter grid.\medskip
 
 \noindent The parameters of GridSearchCV are quite wide, but only a few of them are used during the implementation:
 \begin{verse}
@@ -143,7 +172,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 import inversion
 \end{lstlisting}
-The $inversion$ library is not a built-in library of Python, it imports the written function from another .py file.\smallskip
+The $inversion$ is not a built-in library of Python, it imports the written function from another .py file.\smallskip
 
 After, the selected dataset has captured by Pandas. In this case the used dataset is a .csv file, which contains 39.644 instances and 61 attributes. The attributes consist of 58 predictive features, 2 other attributes of accessory information and 1 goal field, which is the number of shares. The dataset can be represented as a matrix, where the columns are the features and the rows are the data. This dataset is preprocessed by Pandas as a DataFrame object. The $url$ and $timedelta$ columns have been omitted, since they are meta-data and cannot be treated as features. 
 \begin{lstlisting}
@@ -198,7 +227,7 @@ X = dataset_copy
 \end{lstlisting}
 The column $shares$ contains the target values, which are the number of shares.\medskip
 
-Learning the parameters of a prediction function and testing the accuracy of the learning on the same data is a methodological mistake: a model that is just repeating the values of the samples would have a perfect score, but it cannot predict anything useful from the data that are not seen yet. This situation is called overfitting. To avoid it, a common practice is when performing a supervised machine learning experiment to hold out a part of the available data as a testing set $X\char`_test$, $y\char`_test$. 
+Learning the parameters of a prediction function and testing the accuracy of the learning on the same data is a methodological mistake: a model that is just repeating the values of the samples would have a perfect score, but it cannot predict anything useful from the data that have not been previously processed. Furthermore a model that completely trains a dataset, also trains its noises, so it will predict worse. This problem is called overfitting. To avoid it, a common practice is when performing a supervised machine learning experiment to hold out a part of the available data as a testing set $X\char`_test$, $y\char`_test$. 
 \begin{lstlisting}
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 \end{lstlisting}
@@ -208,11 +237,9 @@ Now the training ($X\char`_train$, $X\char`_test$) and testing ($y\char`_train$,
 
 \subsection{Training the Neural Network}
 
-Then the dataset is ready to be trained. The training consists of the application of machine learning techniques. Different multi-layer perceptron models are fitted on the training sets with a set of hyperparameters $param\char`_grid$. These parameters are the number of hidden layers, the activation functions, the optimization algorithms, the alpha value, the learning rate's type and the learning rate's initialize value. \medskip
+The training consists of the application of machine learning techniques. Different multi-layer perceptron models are fitted on the training sets with a set of hyperparameters $param\char`_grid$. These parameters are the number of hidden layers, the activation functions, the optimization algorithms, the alpha value, the learning rate's type and the learning rate's initialize value. \medskip
 
-Scikit-Learn's training toolkit is called MLPRegressor, which is used as an estimator of GridSearchCV. The process of the training is about fitting the neural network model to the training sets, then testing the accuracy on the testing sets by predicting the output $y\char`_pred$.  
-
-\newpage
+In Scikit-Learn, the model is conventionally called estimator. Scikit-Learn's neural network model is the MLPRegressor, which is used as an estimator of GridSearchCV. The process of the training is about fitting the neural network model to the training sets, then testing the accuracy on the testing sets by predicting the output $y\char`_pred$. \medskip
 
 \begin{lstlisting}
 mlp = MLPRegressor()
@@ -227,11 +254,9 @@ param_grid = {
 gs = GridSearchCV(mlp, param_grid, cv=2, n_jobs=-1)
 gs.fit(X_train, y_train)
 \end{lstlisting}
-This process is time consuming, since the amount of the given parameters are trained on a large-scale dataset. The search was running on the supercomputer and the training lasts for days. The score was computed by the L2 normal of the loss function, which means the difference between the original and the predicted value. \smallskip
+This process is time consuming, since the amount of the given parameters are trained on a large-scale dataset. The search was running in parallel on the supercomputer and the training lasted for days. The score was computed by the L2 normal of the loss function, which means the difference between the original and the predicted value. \smallskip
 
-It can be seen, that stochastic gradient descent is not on the list of the optimization methods. When the dataset was trained, SGD causes NaN or infinite values during the calculation of the gradients. The solution was to remove SGD from the solvers. \medskip
-
-After the trained multi-layer perceptron is ready, the results can be stored and plotted.
+It can be seen, that stochastic gradient descent is not on the list of the optimization methods. When the dataset was trained, SGD causes NaN or infinite values during the calculation of the gradients. The solution was to remove SGD from the solvers. After the trained multi-layer perceptron is ready, the results can be stored and plotted. 
 \begin{lstlisting}
 regressor = gs.best_estimator_
 print(regressor, 'score: ', gs.best_score_, sep='\n ', file=open('TrainingResult.txt', 'w'))
@@ -244,7 +269,7 @@ plt.savefig("./" + 'plot.pdf')
 plt.show()
 \end{lstlisting}
 
-\medskip The results of the training contains a summarization of the best estimator and the score. The best score was $0.02001904720978248$ and the best estimator parameters were the \textbf{logistic} activation function and \textbf{L-BFGS} as optimization algorithm, with the use of $0.001$ alpha value and $0.003$ initial learning rate. The training uses $3$ hidden layers with $(100,200,500)$ neurons in each layers.
+\medskip The resulted values called scores return with the coefficient of the determinated prediction. This means, the score is the prediction value of the difference between the original and the predicted outputs. The prediction is the most accurate, if the score approximates to 1. If the score is between the range $[-1, 1]$, the function slowly converge. However if the score is outside of this range, that means there is no convergence. 
 \begin{lstlisting}
 MLPRegressor(activation='logistic', alpha=0.001, batch_size='auto',
 	beta_1=0.9, beta_2=0.999, early_stopping=False, epsilon=1e-08,
@@ -256,7 +281,7 @@ MLPRegressor(activation='logistic', alpha=0.001, batch_size='auto',
 score: 0.02001904720978248
 \end{lstlisting}
 
-\medskip It is a long process to train a multi-layer perceptron properly and find the best fitting regression function. During the training, thousands of parameter combinations were trained, but the best fitting parameters were not found. That is why the score value is inadequate.\medskip
+The results of the training contains a summarization of the best estimator and the score. The best score was $0.02001904720978248$, which means the regression function was just rarely approximates the model, as the best fitting hyperparameter combination has not captured yet. The best estimator parameters were the \textbf{logistic} activation function and \textbf{L-BFGS} as optimization algorithm, with the use of $0.001$ alpha value and $0.003$ initial learning rate. The training uses $3$ hidden layers with $(100,200,500)$ neurons in each layers.\medskip
 
 As mentioned, the result of the training is plotted, which includes the tested target values and the predicted values.
 \begin{figure}[h]
@@ -266,7 +291,7 @@ As mentioned, the result of the training is plotted, which includes the tested t
 	\label{fig:plot}
 \end{figure}
 
-The orange points represents the original values from the test set and the blue points are the results of the prediction. The horizontal line means the range of the values located in the original testing sets $X\char`_test$ and $y\char`_test$ and the vertical line represents the range of predicted values in respect of $X\char`_test$ and $y\char`_pred$.
+The orange points represents the original values from the test set and the blue points are the results of the prediction. The horizontal line means the range of the values located in the original testing set $y\char`_test$ and the predicted one $y\char`_pred$ and the vertical line represents the range of the values in respect of the input testing set $X\char`_test$.
 
 
 \subsection{Inverting the MLP}
@@ -282,8 +307,21 @@ def invert(regressor,
 	
 	[...]
 \end{lstlisting}
-The process of the inversion is the following: The network is initialized with a random input vector, then the sizes of the layer units are defined. The inversion is an iterative process where the equations in the WLK inversion are computed. The return value is the guessed value of the input.\medskip
 
+\newpage
+
+The process of the inversion is the following: First, the network is initialized with a random input vector, then the sizes of the layer units are defined. 
+\begin{lstlisting}
+def invert(regressor, expected_output, input_size, step_size, iteration_count = 100, verbose = False):
+
+	guessedInput = np.random.rand(input_size)
+	layer_units = [[input_size] + list(regressor.hidden_layer_sizes) +
+	 [regressor.n_outputs_]]
+	 
+	 [...]
+\end{lstlisting}
+
+The inversion is an iterative process where the equations in the WLK inversion are computed recursively. The first task is to perform the implementation of the \autoref{eq:wlk_forward}. The equation separates two cases for computing the value of $\delta$. One of the cases includes the computation for the output layer and the other one is for the input and hidden layers. The outer iteration stands for to approximate the input values more precisely. The internal iterations compute the values of $\delta$ in vector $deltas[]$, depending on the layer it stands in. The $deltas[-1]$ means the last value of the vector, that represents the output layer. The $deltas[-i-1]$ provides the recursive computation to the vector's values. 
 \begin{lstlisting}
 def invert(regressor, expected_output, input_size, step_size, iteration_count = 100, verbose = False):
 
@@ -309,6 +347,19 @@ def invert(regressor, expected_output, input_size, step_size, iteration_count = 
 			 regressor.activation) * (regressor.coefs_[-i] * deltas[-i].T)
 			 .sum(axis=1)
 			 
+			[...]
+\end{lstlisting}
+
+As it is mentioned above, a parameter $verbose$ of the $invert()$ function is a boolean, which stands for to show the detailed information about the computation or not. If $verbose = True$, the following information are shown in connection with $deltas[-i-1]$.
+
+\newpage
+
+\begin{lstlisting}
+		for i in range(1, len(activations)):
+			deltas[-i-1] = _activationFunctionDerivate(activations[-i-1], 
+			 regressor.activation) * (regressor.coefs_[-i] * deltas[-i].T)
+			 .sum(axis=1)
+
 			if verbose:
 				print('#', i)
 				print(regressor.coefs_[-i])
@@ -320,13 +371,45 @@ def invert(regressor, expected_output, input_size, step_size, iteration_count = 
 				 regressor.activation))
 				print(deltas[-i-1])
 				print('-------------------')
-				
-		guessedInput = guessedInput - step_size * deltas[0]
-		
-	return guessedInput
+
+		[...]
 \end{lstlisting}
 
-\medskip As it is known, the equation in \eqref{eq:wlk_forward} uses the derivatives of the activation functions. A function $\char`_activationFunctionDerivate()$ was defined, which computes the derivatives of the used activation.
+After the $deltas[]$ are computed, the next step is to implement the \autoref{eq:wlk}, where the current value of the input vector is approximated. Then the return value is the guessed value of the desired input.
+\begin{lstlisting}
+def invert(regressor, expected_output, input_size, step_size, iteration_count = 100, verbose = False):
+
+	guessedInput = np.random.rand(input_size)
+	layer_units = [[input_size] + list(regressor.hidden_layer_sizes) +
+	 [regressor.n_outputs_]]
+
+	for j in range(0, iteration_count):
+		activations = [guessedInput]
+
+		for i in range(regressor.n_layers_ - 1):
+			activations.append(np.empty((guessedInput.shape[0],
+			 layer_units[0][i + 1])))
+
+		regressor._forward_pass(activations)
+		y_pred = activations[-1]
+		deltas = activations.copy()
+		deltas[-1] = _activationFunctionDerivate(activations[-1],
+		 regressor.activation) * (y_pred - expected_output)
+
+	for i in range(1, len(activations)):
+		deltas[-i-1] = _activationFunctionDerivate(activations[-i-1], 
+		 regressor.activation) * (regressor.coefs_[-i] * deltas[-i].T)
+		 .sum(axis=1)
+		 
+		 if verbose:
+			[...]
+
+	guessedInput = guessedInput - step_size * deltas[0]
+
+return guessedInput
+\end{lstlisting}
+
+\medskip As it is known, the \autoref{eq:wlk_forward} uses the derivatives of the activation functions. A function $\char`_activationFunctionDerivate()$ was defined, which computes the derivatives of the used activation.
 \begin{lstlisting}
 def _activationFunctionDerivate(X, activation):
 	if activation == 'tanh':
@@ -357,7 +440,7 @@ for i, value in enumerate(y_test):
 	'desired output value in y_test: ', desired_output,
 	'error: ', regressor.predict(guessedInput) - desired_output,
 	'accuracy percent: ', accuracy[0]*100, '\n',
-	sep='\n ', file=open('InversionResults.txt', 'a'))
+	 sep='\n ', file=open('InversionResults.txt', 'a'))
 
 print('summarization: ', inversionResults.describe(), sep='\n ', file=open('InversionResults.txt', 'a'))
 \end{lstlisting}
@@ -382,5 +465,5 @@ The training was running in parallel on the supercomputer with thousands of hype
 	max           99.999681
 \end{lstlisting}
 
-Inversion is firmly depends on the result of the training. The more accurate the training is, the more effective the inversion will be. Finding the best fitting parameters to the dataset, especially to large-scale datasets takes great amount of time. As mentioned the training was running in parallel on the supercomputer with thousands of parameter combinations, but the best fitting combinations are not captured yet. Anyway WLK inversion can generate the features of the input set correctly. 
+Inversion is firmly depends on the result of the training. The more accurate the training is, the more effective the inversion will be. Finding the best fitting parameters to the dataset, especially to large-scale datasets takes great amount of time. As mentioned the training was running in parallel on the supercomputer with thousands of parameter combinations, but the best fitting combinations are not captured yet. In summary Willams-Linder-Kindermann inversion can generate the features of the input set correctly. 
 

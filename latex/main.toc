@@ -3,42 +3,41 @@
 \contentsline {chapter}{\numberline {2}Related Works}{7}{chapter.3}
 \contentsline {section}{\numberline {2.1}Data Mining}{7}{section.4}
 \contentsline {subsection}{\numberline {2.1.1}The Dataset}{7}{subsection.5}
-\contentsline {section}{\numberline {2.2}Machine Learning}{8}{section.6}
-\contentsline {subsubsection}{Supervised Learning}{8}{section*.7}
-\contentsline {subsubsection}{Unsupervised Learning}{9}{section*.8}
-\contentsline {subsection}{\numberline {2.2.1}Biological Nervous Systems}{9}{subsection.9}
-\contentsline {subsection}{\numberline {2.2.2}Artificial Neural Networks}{9}{subsection.11}
-\contentsline {subsection}{\numberline {2.2.3}Neural Network Inversion}{10}{subsection.12}
-\contentsline {section}{\numberline {2.3}Python}{11}{section.13}
-\contentsline {chapter}{\numberline {3}Theoretical Background}{13}{chapter.15}
-\contentsline {section}{\numberline {3.1}Feature Engineering}{13}{section.16}
-\contentsline {subsection}{\numberline {3.1.1}Data Mining}{14}{subsection.18}
-\contentsline {subsubsection}{Transformation and Feature Scaling}{15}{section*.19}
-\contentsline {subsubsection}{Algorithms of Data Mining}{16}{section*.24}
-\contentsline {section}{\numberline {3.2}Regression Analysis}{17}{section.25}
-\contentsline {subsection}{\numberline {3.2.1}Method of Least Squares}{18}{subsection.27}
-\contentsline {section}{\numberline {3.3}Perceptron}{19}{section.28}
-\contentsline {subsection}{\numberline {3.3.1}Feedforward Neural Networks}{20}{subsection.32}
-\contentsline {subsection}{\numberline {3.3.2}Multi-Layer Perceptron}{20}{subsection.35}
-\contentsline {subsubsection}{Backpropagation}{21}{section*.37}
-\contentsline {subsubsection}{Gradient descent}{22}{section*.39}
-\contentsline {section}{\numberline {3.4}Training a MLP Model}{23}{section.44}
-\contentsline {subsection}{\numberline {3.4.1}Activation Functions}{24}{subsection.45}
-\contentsline {subsection}{\numberline {3.4.2}Optimization Methods}{25}{subsection.49}
-\contentsline {subsubsection}{Stochastic Gradient Descent}{25}{section*.50}
-\contentsline {subsubsection}{Adaptive Moment Estimation}{25}{section*.53}
-\contentsline {subsubsection}{Limited-memory BFGS}{26}{section*.57}
-\contentsline {section}{\numberline {3.5}Inversion}{27}{section.59}
-\contentsline {subsection}{\numberline {3.5.1}Single Element Inversion Methods}{28}{subsection.63}
-\contentsline {subsection}{\numberline {3.5.2}Williams-Linder-Kindermann Inversion}{29}{subsection.64}
-\contentsline {chapter}{\numberline {4}Implementation}{30}{chapter.68}
-\contentsline {section}{\numberline {4.1}Problem Statement}{30}{section.69}
-\contentsline {subsection}{\numberline {4.1.1}Used Third-Party Libraries}{31}{subsection.70}
-\contentsline {subsubsection}{Scikit-Learn}{31}{section*.71}
-\contentsline {section}{\numberline {4.2}The Implementation}{34}{section.72}
-\contentsline {subsection}{\numberline {4.2.1}Optimizing the Dataset}{35}{subsection.88}
-\contentsline {subsection}{\numberline {4.2.2}Training the Neural Network}{36}{subsection.107}
-\contentsline {subsection}{\numberline {4.2.3}Inverting the MLP}{38}{subsection.140}
-\contentsline {section}{\numberline {4.3}Results}{41}{section.219}
-\contentsline {chapter}{\numberline {5}Summary}{42}{chapter.230}
-\contentsline {chapter}{Media Instruction Manual}{46}{chapter*.232}
+\contentsline {section}{\numberline {2.2}Machine Learning}{8}{section.7}
+\contentsline {subsubsection}{Supervised Learning}{9}{section*.8}
+\contentsline {subsubsection}{Unsupervised Learning}{9}{section*.9}
+\contentsline {subsection}{\numberline {2.2.1}Biological Nervous Systems}{9}{subsection.10}
+\contentsline {subsection}{\numberline {2.2.2}Artificial Neural Networks}{10}{subsection.12}
+\contentsline {subsection}{\numberline {2.2.3}Neural Network Inversion}{10}{subsection.13}
+\contentsline {section}{\numberline {2.3}Python}{11}{section.14}
+\contentsline {chapter}{\numberline {3}Theoretical Background}{13}{chapter.16}
+\contentsline {section}{\numberline {3.1}Feature Engineering}{13}{section.17}
+\contentsline {subsection}{\numberline {3.1.1}Data Mining}{14}{subsection.19}
+\contentsline {subsubsection}{Transformation and Feature Scaling}{15}{section*.20}
+\contentsline {subsubsection}{Algorithms of Data Mining}{16}{section*.25}
+\contentsline {section}{\numberline {3.2}Regression Analysis}{17}{section.26}
+\contentsline {subsection}{\numberline {3.2.1}Method of Least Squares}{18}{subsection.29}
+\contentsline {section}{\numberline {3.3}Perceptron}{19}{section.32}
+\contentsline {subsection}{\numberline {3.3.1}Feedforward Neural Networks}{20}{subsection.36}
+\contentsline {subsection}{\numberline {3.3.2}Multi-Layer Perceptron}{20}{subsection.39}
+\contentsline {subsubsection}{Backpropagation}{21}{section*.41}
+\contentsline {subsubsection}{Gradient descent}{22}{section*.43}
+\contentsline {section}{\numberline {3.4}Training a MLP Model}{23}{section.48}
+\contentsline {subsection}{\numberline {3.4.1}Activation Functions}{24}{subsection.49}
+\contentsline {subsection}{\numberline {3.4.2}Optimization Methods}{25}{subsection.53}
+\contentsline {subsubsection}{Stochastic Gradient Descent}{25}{section*.54}
+\contentsline {subsubsection}{Adaptive Moment Estimation}{25}{section*.57}
+\contentsline {subsubsection}{Limited-memory BFGS}{26}{section*.61}
+\contentsline {section}{\numberline {3.5}Inversion}{27}{section.63}
+\contentsline {subsection}{\numberline {3.5.1}Single Element Inversion Methods}{28}{subsection.67}
+\contentsline {subsection}{\numberline {3.5.2}Williams-Linder-Kindermann Inversion}{29}{subsection.68}
+\contentsline {chapter}{\numberline {4}Implementation}{30}{chapter.72}
+\contentsline {section}{\numberline {4.1}Problem Statement}{30}{section.73}
+\contentsline {subsection}{\numberline {4.1.1}Used Third-Party Libraries}{31}{subsection.74}
+\contentsline {section}{\numberline {4.2}The Implementation}{35}{section.78}
+\contentsline {subsection}{\numberline {4.2.1}Optimizing the Dataset}{36}{subsection.94}
+\contentsline {subsection}{\numberline {4.2.2}Training the Neural Network}{37}{subsection.113}
+\contentsline {subsection}{\numberline {4.2.3}Inverting the MLP}{39}{subsection.146}
+\contentsline {section}{\numberline {4.3}Results}{43}{section.269}
+\contentsline {chapter}{\numberline {5}Summary}{44}{chapter.280}
+\contentsline {chapter}{Media Instruction Manual}{48}{lstnumber.290}

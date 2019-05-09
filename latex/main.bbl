@@ -1,5 +1,25 @@
 \begin{thebibliography}{10}
 
+\bibitem{onlinenews-url}
+{Online News Popularity Data Set}.
+\newblock \url{http://archive.ics.uci.edu/ml/datasets/Online+News+Popularity}.
+
+\bibitem{python-url}
+Python.
+\newblock \url{https://www.python.org/}.
+
+\bibitem{scikit-url}
+{Scikit-Learn}.
+\newblock \url{https://scikit-learn.org/stable/}.
+
+\bibitem{scipy-url}
+{SciPy}.
+\newblock \url{https://www.scipy.org/}.
+
+\bibitem{uci-url}
+{UCI Machine Learning Repository}.
+\newblock \url{https://archive.ics.uci.edu/ml/index.php}.
+
 \bibitem{article}
 Craig A.~Jensen, Russell D.~Reed, Robert J~Marks, Mohamed El-Sharkawi,
   Jae-byung Jung, Robert T.~Miyamoto, Gregory M.~Anderson, and J~Eggen.
@@ -29,26 +49,10 @@ J.A. Anderson.
 \newblock {\em An Introduction to Neural Networks}.
 \newblock Bradford book. MIT Press, 1995.
 
-\bibitem{bengfort2018applied}
-B.~Bengfort, R.~Bilbro, and T.~Ojeda.
-\newblock {\em Applied Text Analysis with Python: Enabling Language-Aware Data
-  Products with Machine Learning}.
-\newblock O'Reilly Media, 2018.
-
-\bibitem{bressert2012scipy}
-E.~Bressert.
-\newblock {\em SciPy and NumPy}.
-\newblock Oreilly and Associate Series. O'Reilly, 2012.
-
 \bibitem{chauvin2013backpropagation}
 Y.~Chauvin and D.E. Rumelhart.
 \newblock {\em Backpropagation: Theory, Architectures, and Applications}.
 \newblock Developments in Connectionist Theory Series. Taylor \& Francis, 2013.
-
-\bibitem{chen2017pandas}
-D.Y. Chen.
-\newblock {\em Pandas for Everyone: Python Data Analysis}.
-\newblock Addison-Wesley Data \& Analytics Series. Pearson Education, 2017.
 
 \bibitem{dong2018feature}
 G.~Dong and H.~Liu.
@@ -110,12 +114,6 @@ R.S. Michalski, J.G. Carbonell, and T.M. Mitchell.
 T.M. Mitchell.
 \newblock {\em Machine Learning}.
 \newblock McGraw-Hill International Editions. McGraw-Hill, 1997.
-
-\bibitem{nazari1992implementation}
-J.~Nazari and O.K. Ersoy.
-\newblock {\em Implementation of Back-propagation Neural Networks with Matlab}.
-\newblock Technical report (Purdue University. School of Electrical
-  Engineering). Purdue University, School of Electrical Engineering, 1992.
 
 \bibitem{Pedregosa2011ScikitlearnML}
 Fabian Pedregosa, Ga{\"e}l Varoquaux, Alexandre Gramfort, Vincent Michel,

@@ -61,6 +61,8 @@ LaTeX document class]
 \usepackage{vmargin}
 \usepackage{todonotes}
 \usepackage{wrapfig}
+\usepackage{enumitem}
+
 %\usepackage[fontsize=13pt]{scrextend}
 
 \usepackage{color}
@@ -101,7 +103,7 @@ LaTeX document class]
 
 \usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,
    bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,
-   colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red},
+   colorlinks,linkcolor={black},citecolor={black},urlcolor={black},
    pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
 \pdfstringdefDisableCommands{
    \let\\\space
@@ -109,7 +111,7 @@ LaTeX document class]
 
 %\usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
 
-\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 
 %----------------------------------------------------------------------------------------
 %	DOCUMENT VARIABLES

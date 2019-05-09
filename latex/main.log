@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.12)  8 MAY 2019 09:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.12)  9 MAY 2019 14:40
 entering extended mode
 **./main.tex
 (main.tex
@@ -634,38 +634,47 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \WF@everypar=\toks41
 Package: wrapfig 2003/01/31  v 3.6
 )
+(D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\enumitem\enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen187
+\enit@toks=\toks42
+\enit@inbox=\box43
+\enit@count@id=\count146
+\enitdp@description=\count147
+)
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\fancyhdr\fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip54
-\f@nch@O@elh=\skip55
-\f@nch@O@erh=\skip56
-\f@nch@O@olh=\skip57
-\f@nch@O@orh=\skip58
-\f@nch@O@elf=\skip59
-\f@nch@O@erf=\skip60
-\f@nch@O@olf=\skip61
-\f@nch@O@orf=\skip62
+\f@nch@headwidth=\skip55
+\f@nch@O@elh=\skip56
+\f@nch@O@erh=\skip57
+\f@nch@O@olh=\skip58
+\f@nch@O@orh=\skip59
+\f@nch@O@elf=\skip60
+\f@nch@O@erf=\skip61
+\f@nch@O@olf=\skip62
+\f@nch@O@orf=\skip63
 )
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\listings\listings.sty
-\lst@mode=\count146
-\lst@gtempboxa=\box43
-\lst@token=\toks42
-\lst@length=\count147
-\lst@currlwidth=\dimen187
-\lst@column=\count148
-\lst@pos=\count149
-\lst@lostspace=\dimen188
-\lst@width=\dimen189
-\lst@newlines=\count150
-\lst@lineno=\count151
-\lst@maxwidth=\dimen190
+\lst@mode=\count148
+\lst@gtempboxa=\box44
+\lst@token=\toks43
+\lst@length=\count149
+\lst@currlwidth=\dimen188
+\lst@column=\count150
+\lst@pos=\count151
+\lst@lostspace=\dimen189
+\lst@width=\dimen190
+\lst@newlines=\count152
+\lst@lineno=\count153
+\lst@maxwidth=\dimen191
 
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count152
-\lst@skipnumbers=\count153
-\lst@framebox=\box44
+\c@lstnumber=\count154
+\lst@skipnumbers=\count155
+\lst@framebox=\box45
 )
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\listings\listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -718,16 +727,16 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\oberdiek\auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen191
-\Hy@linkcounter=\count154
-\Hy@pagecounter=\count155
+\@linkdim=\dimen192
+\Hy@linkcounter=\count156
+\Hy@pagecounter=\count157
 
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\hyperref\pd1enc.def
 File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count156
+\Hy@SavedSpaceFactor=\count158
 
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\00miktex\hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -753,17 +762,17 @@ Package hyperref Info: Plain pages OFF on input line 4550.
 Package hyperref Info: Backreferencing OFF on input line 4555.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4788.
-\c@Hy@tempcnt=\count157
+\c@Hy@tempcnt=\count159
 
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5141.
-\XeTeXLinkMargin=\dimen192
-\Fld@menulength=\count158
-\Field@Width=\dimen193
-\Fld@charsize=\dimen194
+\XeTeXLinkMargin=\dimen193
+\Fld@menulength=\count160
+\Field@Width=\dimen194
+\Fld@charsize=\dimen195
 Package hyperref Info: Hyper figures OFF on input line 6396.
 Package hyperref Info: Link nesting OFF on input line 6401.
 Package hyperref Info: Hyper index ON on input line 6404.
@@ -773,25 +782,25 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6421.
 Package hyperref Info: PDF/A mode OFF on input line 6426.
 LaTeX Info: Redefining \ref on input line 6466.
 LaTeX Info: Redefining \pageref on input line 6470.
-\Hy@abspage=\count159
-\c@Item=\count160
-\c@Hfootnote=\count161
+\Hy@abspage=\count161
+\c@Item=\count162
+\c@Hfootnote=\count163
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\hyperref\hpdftex.def
 File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
-\Fld@listcount=\count162
-\c@bookmark@seq@number=\count163
+\Fld@listcount=\count164
+\c@bookmark@seq@number=\count165
 
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\oberdiek\rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip63
+\Hy@SectionHShift=\skip64
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 112.
+Package hyperref Info: Option `colorlinks' set `true' on input line 114.
 )
 (main.aux)
 \openout1 = `main.aux'.
@@ -814,17 +823,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
  (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count164
-\scratchdimen=\dimen195
-\scratchbox=\box45
-\nofMPsegments=\count165
-\nofMParguments=\count166
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count167
-\MPscratchDim=\dimen196
-\MPnumerator=\count168
-\makeMPintoPDFobject=\count169
-\everyMPtoPDFconversion=\toks44
+\scratchcounter=\count166
+\scratchdimen=\dimen196
+\scratchbox=\box46
+\nofMPsegments=\count167
+\nofMParguments=\count168
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count169
+\MPscratchDim=\dimen197
+\MPnumerator=\count170
+\makeMPintoPDFobject=\count171
+\everyMPtoPDFconversion=\toks45
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -840,8 +849,8 @@ most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
 loading the todonotes package. on input line 34.
 
-\c@lstlisting=\count170
-\AtBeginShipoutBox=\box46
+\c@lstlisting=\count172
+\AtBeginShipoutBox=\box47
 Package hyperref Info: Link coloring ON on input line 34.
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -849,7 +858,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count171
+\c@section@level=\count173
 )
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
@@ -988,27 +997,33 @@ Chapter 1.
 Chapter 2.
 [7
 
-] [8]
-<./figures/neuron2.png, id=248, 517.18219pt x 224.33812pt>
+]
+<./figures/mashable.png, id=236, 617.30624pt x 96.36pt>
+File: ./figures/mashable.png Graphic file (type png)
+<use ./figures/mashable.png>
+Package pdftex.def Info: ./figures/mashable.png  used on input line 29.
+(pdftex.def)             Requested size: 410.71072pt x 64.1121pt.
+ [8 <./figures/mashable.png>]
+<./figures/neuron2.png, id=254, 517.18219pt x 224.33812pt>
 File: ./figures/neuron2.png Graphic file (type png)
 <use ./figures/neuron2.png>
-Package pdftex.def Info: ./figures/neuron2.png  used on input line 59.
+Package pdftex.def Info: ./figures/neuron2.png  used on input line 68.
 (pdftex.def)             Requested size: 344.90039pt x 149.60364pt.
  [9 <./figures/neuron2.png>] [10]
-<./figures/python_scikit.png, id=267, 505.89pt x 181.42781pt>
+<./figures/python_scikit.png, id=274, 722.7pt x 181.42781pt>
 File: ./figures/python_scikit.png Graphic file (type png)
 <use ./figures/python_scikit.png>
-Package pdftex.def Info: ./figures/python_scikit.png  used on input line 95.
-(pdftex.def)             Requested size: 297.96303pt x 106.85788pt.
+Package pdftex.def Info: ./figures/python_scikit.png  used on input line 104.
+(pdftex.def)             Requested size: 425.66148pt x 106.85788pt.
  [11 <./figures/python_scikit.png>]
-Overfull \hbox (5.21815pt too wide) in paragraph at lines 116--117
+Overfull \hbox (5.21815pt too wide) in paragraph at lines 127--128
 []\T1/cmr/m/n/12 - \T1/cmr/bx/n/12 NumPy \T1/cmr/m/n/12 for pro-vid-ing ef-fi-c
 ient stor-age and com-put-ing multi-dimensional
  []
 
 ) (chapters/theoreticalBackground.tex [12]
 Chapter 3.
-<./figures/data_mining_stages.png, id=284, 515.67656pt x 492.33937pt>
+<./figures/data_mining_stages.png, id=293, 515.67656pt x 492.33937pt>
 File: ./figures/data_mining_stages.png Graphic file (type png)
 <use ./figures/data_mining_stages.png>
 Package pdftex.def Info: ./figures/data_mining_stages.png  used on input line 9
@@ -1017,24 +1032,24 @@ Package pdftex.def Info: ./figures/data_mining_stages.png  used on input line 9
 [13
 
  <./figures/data_mining_stages.png>] [14]
-<./figures/data_mining.jpeg, id=299, 1034.86626pt x 356.33125pt>
+<./figures/data_mining.jpeg, id=308, 1034.86626pt x 356.33125pt>
 File: ./figures/data_mining.jpeg Graphic file (type jpg)
 <use ./figures/data_mining.jpeg>
-Package pdftex.def Info: ./figures/data_mining.jpeg  used on input line 64.
+Package pdftex.def Info: ./figures/data_mining.jpeg  used on input line 63.
 (pdftex.def)             Requested size: 434.48296pt x 149.60364pt.
 
-Overfull \hbox (7.05142pt too wide) in paragraph at lines 64--65
+Overfull \hbox (7.05142pt too wide) in paragraph at lines 63--64
  [][] 
  []
 
 [15 <./figures/data_mining.jpeg>] [16]
-<./figures/regression.png, id=325, 381.67593pt x 260.47313pt>
+<./figures/regression.png, id=334, 381.67593pt x 260.47313pt>
 File: ./figures/regression.png Graphic file (type png)
 <use ./figures/regression.png>
-Package pdftex.def Info: ./figures/regression.png  used on input line 112.
+Package pdftex.def Info: ./figures/regression.png  used on input line 111.
 (pdftex.def)             Requested size: 263.05383pt x 179.52045pt.
  [17 <./figures/regression.png>]
-Overfull \hbox (4.56006pt too wide) in paragraph at lines 148--149
+Overfull \hbox (4.56006pt too wide) in paragraph at lines 147--148
 []\T1/cmr/m/n/12 Suppose that we have a se-ries of $\OML/cmm/m/it/12 N \OMS/cms
 y/m/n/12 2 \U/msb/m/n/12 Z[]$ \T1/cmr/m/n/12 data points $\OT1/cmr/m/n/12 (\OML
 /cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/
@@ -1043,103 +1058,125 @@ OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ,
  []
 
 [18]
-<./figures/perceptron.png, id=349, 1256.695pt x 487.8225pt>
+<./figures/perceptron.png, id=364, 942.52126pt x 365.86688pt>
 File: ./figures/perceptron.png Graphic file (type png)
 <use ./figures/perceptron.png>
-Package pdftex.def Info: ./figures/perceptron.png  used on input line 168.
-(pdftex.def)             Requested size: 308.30525pt x 119.6803pt.
+Package pdftex.def Info: ./figures/perceptron.png  used on input line 167.
+(pdftex.def)             Requested size: 308.31483pt x 119.6803pt.
  [19 <./figures/perceptron.png>]
-<./figures/feedforward.png, id=361, 564.1075pt x 355.3275pt>
+<./figures/feedforward.png, id=376, 564.1075pt x 355.3275pt>
 File: ./figures/feedforward.png Graphic file (type png)
 <use ./figures/feedforward.png>
-Package pdftex.def Info: ./figures/feedforward.png  used on input line 184.
+Package pdftex.def Info: ./figures/feedforward.png  used on input line 183.
 (pdftex.def)             Requested size: 237.50883pt x 149.60364pt.
  [20 <./figures/feedforward.png>] [21]
 [22]
-<./figures/gradient.png, id=396, 951.555pt x 531.9875pt>
+<./figures/gradient.png, id=411, 951.555pt x 531.9875pt>
 File: ./figures/gradient.png Graphic file (type png)
 <use ./figures/gradient.png>
-Package pdftex.def Info: ./figures/gradient.png  used on input line 261.
+Package pdftex.def Info: ./figures/gradient.png  used on input line 260.
 (pdftex.def)             Requested size: 305.81058pt x 170.97pt.
  [23 <./figures/gradient.png>]
-<./figures/functions.png, id=404, 1559.8275pt x 540.0175pt>
+<./figures/functions.png, id=419, 1559.8275pt x 540.0175pt>
 File: ./figures/functions.png Graphic file (type png)
 <use ./figures/functions.png>
-Package pdftex.def Info: ./figures/functions.png  used on input line 285.
+Package pdftex.def Info: ./figures/functions.png  used on input line 284.
 (pdftex.def)             Requested size: 432.10753pt x 149.60364pt.
 
-Overfull \hbox (4.676pt too wide) in paragraph at lines 285--287
+Overfull \hbox (4.676pt too wide) in paragraph at lines 284--286
  [][] 
  []
 
 [24 <./figures/functions.png>]
-<./figures/stochastic.png, id=421, 483.60675pt x 177.0615pt>
+<./figures/stochastic.png, id=436, 483.60675pt x 177.0615pt>
 File: ./figures/stochastic.png Graphic file (type png)
 <use ./figures/stochastic.png>
-Package pdftex.def Info: ./figures/stochastic.png  used on input line 319.
+Package pdftex.def Info: ./figures/stochastic.png  used on input line 318.
 (pdftex.def)             Requested size: 326.89273pt x 119.6803pt.
  [25 <./figures/stochastic.png>]
-<./figures/optimization.png, id=436, 259.97125pt x 194.7275pt>
+<./figures/optimization.png, id=451, 259.97125pt x 194.7275pt>
 File: ./figures/optimization.png Graphic file (type png)
 <use ./figures/optimization.png>
-Package pdftex.def Info: ./figures/optimization.png  used on input line 349.
+Package pdftex.def Info: ./figures/optimization.png  used on input line 348.
 (pdftex.def)             Requested size: 205.4385pt x 153.87561pt.
  [26 <./figures/optimization.png>]
-<./figures/injection.png, id=447, 602.25pt x 551.81157pt>
+<./figures/injection.png, id=462, 602.25pt x 551.81157pt>
 File: ./figures/injection.png Graphic file (type png)
 <use ./figures/injection.png>
-Package pdftex.def Info: ./figures/injection.png  used on input line 364.
+Package pdftex.def Info: ./figures/injection.png  used on input line 363.
 (pdftex.def)             Requested size: 107.28838pt x 98.30742pt.
-<./figures/surjection.png, id=448, 602.25pt x 551.81157pt>
+<./figures/surjection.png, id=463, 602.25pt x 551.81157pt>
 File: ./figures/surjection.png Graphic file (type png)
 <use ./figures/surjection.png>
-Package pdftex.def Info: ./figures/surjection.png  used on input line 373.
+Package pdftex.def Info: ./figures/surjection.png  used on input line 372.
 (pdftex.def)             Requested size: 107.28838pt x 98.30742pt.
-<./figures/bijection.png, id=449, 602.25pt x 554.82281pt>
+<./figures/bijection.png, id=464, 602.25pt x 554.82281pt>
 File: ./figures/bijection.png Graphic file (type png)
 <use ./figures/bijection.png>
-Package pdftex.def Info: ./figures/bijection.png  used on input line 382.
+Package pdftex.def Info: ./figures/bijection.png  used on input line 381.
 (pdftex.def)             Requested size: 106.70943pt x 98.30742pt.
  [27 <./figures/injection.png> <./figures/surjection.png> <./figures/bijection.
 png>] [28]) (chapters/implementation.tex [29]
 Chapter 4.
 [30
 
-] [31] [32]
-Overfull \hbox (11.5484pt too wide) in paragraph at lines 92--92
+]
+<./figures/scipy.png, id=504, 906.38625pt x 298.86656pt>
+File: ./figures/scipy.png Graphic file (type png)
+<use ./figures/scipy.png>
+Package pdftex.def Info: ./figures/scipy.png  used on input line 27.
+(pdftex.def)             Requested size: 388.89484pt x 128.23076pt.
+ [31 <./figures/scipy.png>] [32] [33]
+Overfull \hbox (11.5484pt too wide) in paragraph at lines 121--121
 []  \T1/cmr/m/n/12 - `adam' refers to a tran-si-tion be-tween adap-tive meth-od
 s and momentum-
  []
 
-[33] [34]
-<./figures/describe1.png, id=525, 500.62032pt x 171.64125pt>
+[34] [35]
+<./figures/describe1.png, id=545, 500.62032pt x 171.64125pt>
 File: ./figures/describe1.png Graphic file (type png)
 <use ./figures/describe1.png>
-Package pdftex.def Info: ./figures/describe1.png  used on input line 161.
+Package pdftex.def Info: ./figures/describe1.png  used on input line 190.
 (pdftex.def)             Requested size: 423.86401pt x 145.32515pt.
 
-Overfull \hbox (6.1266pt too wide) in paragraph at lines 183--184
+Overfull \hbox (6.1266pt too wide) in paragraph at lines 212--213
 []\T1/cmr/m/n/12 These re-duc-tions need some ex-pla-na-tion. As men-tioned abo
 ve, $\OML/cmm/m/it/12 n[]tokens[]content$
  []
 
-[35 <./figures/describe1.png>] [36] [37]
-<./figures/plot.png, id=594, 403.5075pt x 304.13625pt>
+[36 <./figures/describe1.png>] [37] [38]
+<./figures/plot.png, id=614, 403.5075pt x 304.13625pt>
 File: ./figures/plot.png Graphic file (type png)
 <use ./figures/plot.png>
-Package pdftex.def Info: ./figures/plot.png  used on input line 264.
+Package pdftex.def Info: ./figures/plot.png  used on input line 289.
 (pdftex.def)             Requested size: 255.1962pt x 192.34288pt.
- [38 <./figures/plot.png>]
+ [39 <./figures/plot.png>]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
- [39]
-[40]) (chapters/summary.tex [41]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 343.
+ [40]
+[41] [42]) (chapters/summary.tex [43]
 Chapter 5.
-) (main.bbl [42
+) (main.bbl [44
 
-] [43
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 5.
+ (D:\Lilcsa\Tanszeki_dolgok\miktex\tex\latex\base\t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 2020) in paragraph at lines 4--6
+[]\T1/cmr/m/n/12 Online News Pop-u-lar-ity Data Set.  [][]$\T1/cmtt/m/n/12 http
+ : / / archive . ics . uci . edu / ml /
+ []
 
-] [44]) [45] (appendices/cd.tex) [46
+
+Underfull \hbox (badness 1248) in paragraph at lines 20--22
+[]\T1/cmr/m/n/12 UCI Ma-chine Learn-ing Repos-i-tory.  [][]$\T1/cmtt/m/n/12 htt
+ps : / / archive . ics . uci . edu / ml /
+ []
+
+[45
+
+] [46]) [47] (appendices/cd.tex) [48
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
@@ -1148,7 +1185,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 38861B7F84AB0DAB3FEC37C9001D3C70;5862.
+(rerunfilecheck)             Checksum: 675336E1F844E60C358D24605CA525A7;5864.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1157,43 +1194,44 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 24528 strings out of 492970
- 422647 string characters out of 3133676
- 706311 words of memory out of 3000000
- 27618 multiletter control sequences out of 15000+200000
- 24237 words of font info for 59 fonts, out of 3000000 for 9000
+ 24949 strings out of 492970
+ 430095 string characters out of 3133676
+ 701816 words of memory out of 3000000
+ 27968 multiletter control sequences out of 15000+200000
+ 24550 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,15n,77p,1281b,1893s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecrm1000.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecbx1440.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\Lilcsa\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Lilcsa\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440.pk> <C:\Users\
-Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk>
+\ectt1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\ecrm1000.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lilcsa\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\Lilcsa\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\
+Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1440.pk>
  <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\eccc1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Lilcsa\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Lilcsa\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <C:\Users\Li
-lcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk><D
-:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/L
-ilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/Lilc
-sa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/Lilcsa/T
-anszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/Lilcsa/Tansz
-eki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Lilcsa/Tanszeki_
-dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Lilcsa/Tanszeki_dolgo
-k/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Lilcsa/Tanszeki_dolgok/mik
-tex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex
-/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/t
-ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (47 pages, 1568773 bytes).
+cxc1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\eccc1200.pk> <C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lilcsa\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Lilcsa\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1440.pk> <C:\Users\Li
+lcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk> <
+C:\Users\Lilcsa\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecr
+m1440.pk><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb><D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+D:/Lilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/L
+ilcsa/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Lilcs
+a/Tanszeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Lilcsa/Tan
+szeki_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Lilcsa/Tanszeki
+_dolgok/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Lilcsa/Tanszeki_do
+lgok/miktex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Lilcsa/Tanszeki_dolgok
+/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/Lilcsa/Tanszeki_dolgok/mik
+tex/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (49 pages, 1730245 bytes).
 PDF statistics:
- 1396 PDF objects out of 1440 (max. 8388607)
- 315 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1528 PDF objects out of 1728 (max. 8388607)
+ 376 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 

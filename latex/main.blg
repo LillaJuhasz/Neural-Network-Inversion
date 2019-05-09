@@ -1,7 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
+Warning--to sort, need author or key in onlinenews-url
+Warning--to sort, need author or key in uci-url
+Warning--to sort, need author or key in python-url
+Warning--to sort, need author or key in scipy-url
+Warning--to sort, need author or key in scikit-url
 Warning--empty journal in article
 Warning--there's a number but no series in michalski2014machine
 Warning--empty booktitle in Ren2015PredictingAE
-(There were 3 warnings)
+(There were 8 warnings)
