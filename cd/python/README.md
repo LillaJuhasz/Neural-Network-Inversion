@@ -14,7 +14,7 @@ Then the virtual environment venv must be activated.
 
 For running the source code, the necessary packages need to be loaded, that are located in the requirements.txt file.
 
->>> pip install -r requirements.txt
+>>> conda install --file requirements.txt
 
 
 Finally the virtual environment is ready to load the Python file.
